@@ -4,8 +4,8 @@ First concepts (last column) are derived, and concrete competency questions aris
 
 | ID  | Name                                        | User Story                                                       | Extracted concepts                      |
 |-----|----------------------------------------------------------------------------------------------------------------|-----------------------------------------|
-| US1 | Different types of restrictions             |
-| US2 | Similar expressions in different languages  |
-| US3 | Equivalent expressions in the same language |
-| US4 | Detecting expressions                       |
+| US1 | Different types of restrictions             |                                                                  |                                         |
+| US2 | Similar expressions in different languages  |                                                                  |                                         | 
+| US3 | Equivalent expressions in the same language |                                                                  |                                         |
+| US4 | Detecting expressions                       |                                                                  |                                         |
 
