@@ -9,7 +9,7 @@ todo: insert purpose
 
 # Scope
 
-The scope of the vocabulary is described using motivating scenarios in the form of user stories.
+The scope of the vocabulary is described using motivating scenarios in the form of user stories (expressed as tables according to the ExtremeDesign methodology).
 Derived competency questions are stored within a table in the `README.md` file in the `competency-questions` folder, furthermore that folder contains the competency questions represented as
 SPARQL queries.
 
@@ -21,4 +21,4 @@ According to the UPON-light methodology, the following folders contain tables (w
 * Output of step 3: `taxonomy`
 * Output of step 4: `predicatioon`
 * Output of step 5: `parthood`
-* Output of step 3: `ontology`
+* Output of step 6: `ontology`
