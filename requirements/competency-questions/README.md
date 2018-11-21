@@ -66,7 +66,7 @@ select (count(distinct ?type) as ?typeCount) where {
 
 ```
 PREFIX qb: <http://purl.org/linked-data/cube#>
-PREFIX lovvoc: <http://example.org/lovvoc#>
+PREFIX lovstats: <http://example.org/lovstats#>
 
 
 select distinct ?range where {
@@ -87,7 +87,7 @@ select distinct ?range where {
 
 ```
 PREFIX qb: <http://purl.org/linked-data/cube#>
-PREFIX lovvoc: <http://example.org/lovvoc#>
+PREFIX lovstats: <http://example.org/lovstats#>
 PREFIX lovc:     <http://example.com/lovcube#>
 
 
@@ -100,7 +100,7 @@ select (count(distinct ?impl) as ?implementationCount) where {
 
 ```
 PREFIX qb: <http://purl.org/linked-data/cube#>
-PREFIX lovvoc: <http://example.org/lovvoc#>
+PREFIX lovstats: <http://example.org/lovstats#>
 PREFIX lovc:     <http://example.com/lovcube#>
 
 
@@ -117,12 +117,12 @@ Not available yet
 
 ```
 PREFIX qb: <http://purl.org/linked-data/cube#>
-PREFIX lovvoc: <http://example.org/lovvoc#>
+PREFIX lovstats: <http://example.org/lovstats#>
 
 
 select distinct ?Concept ?time where {
   ?Concept a qb:Observation ;
-    lovvoc:execution-time ?time.
+    lovstats:execution-time ?time.
 }
 ```
 
@@ -130,12 +130,12 @@ select distinct ?Concept ?time where {
 
 ```
 PREFIX qb: <http://purl.org/linked-data/cube#>
-PREFIX lovvoc: <http://example.org/lovvoc#>
+PREFIX lovstats: <http://example.org/lovstats#>
 
 
 select distinct ?Concept ?version where {
   ?Concept a qb:Observation ;
-    lovvoc:ontology-version ?version.
+    lovstats:ontology-version ?version.
 }
 ```
 
@@ -143,12 +143,12 @@ select distinct ?Concept ?version where {
 
 ```
 PREFIX qb: <http://purl.org/linked-data/cube#>
-PREFIX lovvoc: <http://example.org/lovvoc#>
+PREFIX lovstats: <http://example.org/lovstats#>
 
 select distinct ?dataset ?detector where {
   ?Concept a qb:Observation ;
     qb:dataSet ?dataset ;
-    lovvoc:detector ?detector .
+    lovstats:detector ?detector .
 }
 ```
 
@@ -157,14 +157,14 @@ select distinct ?dataset ?detector where {
 
 ```
 PREFIX qb: <http://purl.org/linked-data/cube#>
-PREFIX lovvoc: <http://example.org/lovvoc#>
+PREFIX lovstats: <http://example.org/lovstats#>
 
 
 select distinct ?dataset ?detector ?implementation where {
   ?Concept a qb:Observation ;
     qb:dataSet ?dataset ;
-    lovvoc:detector ?detector ;
-    lovvoc:implementation ?implementation .
+    lovstats:detector ?detector ;
+    lovstats:implementation ?implementation .
 }
 ```
 
@@ -176,10 +176,10 @@ Hmm, that's weird, detector is already the version?
 
 ```
 PREFIX qb: <http://purl.org/linked-data/cube#>
-PREFIX lovvoc: <http://example.org/lovvoc#>
+PREFIX lovstats: <http://example.org/lovstats#>
 
 select distinct ?measurePredicate where {
-  lovvoc:lovstats2018datastructure a qb:DataStructureDefinition ;
+  lovstats:lovstats2018datastructure a qb:DataStructureDefinition ;
     qb:component [
       qb:measure ?measurePredicate
     ] .
@@ -190,16 +190,16 @@ select distinct ?measurePredicate where {
 
 ```
 PREFIX qb: <http://purl.org/linked-data/cube#>
-PREFIX lovvoc: <http://example.org/lovvoc#>
+PREFIX lovstats: <http://example.org/lovstats#>
 
 
 select distinct ?dataset ?detector ?measurePredicate ?output where {
   ?Concept a qb:Observation ;
-    lovvoc:detector ?detector ;
+    lovstats:detector ?detector ;
     ?measurePredicate ?output .
   {
     select distinct ?measurePredicate where {
-      lovvoc:lovstats2018datastructure a qb:DataStructureDefinition ;
+      lovstats:lovstats2018datastructure a qb:DataStructureDefinition ;
         qb:component [
           qb:measure ?measurePredicate
         ] .
@@ -212,16 +212,16 @@ select distinct ?dataset ?detector ?measurePredicate ?output where {
 
 ```
 PREFIX qb: <http://purl.org/linked-data/cube#>
-PREFIX lovvoc: <http://example.org/lovvoc#>
+PREFIX lovstats: <http://example.org/lovstats#>
 
 
 select distinct ?dataset (datatype(?output) as ?datatype) where {
   ?Concept a qb:Observation ;
-    lovvoc:detector ?detector ;
+    lovstats:detector ?detector ;
     ?measurePredicate ?output .
   {
     select distinct ?measurePredicate where {
-      lovvoc:lovstats2018datastructure a qb:DataStructureDefinition ;
+      lovstats:lovstats2018datastructure a qb:DataStructureDefinition ;
         qb:component [
           qb:measure ?measurePredicate
         ] .
@@ -238,13 +238,13 @@ So, I invented these: results larger than 0. might be what you expected before, 
 
 ```
 PREFIX qb: <http://purl.org/linked-data/cube#>
-PREFIX lovvoc: <http://example.org/lovvoc#>
+PREFIX lovstats: <http://example.org/lovstats#>
 
 
 select distinct ?type where {
   ?Concept a qb:Observation ; 
-    lovvoc:restriction-type ?type;
-    lovvoc:amount ?amount .
+    lovstats:restriction-type ?type;
+    lovstats:amount ?amount .
   FILTER (?amount > 0)
 }
 ```
@@ -253,13 +253,13 @@ select distinct ?type where {
 
 ```
 PREFIX qb: <http://purl.org/linked-data/cube#>
-PREFIX lovvoc: <http://example.org/lovvoc#>
+PREFIX lovstats: <http://example.org/lovstats#>
 
 
 select (count(distinct ?type) as ?tcount) where {
   ?Concept a qb:Observation ; 
-    lovvoc:restriction-type ?type;
-    lovvoc:amount ?amount .
+    lovstats:restriction-type ?type;
+    lovstats:amount ?amount .
   FILTER (?amount > 0)
 }
 ```
@@ -268,14 +268,14 @@ select (count(distinct ?type) as ?tcount) where {
 
 ```
 PREFIX qb: <http://purl.org/linked-data/cube#>
-PREFIX lovvoc: <http://example.org/lovvoc#>
+PREFIX lovstats: <http://example.org/lovstats#>
 
 
 select distinct ?type ?detector where {
   ?Concept a qb:Observation ; 
-    lovvoc:restriction-type ?type;
-    lovvoc:detector ?detector ;
-    lovvoc:amount ?amount .
+    lovstats:restriction-type ?type;
+    lovstats:detector ?detector ;
+    lovstats:amount ?amount .
   FILTER (?amount > 0)
 }
 ```
@@ -284,14 +284,14 @@ select distinct ?type ?detector where {
 
 ```
 PREFIX qb: <http://purl.org/linked-data/cube#>
-PREFIX lovvoc: <http://example.org/lovvoc#>
+PREFIX lovstats: <http://example.org/lovstats#>
 
 
 select distinct ?type ?detector (count(?detector) as ?detectorCount) where {
   ?Concept a qb:Observation ; 
-    lovvoc:restriction-type ?type;
-    lovvoc:detector ?detector ;
-    lovvoc:amount ?amount .
+    lovstats:restriction-type ?type;
+    lovstats:detector ?detector ;
+    lovstats:amount ?amount .
   FILTER (?amount > 0)
 } group by ?type ?detector
 ```
