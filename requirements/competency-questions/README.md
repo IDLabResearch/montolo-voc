@@ -28,4 +28,270 @@ This file contains a list of competency questions, the vocabulary aims to answer
 | CQ18 | What is the result of a Restriction Type-related result?
 | CQ19 | What attribute units are part of the result? (e.g. integer boolean)
 
+## SPARQL queries
 
+### CQ1
+
+```
+PREFIX lovc:     <http://example.com/lovcube#>
+
+select distinct ?type where {
+  ?type a lovc:RestrictionType .
+}
+```
+
+### CQ2
+
+```
+PREFIX lovc:     <http://example.com/lovcube#>
+
+select (count(distinct ?type) as ?typeCount) where {
+  ?type a lovc:RestrictionType .
+}
+```
+
+### CQ3
+
+???
+
+### CQ4
+
+???
+
+### CQ5
+
+???
+
+### CQ6
+
+```
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX lovvoc: <http://example.org/lovvoc#>
+
+
+select distinct ?range where {
+  ?p a qb:MeasureProperty ;
+    rdfs:range ?range .
+}
+```
+
+### CQ7
+
+???
+
+### CQ8
+
+???
+
+### CQ9
+
+```
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX lovvoc: <http://example.org/lovvoc#>
+PREFIX lovc:     <http://example.com/lovcube#>
+
+
+select (count(distinct ?impl) as ?implementationCount) where {
+  ?impl a lovc:Implementation .
+}
+```
+
+### CQ10
+
+```
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX lovvoc: <http://example.org/lovvoc#>
+PREFIX lovc:     <http://example.com/lovcube#>
+
+
+select distinct ?impl where {
+  ?impl a lovc:Implementation .
+}
+```
+
+### CQ11
+
+Not available yet
+
+### CQ12
+
+```
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX lovvoc: <http://example.org/lovvoc#>
+
+
+select distinct ?Concept ?time where {
+  ?Concept a qb:Observation ;
+    lovvoc:execution-time ?time.
+}
+```
+
+### CQ13
+
+```
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX lovvoc: <http://example.org/lovvoc#>
+
+
+select distinct ?Concept ?version where {
+  ?Concept a qb:Observation ;
+    lovvoc:ontology-version ?version.
+}
+```
+
+### CQ14
+
+```
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX lovvoc: <http://example.org/lovvoc#>
+
+select distinct ?dataset ?detector where {
+  ?Concept a qb:Observation ;
+    qb:dataSet ?dataset ;
+    lovvoc:detector ?detector .
+}
+```
+
+
+### CQ15
+
+```
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX lovvoc: <http://example.org/lovvoc#>
+
+
+select distinct ?dataset ?detector ?implementation where {
+  ?Concept a qb:Observation ;
+    qb:dataSet ?dataset ;
+    lovvoc:detector ?detector ;
+    lovvoc:implementation ?implementation .
+}
+```
+
+### CQ16
+
+Hmm, that's weird, detector is already the version?
+
+### CQ17
+
+```
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX lovvoc: <http://example.org/lovvoc#>
+
+select distinct ?measurePredicate where {
+  lovvoc:lovstats2018datastructure a qb:DataStructureDefinition ;
+    qb:component [
+      qb:measure ?measurePredicate
+    ] .
+}
+```
+
+### CQ18
+
+```
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX lovvoc: <http://example.org/lovvoc#>
+
+
+select distinct ?dataset ?detector ?measurePredicate ?output where {
+  ?Concept a qb:Observation ;
+    lovvoc:detector ?detector ;
+    ?measurePredicate ?output .
+  {
+    select distinct ?measurePredicate where {
+      lovvoc:lovstats2018datastructure a qb:DataStructureDefinition ;
+        qb:component [
+          qb:measure ?measurePredicate
+        ] .
+    }
+  }
+}
+```
+
+### CQ19
+
+```
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX lovvoc: <http://example.org/lovvoc#>
+
+
+select distinct ?dataset (datatype(?output) as ?datatype) where {
+  ?Concept a qb:Observation ;
+    lovvoc:detector ?detector ;
+    ?measurePredicate ?output .
+  {
+    select distinct ?measurePredicate where {
+      lovvoc:lovstats2018datastructure a qb:DataStructureDefinition ;
+        qb:component [
+          qb:measure ?measurePredicate
+        ] .
+    }
+  }
+}
+```
+
+---
+
+So, I invented these: results larger than 0. might be what you expected before, but didn't specify
+
+### CQ20
+
+```
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX lovvoc: <http://example.org/lovvoc#>
+
+
+select distinct ?type where {
+  ?Concept a qb:Observation ; 
+    lovvoc:restriction-type ?type;
+    lovvoc:amount ?amount .
+  FILTER (?amount > 0)
+}
+```
+
+### CQ21
+
+```
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX lovvoc: <http://example.org/lovvoc#>
+
+
+select (count(distinct ?type) as ?tcount) where {
+  ?Concept a qb:Observation ; 
+    lovvoc:restriction-type ?type;
+    lovvoc:amount ?amount .
+  FILTER (?amount > 0)
+}
+```
+
+### CQ22
+
+```
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX lovvoc: <http://example.org/lovvoc#>
+
+
+select distinct ?type ?detector where {
+  ?Concept a qb:Observation ; 
+    lovvoc:restriction-type ?type;
+    lovvoc:detector ?detector ;
+    lovvoc:amount ?amount .
+  FILTER (?amount > 0)
+}
+```
+
+### CQ23
+
+```
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX lovvoc: <http://example.org/lovvoc#>
+
+
+select distinct ?type ?detector (count(?detector) as ?detectorCount) where {
+  ?Concept a qb:Observation ; 
+    lovvoc:restriction-type ?type;
+    lovvoc:detector ?detector ;
+    lovvoc:amount ?amount .
+  FILTER (?amount > 0)
+} group by ?type ?detector
+```
