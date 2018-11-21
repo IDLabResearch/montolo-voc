@@ -2,8 +2,11 @@
 #
 @prefix lovc : <http://example.com/lovcube#> .
 @prefix lovstats : <http://example.com/lovstats#> .
+@prefix frbr : <http://purl.org/vocab/frbr/core#> .
 
+#
 # Definitions of Restriction Types
+#
 
 lovstats:FunctionalProperties a lovc:RestrictionType .
 lovstats:InverseFunctionalProperties a lovc:RestrictionType .
@@ -21,8 +24,9 @@ lovstats:IrreflexiveProperties a lovc:RestrictionType .
 lovstats:DisjointProperties a lovc:RestrictionType .
 lovstats:DisjointClasses a lovc:RestrictionType .
 
-
+#
 # Definitions of Restriction Types Expressions
+#
 
 lovstats:FunctionalPropertiesOwlFunctionalProperty a lovc:RestrictionTypeExpression .
 lovstats:InverseFunctionalPropertiesOwlInverseFunctionalProperty a lovc:RestrictionTypeExpression .
@@ -42,11 +46,136 @@ lovstats:DisjointClassesOwlDisjointWith a lovc:RestrictionTypeExpression .
 
 # Definitions of Restriction Types Metrics
 
+lovstats:amount-statements a lovc:RestrictionTypeMetric .
+lovstats:amount-hierarchies a lovc:RestrictionTypeMetric .
+lovstats:average-hierarchy-depth a lovc:RestrictionTypeMetric .
+lovstats:median-hierarchy-depth a lovc:RestrictionTypeMetric .
+
+#
 # Definitions of Restriction Types Detectors
+#
 
-# Definitions of Restriction Types Detectors Versions
+lovstats:FunctionalPropertiesDetectorOwlFunctionalProperty a lovc:RestrictionTypeDetector ;
+    rdfs:label ""@en .
 
+lovstats:FunctionalPropertiesDetectorOwlFunctionalProperty-v1 a lovc:RestrictionTypeDetectorVersion ;
+    rdfs:label ""@en ;
+    frbr:realizationOf lovstats:FunctionalPropertiesDetectorOwlFunctionalProperty .
+
+
+lovstats:InverseFunctionalPropertiesDetectorOwlInverseFunctionalProperty a lovc:RestrictionTypeDetector ;
+    rdfs:label ""@en .
+
+lovstats:InverseFunctionalPropertiesDetectorOwlInverseFunctionalProperty-v1 a lovc:RestrictionTypeDetectorVersion ;
+    rdfs:label ""@en ;
+    frbr:realizationOf lovstats:InverseFunctionalPropertiesDetectorOwlInverseFunctionalProperty .
+
+
+lovstats:SubsumptionDetectorRdfsSubClassOf a lovc:RestrictionTypeDetector ;
+    rdfs:label ""@en .
+
+lovstats:SubsumptionDetectorRdfsSubClassOf-v1 a lovc:RestrictionTypeDetectorVersion ;
+    rdfs:label ""@en ;
+    frbr:realizationOflovstats:SubsumptionDetectorRdfsSubClassOf .
+
+
+lovstats:PropertyDomainsDetectorRdfsDomain a lovc:RestrictionTypeDetector ;
+    rdfs:label ""@en .
+
+lovstats:PropertyDomainsDetectorRdfsDomain-v1 a lovc:RestrictionTypeDetectorVersion ;
+    rdfs:label ""@en ;
+    frbr:realizationOf lovstats:PropertyDomainsDetectorRdfsDomain .
+
+
+lovstats:PropertyRangesDetetorRdfRange a lovc:RestrictionTypeDetector ;
+    rdfs:label ""@en .
+
+lovstats:PropertyRangesDetectorRdfRange-v1 a lovc:RestrictionTypeDetectorVersion ;
+    rdfs:label ""@en ;
+    frbr:realizationOf lovstats:PropertyRangesDetetorRdfRange .
+
+
+lovstats:LiteralPatternMatchingDetectorXsdPatternOwlRestriction a lovc:RestrictionTypeDetector ;
+    rdfs:label ""@en .
+
+lovstats:LiteralPatternMatchingDetectorXsdPatternOwlRestriction-v1 a lovc:RestrictionTypeDetectorVersion ;
+    rdfs:label ""@en ;
+    frbr:realizationOf lovstats:LiteralPatternMatchingDetectorXsdPatternOwlRestriction .
+
+
+lovstats:UniversalQuantificationDetectorOwlAllValuesFrom a lovc:RestrictionTypeDetector ;
+    rdfs:label ""@en .
+
+lovstats:UniversalQuantificationDetectorOwlAllValuesFrom-v1 a lovc:RestrictionTypeDetectorVersion ;
+    rdfs:label ""@en ;
+    frbr:realizationOf lovstats:UniversalQuantificationDetectorOwlAllValuesFrom .
+
+
+lovstats:MinimumUnqualifiedCardinalityDetectorOwlMinCardinality a lovc:RestrictionTypeDetector ;
+    rdfs:label ""@en .
+
+lovstats:MinimumUnqualifiedCardinalityDetectorOwlMinCardinality-v1 a lovc:RestrictionTypeDetectorVersion ;
+    rdfs:label ""@en ;
+    frbr:realizationOf lovstats:MinimumUnqualifiedCardinalityDetectorOwlMinCardinality .
+
+
+lovstats:MinimumQualifiedCardinalityDetectorOwl a lovc:RestrictionTypeDetector ;
+    rdfs:label ""@en .
+
+lovstats:MinimumQualifiedCardinalityDetectorOwl-v1 a lovc:RestrictionTypeDetectorVersion ;
+    rdfs:label ""@en ;
+    frbr:realizationOf lovstats:MinimumQualifiedCardinalityDetectorOwl .
+
+
+lovstats:MaximumUnqualifiedCardinalityDetectorOwlMaxCardinality a lovc:RestrictionTypeDetector ;
+    rdfs:label ""@en .
+
+lovstats:MaximumUnqualifiedCardinalityDetectorOwlMaxCardinality-v1 a lovc:RestrictionTypeDetectorVersion ;
+    rdfs:label ""@en ;
+    frbr:realizationOf lovstats:MaximumUnqualifiedCardinalityDetectorOwlMaxCardinality .
+
+
+lovstats:MaximumQualifiedCardinalityDetectorOwl a lovc:RestrictionTypeDetector ;
+    rdfs:label ""@en .
+
+lovstats:MaximumQualifiedCardinalityDetectorOwl-v1 a lovc:RestrictionTypeDetectorVersion ;
+    rdfs:label ""@en ;
+    frbr:realizationOf lovstats:MaximumQualifiedCardinalityDetectorOwl .
+
+
+lovstats:AsymmetricPropertiesDetectorOwlAsymmetricProperty a lovc:RestrictionTypeDetector ;
+    rdfs:label ""@en .
+
+lovstats:AsymmetricPropertiesDetectorOwlAsymmetricProperty-v1 a lovc:RestrictionTypeDetectorVersion ;
+    rdfs:label ""@en ;
+    frbr:realizationOf lovstats:AsymmetricPropertiesDetectorOwlAsymmetricProperty .
+
+
+lovstats:IrreflexivePropertiesDetectorOwlIrreflexiveProperty a lovc:RestrictionTypeDetector ;
+    rdfs:label ""@en .
+
+lovstats:IrreflexivePropertiesDetectorOwlIrreflexiveProperty-v1 a lovc:RestrictionTypeDetectorVersion ;
+    rdfs:label ""@en ;
+    frbr:realizationOf lovstats:IrreflexivePropertiesDetectorOwlIrreflexiveProperty .
+
+lovstats:DisjointPropertiesDetectorOwlDisjointWith a lovc:RestrictionTypeDetector ;
+    rdfs:label ""@en .
+
+lovstats:DisjointPropertiesDetectorOwlDisjointWith-v1 a lovc:RestrictionTypeDetectorVersion ;
+    rdfs:label ""@en 
+    frbr:realizationOf lovstats:DisjointPropertiesDetectorOwlDisjointWith .
+
+
+lovstats:DisjointClassesDetectorOwlDisjointWith a lovc:RestrictionTypeDetector ;
+    rdfs:label ""@en .
+
+lovstats:DisjointClassesDetectorOwlDisjointWith-v1 a lovc:RestrictionTypeDetectorVersion ;
+    rdfs:label ""@en ;
+    frbr:realizationOf lovstats:DisjointClassesDetectorOwlDisjointWith .
+
+#
 # Definitions of Restriction Types Detector Implementations
+#
 
 lovstats:LODStatsModule a lovc:RestrictionTypeDetectorImplementation .
 
