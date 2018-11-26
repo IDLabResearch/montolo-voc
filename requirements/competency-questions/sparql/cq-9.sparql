@@ -1,0 +1,9 @@
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX lovvoc: <http://example.org/lovvoc#>
+PREFIX lovc: 	<http://example.com/lovcube#>
+
+
+select (count(distinct ?impl) as ?implementationCount) where {
+  ?impl a lovc:Implementation .
+}
+

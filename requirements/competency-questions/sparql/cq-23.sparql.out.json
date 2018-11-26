@@ -1,0 +1,73 @@
+{
+    "head": {
+        "vars": [
+            "type",
+            "detector",
+            "detectorCount"
+        ]
+    },
+    "results": {
+        "bindings": [
+            {
+                "detector": {
+                    "type": "uri",
+                    "value": "http://example.org/lovvoc#RdfsRange-v1"
+                },
+                "detectorCount": {
+                    "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+                    "type": "literal",
+                    "value": "205"
+                },
+                "type": {
+                    "type": "uri",
+                    "value": "http://example.org/lovvoc#RdfsRange"
+                }
+            },
+            {
+                "detector": {
+                    "type": "uri",
+                    "value": "http://example.org/lovvoc#OwlFunctionalProperty-v1"
+                },
+                "detectorCount": {
+                    "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+                    "type": "literal",
+                    "value": "44"
+                },
+                "type": {
+                    "type": "uri",
+                    "value": "http://example.org/lovvoc#OwlFunctionalProperty"
+                }
+            },
+            {
+                "detector": {
+                    "type": "uri",
+                    "value": "http://example.org/lovvoc#OwlInverseFunctionalProperty-v1"
+                },
+                "detectorCount": {
+                    "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+                    "type": "literal",
+                    "value": "16"
+                },
+                "type": {
+                    "type": "uri",
+                    "value": "http://example.org/lovvoc#OwlInverseFunctionalProperty"
+                }
+            },
+            {
+                "detector": {
+                    "type": "uri",
+                    "value": "http://example.org/lovvoc#RdfsDomain-v1"
+                },
+                "detectorCount": {
+                    "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+                    "type": "literal",
+                    "value": "211"
+                },
+                "type": {
+                    "type": "uri",
+                    "value": "http://example.org/lovvoc#RdfsDomain"
+                }
+            }
+        ]
+    }
+}

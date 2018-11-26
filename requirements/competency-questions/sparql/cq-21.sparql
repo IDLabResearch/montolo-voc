@@ -1,0 +1,11 @@
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX lovvoc: <http://example.org/lovvoc#>
+
+
+select (count(distinct ?type) as ?tcount) where {
+  ?Concept a qb:Observation ;
+	lovvoc:restriction-type ?type;
+	lovvoc:amount ?amount .
+  FILTER (?amount > 0)
+}
+

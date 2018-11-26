@@ -1,0 +1,11 @@
+{
+    "head": {
+        "vars": [
+            "dataset",
+            "datatype"
+        ]
+    },
+    "results": {
+        "bindings": []
+    }
+}

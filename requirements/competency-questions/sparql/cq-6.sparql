@@ -1,0 +1,9 @@
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX lovvoc: <http://example.org/lovvoc#>
+
+
+select distinct ?range where {
+  ?p a qb:MeasureProperty ;
+	rdfs:range ?range .
+}
+

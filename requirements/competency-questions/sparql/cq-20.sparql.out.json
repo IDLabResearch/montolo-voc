@@ -1,0 +1,35 @@
+{
+    "head": {
+        "vars": [
+            "type"
+        ]
+    },
+    "results": {
+        "bindings": [
+            {
+                "type": {
+                    "type": "uri",
+                    "value": "http://example.org/lovvoc#RdfsRange"
+                }
+            },
+            {
+                "type": {
+                    "type": "uri",
+                    "value": "http://example.org/lovvoc#OwlFunctionalProperty"
+                }
+            },
+            {
+                "type": {
+                    "type": "uri",
+                    "value": "http://example.org/lovvoc#OwlInverseFunctionalProperty"
+                }
+            },
+            {
+                "type": {
+                    "type": "uri",
+                    "value": "http://example.org/lovvoc#RdfsDomain"
+                }
+            }
+        ]
+    }
+}

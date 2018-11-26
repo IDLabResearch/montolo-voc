@@ -1,0 +1,9 @@
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX lovvoc: <http://example.org/lovvoc#>
+
+
+select distinct ?Concept ?time where {
+  ?Concept a qb:Observation ;
+	lovvoc:execution-time ?time.
+}
+
