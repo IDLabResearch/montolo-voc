@@ -246,13 +246,13 @@ lrd:propertyDomainsDetectorRdfsDomain-v1 a lovc:RestrictionTypeExpressionDetecto
     frbr:realizationOf lrd:propertyDomainsDetectorRdfsDomain .
 
 
-lrd:propertyRangesDetetorRdfRange a lovc:RestrictionTypeExpressionDetector ;
+lrd:propertyRangesDetetorRdfsRange a lovc:RestrictionTypeExpressionDetector ;
     rdfs:comment """A method or software component to detect rdfs:range restrictions."""@en ;
     rdfs:label "rdfs:range detector"@en .
 
-lrd:propertyRangesDetectorRdfRange-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
+lrd:propertyRangesDetectorRdfsRange-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
     rdfs:label "rdfs:range detector v1"@en .
-    frbr:realizationOf lrd:propertyRangesDetetorRdfRange .
+    frbr:realizationOf lrd:propertyRangesDetetorRdfsRange .
 
 
 lrd:literalPatternMatchingDetectorXsdPatternOwlRestriction a lovc:RestrictionTypeExpressionDetector ;
@@ -362,12 +362,12 @@ lrd:disjointClassesDetectorOwlAllDisjointClasses-v1 a lovc:RestrictionTypeExpres
     frbr:realizationOf lrd:disjointClassesDetectorOwlAllDisjointClasses .
 
 #
-# Definitions of Restriction Types Metrics
+# Definitions of Restriction Types Measures
 #
 
-lrd:occurrence a lovc:RestrictionTypeMetric ;
-    rdfs:comment """The occurrence of a restriction of a certain type"""@en ;
-    rdfs:label "Occurrence"@en .
+lrd:restrictionTypeOccurrence a lovc:RestrictionTypeMetric ;
+    rdfs:comment """The occurrence of a restriction of a certain type."""@en ;
+    rdfs:label "Restriction type occurrence"@en .
 
 lrd:hierarchyOccurrence a lovc:RestrictionTypeMetric ;
     rdfs:comment """The occurrence of disjoint hierarchies of IRIs."""@en ;
