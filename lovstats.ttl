@@ -2,10 +2,11 @@
 # This file contains Restriction Type-related instantiations of the LOVCube vocabulary
 #
 
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dc: <http://purl.org/dc/terms/> .
-@prefix lovc : <http://example.com/lovcube#> .
+@prefix lovc: <https://w3id.org/lovcube/ns/lovcube#> .
 @prefix lrd: <http://example.com/lovrestrictiondata#> .
 @prefix frbr : <http://purl.org/vocab/frbr/core#> .
 @prefix rdfcv : <http://www.dr-thomashartmann.de/phd-thesis/rdf-validation/vocabularies/rdf-constraints-vocabulary#> .
@@ -402,32 +403,46 @@ lrd:lodstatsExtension a lovc:RestrictionTypeExpressionDetectorImplementation ;
 
 lrd:implementationDimension a qb:DimensionProperty, rdf:Property ;
     rdfs:label "Implementation dimension"@en ;
-    rdfs:comment "The implementation used to collect the observation"@en ;
+    rdfs:comment "The implementation used to collect the observation."@en ;
     rdfs:domain qb:Observation ;
     rdfs:range lovc:RestrictionTypeExpressionDetectorImplementation .
 
 lrd:restrictionTypeDimension a qb:DimensionProperty, rdf:Property ;
     rdfs:label "Restriction type dimension"@en ;
-    rdfs:comment "The restriction type of this observation"@en ;
+    rdfs:comment "The restriction type of this observation."@en ;
     rdfs:domain qb:Observation ;
     rdfs:range lovc:RestrictionType .
 
 lrd:detectorVersionDimension a qb:DimensionProperty, rdf:Property ;
-  rdfs:label "Detector version dimension"@en ;
-  rdfs:comment "The specific detector used to collect the observation"@en ;
-  rdfs:domain qb:Observation ;
-  rdfs:range lovc:RestrictionTypeExpressionDetectorVersion .
+    rdfs:label "Detector version dimension"@en ;
+    rdfs:comment "The specific detector used to collect the observation."@en ;
+    rdfs:domain qb:Observation ;
+    rdfs:range lovc:RestrictionTypeExpressionDetectorVersion .
+
+lrd:executionTimeDimension a qb:DimensionProperty, rdf:Property ;
+    rdfs:label "Execution time dimension"@en ;
+    rdfs:comment "The time at which the observation was made."@en ;
+    rdfs:domain qb:Observation ;
+    rdfs:range xsd:dateTime .
+
+lrd:ontologyVersionDimension a qb:DimensionProperty, rdf:Property ;
+    rdfs:label "Ontology version dimension"@en ;
+    rdfs:comment "The ontology version from which this observation was made."@en ;
+    rdfs:domain qb:Observation ;
+    rdfs:range owl:Ontology ;
 
 #
 # Definitions of Data Structures
 #
-lrd:datasetStructure a qb:DataStructureDefinition ;
+lrd:lovstats2018datastructure a qb:DataStructureDefinition ;
 
     # dimensions
     qb:component
       [ a qb:ComponentSpecification ; qb:dimension lrd:implementationDimension ; ] ;
       [ a qb:ComponentSpecification ; qb:dimension lrd:restrictionTypeDimension ;] ;
       [ a qb:ComponentSpecification ; qb:dimension lrd:detectorVersionDimension ;] ;
+      [ a qb:ComponentSpecification ; qb:dimension lrd:executionTimeDimension ;] ;
+      [ a qb:ComponentSpecification ; qb:dimension lrd:ontologyVersionDimension ;] ;
 
     # measures
     qb:component
