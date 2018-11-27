@@ -61,7 +61,8 @@ prov:Entity rdf:type owl:Class .
 
 ###  https://w3id.org/lovcube/ns/lovcube#RestrictionType
 :RestrictionType rdf:type owl:Class ;
-                 rdfs:subClassOf prov:Entity .
+                 rdfs:subClassOf frbr:Work ,
+                                 prov:Entity .
 
 
 ###  https://w3id.org/lovcube/ns/lovcube#RestrictionTypeDefinition
@@ -85,6 +86,7 @@ prov:Entity rdf:type owl:Class .
 ###  https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpression
 :RestrictionTypeExpression rdf:type owl:Class ;
                            rdfs:subClassOf qb:DimensionProperty ,
+                                           frbr:Expression ,
                                            prov:Entity .
 
 
@@ -101,10 +103,10 @@ prov:Entity rdf:type owl:Class .
                                                           prov:Entity .
 
 
-###  https://w3id.org/lovcube/ns/lovcube#RestrictionTypeMetric
-:RestrictionTypeMetric rdf:type owl:Class ;
-                       rdfs:subClassOf qb:MeasureProperty ,
-                                       prov:Entity .
+###  https://w3id.org/lovcube/ns/lovcube#RestrictionTypeMeasure
+:RestrictionTypeMeasure rdf:type owl:Class ;
+                        rdfs:subClassOf qb:MeasureProperty ,
+                                        prov:Entity .
 
 
 ###  https://w3id.org/lovcube/ns/lovcube#RestrictionTypeStatistic
@@ -123,7 +125,7 @@ prov:Entity rdf:type owl:Class .
                 :RestrictionTypeExpression
                 :RestrictionTypeExpressionDetector
                 :RestrictionTypeExpressionDetectorVersion
-                :RestrictionTypeMetric
+                :RestrictionTypeMeasure
                 :RestrictionTypeStatistic
               )
 ] .
