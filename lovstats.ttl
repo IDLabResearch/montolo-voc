@@ -26,6 +26,8 @@ lrd:MinimumUnqualifiedCardinalityDefinition a rdfcv:SimpleConstraint .
 lrd:MinimumQualifiedCardinalityDefinition a rdfcv:SimpleConstraint .
 lrd:MaximumUnqualifiedCardinalityDefinition a rdfcv:SimpleConstraint .
 lrd:MaximumQualifiedCardinalityDefinition a rdfcv:SimpleConstraint .
+lrd:exactUnqualifiedCardinalityDefinition a rdfcv:SimpleConstraint .
+lrd:exactQualifiedCardinalityDefinition a rdfcv:SimpleConstraint .
 lrd:AsymmetricPropertiesDefinition a rdfcv:SimpleConstraint .
 lrd:IrreflexivePropertiesDefinition a rdfcv:SimpleConstraint .
 lrd:DisjointPropertiesDefinition a rdfcv:SimpleConstraint .
@@ -101,6 +103,18 @@ lrd:maximumQualifiedCardinality a lovc:RestrictionType ;
     rdfs:comment """"""@en ;
     rdfs:label "Maximum qualified cardinality restriction type"@en .
 
+lrd:exactUnqualifiedCardinality a lovc:RestrictionType ;
+    lovc:hasRestrictionTypeDefinition lrd:exactUnqualifiedCardinalityDefinition ;
+    rdfs:isDefinedBy <https://publikationen.bibliothek.kit.edu/1000054062> ;
+    rdfs:comment """"""@en ;
+    rdfs:label "Exact unqualified cardinality restriction type"@en .
+
+lrd:exactQualifiedCardinality a lovc:RestrictionType ;
+   lovcv:hasRestrictionTypeDefinition lrd:exactQualifiedCardinalityDefinition ;
+   rdfs:isDefinedBy <https://publikationen.bibliothek.kit.edu/1000054062> ;
+   rdfs:comment """"""@en ;
+   rdfs:label "Exact qualified cardinality restriction type"@en .
+    
 lrd:asymmetricProperties a lovc:RestrictionType ;
     lovc:hasRestrictionTypeDefinition lrd:AsymmetricPropertiesDefinition ;
     rdfs:isDefinedBy <https://publikationen.bibliothek.kit.edu/1000054062> ;
@@ -182,6 +196,16 @@ lrd:maximumQualifiedCardinalityOwl a lovc:RestrictionTypeExpression ;
     frbr:realizationOf lrd:maximumQualifiedCardinality ;
     rdfs:label "owl:maxQualifiedCardinality restriction"@en .
 
+lrd:exactUnqualifiedCardinalityOwlCardinality a lovc:RestrictionTypeExpression ;
+    rdfs:comment """An exact unqualified cardinality restriction, expressed using the owl:cardinality property."""@en ;
+    frbr:realizationOf lrd:exactUnqualifiedCardinality ;
+    rdfs:label "owl:cardinality restriction"@en .
+
+lrd:exactUnqualifiedCardinalityOwlMinMax a lovc:RestrictionTypeExpression ;
+    rdfs:comment """An exact qualified cardinality restriction, expressed using the properties owl:minCardinality and owl:maxCardinality with the same values."""@en ;
+    frbr:realizationOf lrd:exactUnqualifiedCardinality ;
+    rdfs:label "owl:minCardinality==owl:maxCardinality"@en .
+
 lrd:asymmetricPropertiesOwlAsymmetricProperty a lovc:RestrictionTypeExpression ;
     rdfs:comment """An asymmetric properties restriction, expressed using the owl:asymmetricProperty property."""@en ;
     frbr:realizationOf lrd:asymmetricProperties ;
@@ -206,6 +230,7 @@ lrd:disjointClassesOwlAllDisjointClasses a lovc:RestrictionTypeExpression ;
     rdfs:comment """A disjoint classes restriction, expressed using the owl:AllDisjointClasses class."""@en ;
     frbr:realizationOf lrd:disjointClasses ;
     rdfs:label "owl:AllDisjointClasses restriction"@en .
+
 #
 # Definitions of Restriction Types Detectors
 #
@@ -309,6 +334,24 @@ lrd:maximumQualifiedCardinalityDetectorOwl-v1 a lovc:RestrictionTypeExpressionDe
     frbr:realizationOf lrd:maximumQualifiedCardinalityDetectorOwl .
 
 
+lrd:exactUnqualifiedCardinalityDetectorOwlCardinality a lovc:RestrictionTypeExpressionDetector ;
+    rdfs:comment """A method or software component to detect owl:cardinality restrictions."""@en ;
+    rdfs:label "owl:cardinality detector"@en .
+
+lrd:exactUnqualifiedCardinalityDetectorOwlCardinality-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
+    rdfs:label "owl:cardinality detector v1"@en ;
+    frbr:realizationOf lrd:exactUnqualifiedCardinalityDetectorOwlCardinality .
+
+
+lrd:exactUnqualifiedCardinalityDetectorOwlMinMax a lovc:RestrictionTypeExpressionDetector ;
+    rdfs:comment """A method or software component to detect owl:minCardinality==owl:maxCardinality restrictions."""@en ;
+    rdfs:label "owl:minCardinality==owl:maxCardinality detector"@en .
+
+lrd:exactUnqualifiedCardinalityDetectorOwlMinMax-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
+    rdfs:label "owl:minCardinality==owl:maxCardinality detector v1"@en ;
+    frbr:realizationOf lrd:exactUnqualifiedCardinalityDetectorOwlMinMax .
+
+
 lrd:asymmetricPropertiesDetectorOwlAsymmetricProperty a lovc:RestrictionTypeExpressionDetector ;
     rdfs:comment """A method or software component to detect owl:AsymmetricProperty restrictions."""@en ;
     rdfs:label "owl:AsymmetricProperty detector"@en .
@@ -325,6 +368,7 @@ lrd:irreflexivePropertiesDetectorOwlIrreflexiveProperty a lovc:RestrictionTypeEx
 lrd:irreflexivePropertiesDetectorOwlIrreflexiveProperty-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
     rdfs:label "owl:IrreflexiveProperty detector v1"@en .
     frbr:realizationOf lrd:irreflexivePropertiesDetectorOwlIrreflexiveProperty .
+
 
 lrd:disjointPropertiesDetectorOwlDisjointWith a lovc:RestrictionTypeExpressionDetector ;
     rdfs:comment """A method or software component to detect owl:propertyDisjointWith restrictions."""@en ;
