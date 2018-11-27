@@ -1,0 +1,13 @@
+{
+    "head": {
+        "vars": [
+            "dataset",
+            "detector",
+            "measurePredicate",
+            "output"
+        ]
+    },
+    "results": {
+        "bindings": []
+    }
+}

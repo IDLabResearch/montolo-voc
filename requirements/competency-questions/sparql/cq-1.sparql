@@ -1,0 +1,5 @@
+PREFIX lovc: 	<http://example.com/lovcube#>
+
+select distinct ?type where {
+  ?type a lovc:RestrictionType .
+}

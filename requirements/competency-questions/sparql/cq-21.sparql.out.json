@@ -1,0 +1,18 @@
+{
+    "head": {
+        "vars": [
+            "tcount"
+        ]
+    },
+    "results": {
+        "bindings": [
+            {
+                "tcount": {
+                    "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+                    "type": "literal",
+                    "value": "4"
+                }
+            }
+        ]
+    }
+}

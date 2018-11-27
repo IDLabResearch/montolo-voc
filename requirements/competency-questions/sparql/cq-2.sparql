@@ -1,0 +1,5 @@
+PREFIX lovc: 	<http://example.com/lovcube#>
+
+select (count(distinct ?type) as ?typeCount) where {
+  ?type a lovc:RestrictionType .
+}

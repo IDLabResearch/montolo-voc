@@ -1,0 +1,18 @@
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX lovvoc: <http://example.org/lovvoc#>
+
+
+select distinct ?dataset ?detector ?measurePredicate ?output where {
+  ?Concept a qb:Observation ;
+	lovvoc:detector ?detector ;
+	?measurePredicate ?output .
+  {
+	select distinct ?measurePredicate where {
+  	lovvoc:lovstats2018datastructure a qb:DataStructureDefinition ;
+    	qb:component [
+      	qb:measure ?measurePredicate
+    	] .
+	}
+  }
+}
+
