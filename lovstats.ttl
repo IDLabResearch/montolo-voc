@@ -6,7 +6,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dc: <http://purl.org/dc/terms/> .
 @prefix lovc : <http://example.com/lovcube#> .
-@prefix lovstats : <http://example.com/lovstats#> .
+@prefix lrd: <http://example.com/lovrestrictiondata#> .
 @prefix frbr : <http://purl.org/vocab/frbr/core#> .
 @prefix rdfcv : <http://www.dr-thomashartmann.de/phd-thesis/rdf-validation/vocabularies/rdf-constraints-vocabulary#> .
 
@@ -14,112 +14,112 @@
 # Generic description of Restriction Types
 #
 
-lovstats:FunctionalPropertiesDefinition a rdfcv:SimpleConstraint .
-lovstats:InverseFunctionalPropertiesDefinition a rdfcv:SimpleConstraint .
-lovstats:SubsumptionDefinition a rdfcv:SimpleConstraint .
-lovstats:PropertyDomainsDefinition a rdfcv:SimpleConstraint .
-lovstats:PropertyRangesDefinition a rdfcv:SimpleConstraint .
-lovstats:LiteralPatternMatchingDefinition a rdfcv:SimpleConstraint .
-lovstats:UniversalQuantificationDefinition a rdfcv:SimpleConstraint .
-lovstats:MinimumUnqualifiedCardinalityDefinition a rdfcv:SimpleConstraint .
-lovstats:MinimumQualifiedCardinalityDefinition a rdfcv:SimpleConstraint .
-lovstats:MaximumUnqualifiedCardinalityDefinition a rdfcv:SimpleConstraint .
-lovstats:MaximumQualifiedCardinalityDefinition a rdfcv:SimpleConstraint .
-lovstats:AsymmetricPropertiesDefinition a rdfcv:SimpleConstraint .
-lovstats:IrreflexivePropertiesDefinition a rdfcv:SimpleConstraint .
-lovstats:DisjointPropertiesDefinition a rdfcv:SimpleConstraint .
-lovstats:DisjointClassesDefinition a rdfcv:SimpleConstraint .
+lrd:FunctionalPropertiesDefinition a rdfcv:SimpleConstraint .
+lrd:InverseFunctionalPropertiesDefinition a rdfcv:SimpleConstraint .
+lrd:SubsumptionDefinition a rdfcv:SimpleConstraint .
+lrd:PropertyDomainsDefinition a rdfcv:SimpleConstraint .
+lrd:PropertyRangesDefinition a rdfcv:SimpleConstraint .
+lrd:LiteralPatternMatchingDefinition a rdfcv:SimpleConstraint .
+lrd:UniversalQuantificationDefinition a rdfcv:SimpleConstraint .
+lrd:MinimumUnqualifiedCardinalityDefinition a rdfcv:SimpleConstraint .
+lrd:MinimumQualifiedCardinalityDefinition a rdfcv:SimpleConstraint .
+lrd:MaximumUnqualifiedCardinalityDefinition a rdfcv:SimpleConstraint .
+lrd:MaximumQualifiedCardinalityDefinition a rdfcv:SimpleConstraint .
+lrd:AsymmetricPropertiesDefinition a rdfcv:SimpleConstraint .
+lrd:IrreflexivePropertiesDefinition a rdfcv:SimpleConstraint .
+lrd:DisjointPropertiesDefinition a rdfcv:SimpleConstraint .
+lrd:DisjointClassesDefinition a rdfcv:SimpleConstraint .
 
 #
 # Definitions of Restriction Types
 #
 
-lovstats:functionalProperties a lovc:RestrictionType ;
-    lovc:hasRestrictionTypeDefinition lovstats:FunctionalPropertiesDefinition ;
+lrd:functionalProperties a lovc:RestrictionType ;
+    lovc:hasRestrictionTypeDefinition lrd:FunctionalPropertiesDefinition ;
     rdfs:isDefinedBy <https://publikationen.bibliothek.kit.edu/1000054062> ;
     rdfs:comment """"""@en ;
     rdfs:label "Functional properties restriction type"@en .
 
-lovstats:inverseFunctionalProperties a lovc:RestrictionType ;
-    lovc:hasRestrictionTypeDefinition lovstats:InverseFunctionalPropertiesDefinition ;
+lrd:inverseFunctionalProperties a lovc:RestrictionType ;
+    lovc:hasRestrictionTypeDefinition lrd:InverseFunctionalPropertiesDefinition ;
     rdfs:isDefinedBy <https://publikationen.bibliothek.kit.edu/1000054062> ;
     rdfs:comment """"""@en ;
     rdfs:label "Inverse functional properties restriction type"@en .
 
-lovstats:subsumption a lovc:RestrictionType ;
-    lovc:hasRestrictionTypeDefinition lovstats:SubsumptionDefinition ;
+lrd:subsumption a lovc:RestrictionType ;
+    lovc:hasRestrictionTypeDefinition lrd:SubsumptionDefinition ;
     rdfs:isDefinedBy <https://publikationen.bibliothek.kit.edu/1000054062> ;
     rdfs:comment """"""@en ;
     rdfs:label "Subsumption restriction type"@en .
 
-lovstats:propertyDomains a lovc:RestrictionType ;
-    lovc:hasRestrictionTypeDefinition lovstats:PropertyDomainsDefinition ;
+lrd:propertyDomains a lovc:RestrictionType ;
+    lovc:hasRestrictionTypeDefinition lrd:PropertyDomainsDefinition ;
     rdfs:isDefinedBy <https://publikationen.bibliothek.kit.edu/1000054062> ;
     rdfs:comment """"""@en ;
     rdfs:label "Property domains restriction type"@en .
 
-lovstats:propertyRanges a lovc:RestrictionType ;
-    lovc:hasRestrictionTypeDefinition lovstats:PropertyRangesDefinition ;
+lrd:propertyRanges a lovc:RestrictionType ;
+    lovc:hasRestrictionTypeDefinition lrd:PropertyRangesDefinition ;
     rdfs:isDefinedBy <https://publikationen.bibliothek.kit.edu/1000054062> ;
     rdfs:comment """"""@en ;
     rdfs:label "Property ranges restriction type"@en .
 
-lovstats:literalPatternMatching a lovc:RestrictionType ;
-    lovc:hasRestrictionTypeDefinition lovstats:LiteralPatternMatchingDefinition ;
+lrd:literalPatternMatching a lovc:RestrictionType ;
+    lovc:hasRestrictionTypeDefinition lrd:LiteralPatternMatchingDefinition ;
     rdfs:isDefinedBy <https://publikationen.bibliothek.kit.edu/1000054062> ;
     rdfs:comment """"""@en ;
     rdfs:label "Literal pattern matching restriction type"@en .
 
-lovstats:universalQuantification a lovc:RestrictionType ;
-    lovc:hasRestrictionTypeDefinition lovstats:UniversalQuantificationDefinition ;
+lrd:universalQuantification a lovc:RestrictionType ;
+    lovc:hasRestrictionTypeDefinition lrd:UniversalQuantificationDefinition ;
     rdfs:isDefinedBy <https://publikationen.bibliothek.kit.edu/1000054062> ;
     rdfs:comment """"""@en ;
     rdfs:label "Universal quantification restriction type"@en .
 
-lovstats:minimumUnqualifiedCardinality a lovc:RestrictionType ;
-    lovc:hasRestrictionTypeDefinition lovstats:MinimumUnqualifiedCardinalityDefinition ;
+lrd:minimumUnqualifiedCardinality a lovc:RestrictionType ;
+    lovc:hasRestrictionTypeDefinition lrd:MinimumUnqualifiedCardinalityDefinition ;
     rdfs:isDefinedBy <https://publikationen.bibliothek.kit.edu/1000054062> ;
     rdfs:comment """Minimum unqualified cardinality restriction type"""@en ;
     rdfs:label ""@en .
 
-lovstats:minimumQualifiedCardinality a lovc:RestrictionType ;
-    lovc:hasRestrictionTypeDefinition lovstats:MinimumQualifiedCardinalityDefinition ;
+lrd:minimumQualifiedCardinality a lovc:RestrictionType ;
+    lovc:hasRestrictionTypeDefinition lrd:MinimumQualifiedCardinalityDefinition ;
     rdfs:isDefinedBy <https://publikationen.bibliothek.kit.edu/1000054062> ;
     rdfs:comment """"""@en ;
     rdfs:label "Minimum qualified cardinality restriction type"@en .
 
-lovstats:maximumUnqualifiedCardinality a lovc:RestrictionType ;
-    lovc:hasRestrictionTypeDefinition lovstats:MaximumUnqualifiedCadrinalityDefinition ;
+lrd:maximumUnqualifiedCardinality a lovc:RestrictionType ;
+    lovc:hasRestrictionTypeDefinition lrd:MaximumUnqualifiedCadrinalityDefinition ;
     rdfs:isDefinedBy <https://publikationen.bibliothek.kit.edu/1000054062> ;
     rdfs:comment """"""@en ;
     rdfs:label "Maximum unqualified cardinality restriction type"@en .
 
-lovstats:maximumQualifiedCardinality a lovc:RestrictionType ;
-    lovc:hasRestrictionTypeDefinition lovstats:MaximumQualifiedCardinalityDefinition ;
+lrd:maximumQualifiedCardinality a lovc:RestrictionType ;
+    lovc:hasRestrictionTypeDefinition lrd:MaximumQualifiedCardinalityDefinition ;
     rdfs:isDefinedBy <https://publikationen.bibliothek.kit.edu/1000054062> ;
     rdfs:comment """"""@en ;
     rdfs:label "Maximum qualified cardinality restriction type"@en .
 
-lovstats:asymmetricProperties a lovc:RestrictionType ;
-    lovc:hasRestrictionTypeDefinition lovstats:AsymmetricPropertiesDefinition ;
+lrd:asymmetricProperties a lovc:RestrictionType ;
+    lovc:hasRestrictionTypeDefinition lrd:AsymmetricPropertiesDefinition ;
     rdfs:isDefinedBy <https://publikationen.bibliothek.kit.edu/1000054062> ;
     rdfs:comment """"""@en ;
     rdfs:label "Asymmetric properties restriction type"@en .
 
-lovstats:irreflexiveProperties a lovc:RestrictionType ;
-    lovc:hasRestrictionTypeDefinition lovstats:IrreflexivePropertiesDefinition ;
+lrd:irreflexiveProperties a lovc:RestrictionType ;
+    lovc:hasRestrictionTypeDefinition lrd:IrreflexivePropertiesDefinition ;
     rdfs:isDefinedBy <https://publikationen.bibliothek.kit.edu/1000054062> ;
     rdfs:comment """"""@en ;
     rdfs:label "Irreflexive properties restriction type"@en .
 
-lovstats:disjointProperties a lovc:RestrictionType ;
-    lovc:hasRestrictionTypeDefinition lovstats:DisjointPropertiesDefinition ;
+lrd:disjointProperties a lovc:RestrictionType ;
+    lovc:hasRestrictionTypeDefinition lrd:DisjointPropertiesDefinition ;
     rdfs:isDefinedBy <https://publikationen.bibliothek.kit.edu/1000054062> ;
     rdfs:comment """"""@en ;
     rdfs:label "Disjoint properties restriction type"@en .
 
-lovstats:disjointClasses a lovc:RestrictionType ;
-    lovc:hasRestrictionTypeDefinition lovstats:DisjointClassesDefinition ;
+lrd:disjointClasses a lovc:RestrictionType ;
+    lovc:hasRestrictionTypeDefinition lrd:DisjointClassesDefinition ;
     rdfs:isDefinedBy <https://publikationen.bibliothek.kit.edu/1000054062> ;
     rdfs:comment """"""@en ;
     rdfs:label "Disjoint classes restriction type"@en .
@@ -128,272 +128,318 @@ lovstats:disjointClasses a lovc:RestrictionType ;
 # Definitions of Restriction Types Expressions
 #
 
-lovstats:functionalPropertiesOwlFunctionalProperty a lovc:RestrictionTypeExpression ;
+lrd:functionalPropertiesOwlFunctionalProperty a lovc:RestrictionTypeExpression ;
     rdfs:comment """A functional properties restriction, expressed using the owl:FunctionalProperty property."""@en ;
-    frbr:realizationOf lovstats:functionalProperty ;
+    frbr:realizationOf lrd:functionalProperty ;
     rdfs:label "owl:FunctionalProperty"@en .
 
-lovstats:inverseFunctionalPropertiesOwlInverseFunctionalProperty a lovc:RestrictionTypeExpression ;
+lrd:inverseFunctionalPropertiesOwlInverseFunctionalProperty a lovc:RestrictionTypeExpression ;
     rdfs:comment """An inverse functional properties restriction, expressed using the owl:InverseFunctionalProperty property."""@en ;
-    frbr:realizationOf lovstats:inverseFunctionalProperty ;
+    frbr:realizationOf lrd:inverseFunctionalProperty ;
     rdfs:label "owl:InverseFunctionalProperty"@en .
 
-lovstats:subsumptionRdfsSubClassOf a lovc:RestrictionTypeExpression ;
+lrd:subsumptionRdfsSubClassOf a lovc:RestrictionTypeExpression ;
     rdfs:comment """A subsumption restriction, expressed using the rdfs:subClassOf property."""@en ;
-    frbr:realizationOf lovstats:subsumption ;
+    frbr:realizationOf lrd:subsumption ;
     rdfs:label "rdfs:subClassOf restriction"@en .
 
-lovstats:propertyDomainsRdfsDomain a lovc:RestrictionTypeExpression ;
+lrd:propertyDomainsRdfsDomain a lovc:RestrictionTypeExpression ;
     rdfs:comment """A property domains restriction, expressed using the rdfs:domain property."""@en ;
-    frbr:realizationOf lovstats:propertyDomains ;
+    frbr:realizationOf lrd:propertyDomains ;
     rdfs:label "rdfs:domain restriction"@en .
 
-lovstats:propertyRangesRdfsRange a lovc:RestrictionTypeExpression ;
+lrd:propertyRangesRdfsRange a lovc:RestrictionTypeExpression ;
     rdfs:comment """A property ranges restriction, expressed using the rdfs:range property."""@en ;
-    frbr:realizationOf lovstats:propertyRanges ;
+    frbr:realizationOf lrd:propertyRanges ;
     rdfs:label "rdfs:range restriction"@en .
 
-lovstats:literalPatternMatchingXsdPatternOwlRestriction a lovc:RestrictionTypeExpression ;
+lrd:literalPatternMatchingXsdPatternOwlRestriction a lovc:RestrictionTypeExpression ;
     rdfs:comment """A literal pattern matching restriction, expressed using the owl:withRestrictions property and a defined xsd:pattern."""@en ;
-    frbr:realizationOf lovstats:literalPatternMatching ;
+    frbr:realizationOf lrd:literalPatternMatching ;
     rdfs:label "owl:withRestrictions on xsd:pattern restriction"@en .
 
-lovstats:universalQuantificationOwlAllValuesFrom a lovc:RestrictionTypeExpression ;
+lrd:universalQuantificationOwlAllValuesFrom a lovc:RestrictionTypeExpression ;
     rdfs:comment """An universal quantification restriction, expressed using the owl:allValuesFrom property."""@en ;
-    frbr:realizationOf lovstats:univeralQuantification ;
+    frbr:realizationOf lrd:univeralQuantification ;
     rdfs:label "owl:allValuesFrom restriction"@en .
 
-lovstats:minimumUnqualifiedCardinalityOwlMinCardinality a lovc:RestrictionTypeExpression ;
+lrd:minimumUnqualifiedCardinalityOwlMinCardinality a lovc:RestrictionTypeExpression ;
     rdfs:comment """A minimum unqualified cardinality restriction, expressed using the owl:minCardinality property."""@en ;
     rdfs:label "owl:minCardinality restriction"@en .
 
-lovstats:minimumQualifiedCardinalityOwl a lovc:RestrictionTypeExpression ;
+lrd:minimumQualifiedCardinalityOwl a lovc:RestrictionTypeExpression ;
     rdfs:comment """A minimum qualified cardinality restriction, expressed using the owl:minQualifiedCardinality property."""@en ;
-    frbr:realizationOf lovstats:minimumQualifiedCardinality ;
+    frbr:realizationOf lrd:minimumQualifiedCardinality ;
     rdfs:label "owl:minQualifiedCardinality restriction"@en .
 
-lovstats:maximumUnqualifiedCardinalityOwlMaxCardinality a lovc:RestrictionTypeExpression ;
+lrd:maximumUnqualifiedCardinalityOwlMaxCardinality a lovc:RestrictionTypeExpression ;
     rdfs:comment """A maximum unqualified cardinality restriction, expressed using the owl:maxCardinality property."""@en ;
     rdfs:label "owl:maxCardinality restriction"@en .
 
-lovstats:maximumQualifiedCardinalityOwl a lovc:RestrictionTypeExpression ;
+lrd:maximumQualifiedCardinalityOwl a lovc:RestrictionTypeExpression ;
     rdfs:comment """A maximum qualified cardinality restriction, expressed using the owl:maxQualifiedCardinality property."""@en ;
-    frbr:realizationOf lovstats:maximumQualifiedCardinality ;
+    frbr:realizationOf lrd:maximumQualifiedCardinality ;
     rdfs:label "owl:maxQualifiedCardinality restriction"@en .
 
-lovstats:asymmetricPropertiesOwlAsymmetricProperty a lovc:RestrictionTypeExpression ;
+lrd:asymmetricPropertiesOwlAsymmetricProperty a lovc:RestrictionTypeExpression ;
     rdfs:comment """An asymmetric properties restriction, expressed using the owl:asymmetricProperty property."""@en ;
-    frbr:realizationOf lovstats:asymmetricProperties ;
+    frbr:realizationOf lrd:asymmetricProperties ;
     rdfs:label "owl:asymmetricProperty restriction"@en .
 
-lovstats:irreflexivePropertiesOwlIrreflexiveProperty a lovc:RestrictionTypeExpression ;
+lrd:irreflexivePropertiesOwlIrreflexiveProperty a lovc:RestrictionTypeExpression ;
     rdfs:comment """An irreflexive properties restriction, expressed using the owl:irreflexiveProperty property."""@en ;
-    frbr:realizationOf lovstats:irreflexiveProperties ;
+    frbr:realizationOf lrd:irreflexiveProperties ;
     rdfs:label "owl:irreflexiveProperty restriction"@en .
 
-lovstats:disjointPropertiesOwlDisjointWith a lovc:RestrictionTypeExpression ;
+lrd:disjointPropertiesOwlDisjointWith a lovc:RestrictionTypeExpression ;
     rdfs:comment """A disjoint properties restriction, expressed using the owl:propertyDisjointWith property."""@en ;
-    frbr:realizationOf lovstats:disjointProperties ;
+    frbr:realizationOf lrd:disjointProperties ;
     rdfs:label "owl:propertyDisjointWith restriction"@en .
 
-lovstats:disjointClassesOwlDisjointWith a lovc:RestrictionTypeExpression ;
+lrd:disjointClassesOwlDisjointWith a lovc:RestrictionTypeExpression ;
     rdfs:comment """A disjoint classes restriction, expressed using the owl:disjointWith property."""@en ;
-    frbr:realizationOf lovstats:disjointClasses ;
+    frbr:realizationOf lrd:disjointClasses ;
     rdfs:label "owl:disjointWith restriction"@en .
 
-lovstats:disjointClassesOwlAllDisjointClasses a lovc:RestrictionTypeExpression ;
+lrd:disjointClassesOwlAllDisjointClasses a lovc:RestrictionTypeExpression ;
     rdfs:comment """A disjoint classes restriction, expressed using the owl:AllDisjointClasses class."""@en ;
-    frbr:realizationOf lovstats:disjointClasses ;
+    frbr:realizationOf lrd:disjointClasses ;
     rdfs:label "owl:AllDisjointClasses restriction"@en .
+#
+# Definitions of Restriction Types Detectors
+#
+
+lrd:functionalPropertiesDetectorOwlFunctionalProperty a lovc:RestrictionTypeExpressionDetector ;
+    rdfs:comment """A method or software component to detect owl:FunctionalProperties restrictions."""@en ;
+    rdfs:label "owl:FunctionalProperty detector"@en .
+
+lrd:functionalPropertiesDetectorOwlFunctionalProperty-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
+    rdfs:label "owl:FunctionalProperty detector v1"@en .
+    frbr:realizationOf lrd:functionalPropertiesDetectorOwlFunctionalProperty .
+
+
+lrd:inverseFunctionalPropertiesDetectorOwlInverseFunctionalProperty a lovc:RestrictionTypeExpressionDetector ;
+    rdfs:comment """A method or software component to detect owl:InverseProperty restrictions."""@en ;
+    rdfs:label "owl:InverseFunctionalProperty detector"@en .
+
+lrd:inverseFunctionalPropertiesDetectorOwlInverseFunctionalProperty-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
+    rdfs:label "owl:InverseFunctionalProperty detector v1"@en .
+    frbr:realizationOf lrd:inverseFunctionalPropertiesDetectorOwlInverseFunctionalProperty .
+
+
+lrd:subsumptionDetectorRdfsSubClassOf a lovc:RestrictionTypeExpressionDetector ;
+    rdfs:comment """A method or software component to detect rdfs:subClassOf restrictions."""@en ;
+    rdfs:label "rdfs:subClassOf detector"@en .
+
+lrd:subsumptionDetectorRdfsSubClassOf-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
+    rdfs:label "rdfs:subClassOf detector v1"@en .
+    frbr:realizationOflrd:subsumptionDetectorRdfsSubClassOf .
+
+
+lrd:propertyDomainsDetectorRdfsDomain a lovc:RestrictionTypeExpressionDetector ;
+    rdfs:comment """A method or software component to detect rdfs:domain restrictions."""@en ;
+    rdfs:label "rdfs:domain detector"@en .
+
+lrd:propertyDomainsDetectorRdfsDomain-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
+    rdfs:label "rdfs:domain detector v1"@en .
+    frbr:realizationOf lrd:propertyDomainsDetectorRdfsDomain .
+
+
+lrd:propertyRangesDetetorRdfRange a lovc:RestrictionTypeExpressionDetector ;
+    rdfs:comment """A method or software component to detect rdfs:range restrictions."""@en ;
+    rdfs:label "rdfs:range detector"@en .
+
+lrd:propertyRangesDetectorRdfRange-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
+    rdfs:label "rdfs:range detector v1"@en .
+    frbr:realizationOf lrd:propertyRangesDetetorRdfRange .
+
+
+lrd:literalPatternMatchingDetectorXsdPatternOwlRestriction a lovc:RestrictionTypeExpressionDetector ;
+    rdfs:comment """A method or software component to detect owl:withRestrictions, xsd:pattern restrictions."""@en ;
+    rdfs:label "owl:withRestrictions, xsd:pattern detector"@en .
+
+lrd:literalPatternMatchingDetectorXsdPatternOwlRestriction-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
+    rdfs:label "owl:withRestrictions, xsd:pattern detector v1"@en .
+    frbr:realizationOf lrd:literalPatternMatchingDetectorXsdPatternOwlRestriction .
+
+
+lrd:universalQuantificationDetectorOwlAllValuesFrom a lovc:RestrictionTypeExpressionDetector ;
+    rdfs:comment """A method or software component to detect owl:allValuesFrom restrictions."""@en ;
+    rdfs:label "owl:allValuesFrom detector"@en .
+
+lrd:universalQuantificationDetectorOwlAllValuesFrom-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
+    rdfs:label "owl:allValuesFrom detector v1"@en .
+    frbr:realizationOf lrd:universalQuantificationDetectorOwlAllValuesFrom .
+
+
+lrd:minimumUnqualifiedCardinalityDetectorOwlMinCardinality a lovc:RestrictionTypeExpressionDetector ;
+    rdfs:comment """A method or software component to detect owl:minCardinality restrictions."""@en ;
+    rdfs:label "owl:minCardinality detector"@en .
+
+lrd:minimumUnqualifiedCardinalityDetectorOwlMinCardinality-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
+    rdfs:label "owl:minCardinality detector v1"@en .
+    frbr:realizationOf lrd:minimumUnqualifiedCardinalityDetectorOwlMinCardinality .
+
+
+lrd:minimumQualifiedCardinalityDetectorOwl a lovc:RestrictionTypeExpressionDetector ;
+    rdfs:comment """A method or software component to detect owl:minQualifiedCardinality restrictions."""@en ;
+    rdfs:label "owl:minQualifiedCardinality detector"@en .
+
+lrd:minimumQualifiedCardinalityDetectorOwl-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
+    rdfs:label "owl:minQualifiedCardinality detector v1"@en .
+    frbr:realizationOf lrd:minimumQualifiedCardinalityDetectorOwl .
+
+
+lrd:maximumUnqualifiedCardinalityDetectorOwlMaxCardinality a lovc:RestrictionTypeExpressionDetector ;
+    rdfs:comment """A method or software component to detect owl:maxCardinality restrictions."""@en ;
+    rdfs:label "owl:maxCardinality detector"@en .
+
+lrd:maximumUnqualifiedCardinalityDetectorOwlMaxCardinality-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
+    rdfs:label "owl:maxCardinality detector v1"@en .
+    frbr:realizationOf lrd:maximumUnqualifiedCardinalityDetectorOwlMaxCardinality .
+
+
+lrd:maximumQualifiedCardinalityDetectorOwl a lovc:RestrictionTypeExpressionDetector ;
+    rdfs:comment """A method or software component to detect owl:maxQualifiedCardinality restrictions."""@en ;
+    rdfs:label "owl:maxQualifiedCardinality detector"@en .
+
+lrd:maximumQualifiedCardinalityDetectorOwl-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
+    rdfs:label "owl:maxQualifiedCardinality detector v1"@en .
+    frbr:realizationOf lrd:maximumQualifiedCardinalityDetectorOwl .
+
+
+lrd:asymmetricPropertiesDetectorOwlAsymmetricProperty a lovc:RestrictionTypeExpressionDetector ;
+    rdfs:comment """A method or software component to detect owl:AsymmetricProperty restrictions."""@en ;
+    rdfs:label "owl:AsymmetricProperty detector"@en .
+
+lrd:asymmetricPropertiesDetectorOwlAsymmetricProperty-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
+    rdfs:label "owl:AsymmetricProperty detector v1"@en .
+    frbr:realizationOf lrd:asymmetricPropertiesDetectorOwlAsymmetricProperty .
+
+
+lrd:irreflexivePropertiesDetectorOwlIrreflexiveProperty a lovc:RestrictionTypeExpressionDetector ;
+    rdfs:comment """A method or software component to detect owl:IrreflexiveProperty restrictions."""@en ;
+    rdfs:label "owl:IrreflexiveProperty detector"@en .
+
+lrd:irreflexivePropertiesDetectorOwlIrreflexiveProperty-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
+    rdfs:label "owl:IrreflexiveProperty detector v1"@en .
+    frbr:realizationOf lrd:irreflexivePropertiesDetectorOwlIrreflexiveProperty .
+
+lrd:disjointPropertiesDetectorOwlDisjointWith a lovc:RestrictionTypeExpressionDetector ;
+    rdfs:comment """A method or software component to detect owl:propertyDisjointWith restrictions."""@en ;
+    rdfs:label "owl:propertyDisjointWith detector"@en .
+
+lrd:disjointPropertiesDetectorOwlDisjointWith-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
+    rdfs:label "owl:propertyDisjointWith detector v1"@en .
+    frbr:realizationOf lrd:disjointPropertiesDetectorOwlDisjointWith .
+
+
+lrd:disjointPropertiesDetectorOwlAllDisjointProperties a lovc:RestrictionTypeExpressionDetector ;
+    rdfs:comment """A method or software component to detect owl:AllDisjointProperties restrictions."""@en ;
+    rdfs:label "owl:AllDisjointProperties detector"@en .
+
+lrd:disjointPropertiesDetectorOwlAllDisjointProperties-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
+    rdfs:label "owl:AllDisjointProperties detector v1"@en .
+    frbr:realizationOf lrd:disjointPropertiesDetectorOwlAllDisjointProperties .
+
+
+lrd:disjointClassesDetectorOwlDisjointWith a lovc:RestrictionTypeExpressionDetector ;
+    rdfs:comment """A method or software component to detect owl:disjointWith restrictions."""@en ;
+    rdfs:label "owl:disjointWith detector"@en .
+
+lrd:disjointClassesDetectorOwlDisjointWith-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
+    rdfs:label "owl:disjointWith detector v1"@en .
+    frbr:realizationOf lrd:disjointClassesDetectorOwlDisjointWith .
+
+
+lrd:disjointClassesDetectorOwlAllDisjointClasses a lovc:RestrictionTypeExpressionDetector ;
+    rdfs:comment """A method or software component to detect owl:AllDisjointClasses restrictions."""@en ;
+    rdfs:label "owl:AllDisjointClasses detector"@en .
+
+lrd:disjointClassesDetectorOwlAllDisjointClasses-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
+    rdfs:label "owl:AllDisjointClasses detector v1"@en .
+    frbr:realizationOf lrd:disjointClassesDetectorOwlAllDisjointClasses .
 
 #
 # Definitions of Restriction Types Metrics
 #
 
-lovstats:occurrence a lovc:RestrictionTypeMetric ;
+lrd:occurrence a lovc:RestrictionTypeMetric ;
     rdfs:comment """The occurrence of a restriction of a certain type"""@en ;
     rdfs:label "Occurrence"@en .
 
-lovstats:amount-hierarchies a lovc:RestrictionTypeMetric ;
-    rdfs:comment """The amount of disjoint hierarchies of IRIs."""@en ;
+lrd:hierarchyOccurrence a lovc:RestrictionTypeMetric ;
+    rdfs:comment """The occurrence of disjoint hierarchies of IRIs."""@en ;
     rdfs:label "Hierarchy amount"@en .
 
-lovstats:min-hierarchy-depth a lovc:RestrictionTypeMetric ;
+lrd:minHierarchyDepth a lovc:RestrictionTypeMetric ;
     rdfs:comment """The smallest hierarchy depth of disjoint hierarchies of IRIs."""@en ;
     rdfs:label "Minimum hierarchy depth"@en .
 
-lovstats:max-hierarchy-depth a lovc:RestrictionTypeMetric ;
+lrd:maxHierarchyDepth a lovc:RestrictionTypeMetric ;
     rdfs:comment """The biggest hierarchy depth of disjoint hierarcheis of IRIs."""@en ;
     rdfs:label "Maximum hierarchy depth"@en .
 
-lovstats:average-hierarchy-depth a lovc:RestrictionTypeMetric ;
+lrd:averageHierarchyDepth a lovc:RestrictionTypeMetric ;
     rdfs:comment """The average hierarchy depth of disjoint hierarchies of IRIs"""@en ;
     rdfs:label "Average hierarchy depth" .
 
-lovstats:median-hierarchy-depth a lovc:RestrictionTypeMetric ;
+lrd:medianHierarchyDepth a lovc:RestrictionTypeMetric ;
     rdfs:comment """The median hierarchy depth of disjoint hierarchies of IRIs"""@en ;
     rdfs:label "Median hierarchy depth"@en .
-
-#
-# Definitions of Restriction Types Detectors
-#
-
-lovstats:functionalPropertiesDetectorOwlFunctionalProperty a lovc:RestrictionTypeExpressionDetector ;
-    rdfs:comment """A method or software component to detect owl:FunctionalProperties restrictions."""@en ;
-    rdfs:label "owl:FunctionalProperty detector"@en .
-
-lovstats:functionalPropertiesDetectorOwlFunctionalProperty-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
-    rdfs:label ""@en ;
-    frbr:realizationOf lovstats:functionalPropertiesDetectorOwlFunctionalProperty .
-
-
-lovstats:inverseFunctionalPropertiesDetectorOwlInverseFunctionalProperty a lovc:RestrictionTypeExpressionDetector ;
-    rdfs:comment """A method or software component to detect owl:InverseProperty restrictions."""@en ;
-    rdfs:label "owl:InverseFunctionalProperty detector"@en .
-
-lovstats:inverseFunctionalPropertiesDetectorOwlInverseFunctionalProperty-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
-    rdfs:label ""@en ;
-    frbr:realizationOf lovstats:inverseFunctionalPropertiesDetectorOwlInverseFunctionalProperty .
-
-
-lovstats:subsumptionDetectorRdfsSubClassOf a lovc:RestrictionTypeExpressionDetector ;
-    rdfs:comment """A method or software component to detect rdfs:subClassOf restrictions."""@en ;
-    rdfs:label "rdfs:subClassOf detector"@en .
-
-lovstats:subsumptionDetectorRdfsSubClassOf-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
-    rdfs:label ""@en ;
-    frbr:realizationOflovstats:subsumptionDetectorRdfsSubClassOf .
-
-
-lovstats:propertyDomainsDetectorRdfsDomain a lovc:RestrictionTypeExpressionDetector ;
-    rdfs:comment """A method or software component to detect rdfs:domain restrictions."""@en ;
-    rdfs:label "rdfs:domain detector"@en .
-
-lovstats:propertyDomainsDetectorRdfsDomain-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
-    rdfs:label ""@en ;
-    frbr:realizationOf lovstats:propertyDomainsDetectorRdfsDomain .
-
-
-lovstats:propertyRangesDetetorRdfRange a lovc:RestrictionTypeExpressionDetector ;
-    rdfs:comment """A method or software component to detect rdfs:range restrictions."""@en ;
-    rdfs:label "rdfs:range detector"@en .
-
-lovstats:propertyRangesDetectorRdfRange-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
-    rdfs:label ""@en ;
-    frbr:realizationOf lovstats:propertyRangesDetetorRdfRange .
-
-
-lovstats:literalPatternMatchingDetectorXsdPatternOwlRestriction a lovc:RestrictionTypeExpressionDetector ;
-    rdfs:comment """A method or software component to detect owl:withRestrictions, xsd:pattern restrictions."""@en ;
-    rdfs:label "owl:withRestrictions, xsd:pattern detector"@en .
-
-lovstats:literalPatternMatchingDetectorXsdPatternOwlRestriction-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
-    rdfs:label ""@en ;
-    frbr:realizationOf lovstats:literalPatternMatchingDetectorXsdPatternOwlRestriction .
-
-
-lovstats:universalQuantificationDetectorOwlAllValuesFrom a lovc:RestrictionTypeExpressionDetector ;
-    rdfs:comment """A method or software component to detect owl:allValuesFrom restrictions."""@en ;
-    rdfs:label "owl:allValuesFrom detector"@en .
-
-lovstats:universalQuantificationDetectorOwlAllValuesFrom-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
-    rdfs:label ""@en ;
-    frbr:realizationOf lovstats:universalQuantificationDetectorOwlAllValuesFrom .
-
-
-lovstats:minimumUnqualifiedCardinalityDetectorOwlMinCardinality a lovc:RestrictionTypeExpressionDetector ;
-    rdfs:comment """A method or software component to detect owl:minCardinality restrictions."""@en ;
-    rdfs:label "owl:minCardinality detector"@en .
-
-lovstats:minimumUnqualifiedCardinalityDetectorOwlMinCardinality-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
-    rdfs:label ""@en ;
-    frbr:realizationOf lovstats:minimumUnqualifiedCardinalityDetectorOwlMinCardinality .
-
-
-lovstats:minimumQualifiedCardinalityDetectorOwl a lovc:RestrictionTypeExpressionDetector ;
-    rdfs:comment """A method or software component to detect owl:minQualifiedCardinality restrictions."""@en ;
-    rdfs:label "owl:minQualifiedCardinality detector"@en .
-
-lovstats:minimumQualifiedCardinalityDetectorOwl-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
-    rdfs:label ""@en ;
-    frbr:realizationOf lovstats:minimumQualifiedCardinalityDetectorOwl .
-
-
-lovstats:maximumUnqualifiedCardinalityDetectorOwlMaxCardinality a lovc:RestrictionTypeExpressionDetector ;
-    rdfs:comment """A method or software component to detect owl:maxCardinality restrictions."""@en ;
-    rdfs:label "owl:maxCardinality detector"@en .
-
-lovstats:maximumUnqualifiedCardinalityDetectorOwlMaxCardinality-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
-    rdfs:label ""@en ;
-    frbr:realizationOf lovstats:maximumUnqualifiedCardinalityDetectorOwlMaxCardinality .
-
-
-lovstats:maximumQualifiedCardinalityDetectorOwl a lovc:RestrictionTypeExpressionDetector ;
-    rdfs:comment """A method or software component to detect owl:maxQualifiedCardinality restrictions."""@en ;
-    rdfs:label "owl:maxQualifiedCardinality detector"@en .
-
-lovstats:maximumQualifiedCardinalityDetectorOwl-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
-    rdfs:label ""@en ;
-    frbr:realizationOf lovstats:maximumQualifiedCardinalityDetectorOwl .
-
-
-lovstats:asymmetricPropertiesDetectorOwlAsymmetricProperty a lovc:RestrictionTypeExpressionDetector ;
-    rdfs:comment """A method or software component to detect owl:AsymmetricProperty restrictions."""@en ;
-    rdfs:label "owl:AsymmetricProperty detector"@en .
-
-lovstats:asymmetricPropertiesDetectorOwlAsymmetricProperty-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
-    rdfs:label ""@en ;
-    frbr:realizationOf lovstats:asymmetricPropertiesDetectorOwlAsymmetricProperty .
-
-
-lovstats:irreflexivePropertiesDetectorOwlIrreflexiveProperty a lovc:RestrictionTypeExpressionDetector ;
-    rdfs:comment """A method or software component to detect owl:IrreflexiveProperty restrictions."""@en ;
-    rdfs:label "owl:IrreflexiveProperty detector"@en .
-
-lovstats:irreflexivePropertiesDetectorOwlIrreflexiveProperty-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
-    rdfs:label ""@en ;
-    frbr:realizationOf lovstats:irreflexivePropertiesDetectorOwlIrreflexiveProperty .
-
-lovstats:disjointPropertiesDetectorOwlDisjointWith a lovc:RestrictionTypeExpressionDetector ;
-    rdfs:comment """A method or software component to detect owl:propertyDisjointWith restrictions."""@en ;
-    rdfs:label "owl:propertyDisjointWith detector"@en .
-
-lovstats:disjointPropertiesDetectorOwlDisjointWith-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
-    rdfs:label ""@en 
-    frbr:realizationOf lovstats:disjointPropertiesDetectorOwlDisjointWith .
-
-
-lovstats:disjointPropertiesDetectorOwlAllDisjointProperties a lovc:RestrictionTypeExpressionDetector ;
-    rdfs:comment """A method or software component to detect owl:AllDisjointProperties restrictions."""@en ;
-    rdfs:label "owl:AllDisjointProperties detector"@en .
-
-lovstats:disjointPropertiesDetectorOwlAllDisjointProperties-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
-    rdfs:label ""@en 
-    frbr:realizationOf lovstats:disjointPropertiesDetectorOwlAllDisjointProperties .
-
-
-lovstats:disjointClassesDetectorOwlDisjointWith a lovc:RestrictionTypeExpressionDetector ;
-    rdfs:comment """A method or software component to detect owl:disjointWith restrictions."""@en ;
-    rdfs:label "owl:disjointWith detector"@en .
-
-lovstats:disjointClassesDetectorOwlDisjointWith-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
-    rdfs:label ""@en ;
-    frbr:realizationOf lovstats:disjointClassesDetectorOwlDisjointWith .
-
-
-lovstats:disjointClassesDetectorOwlAllDisjointClasses a lovc:RestrictionTypeExpressionDetector ;
-    rdfs:comment """A method or software component to detect owl:AllDisjointClasses restrictions."""@en ;
-    rdfs:label "owl:AllDisjointClasses detector"@en .
-
-lovstats:disjointClassesDetectorOwlAllDisjointClasses-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
-    rdfs:label ""@en ;
-    frbr:realizationOf lovstats:disjointClassesDetectorOwlAllDisjointClasses .
-
 
 #
 # Definitions of Restriction Types Detector Implementations
 #
 
-lovstats:LODStatsModule a lovc:RestrictionTypeExpressionDetectorImplementation .
+lrd:lodstatsExtension a lovc:RestrictionTypeExpressionDetectorImplementation ;
+    rdfs:label "LODStats extension"@en ;
+    rdfs:comment "An extension of the python tool LODStats."@en ;
 
+#
+# Definitions of Dimensions
+#
+
+lrd:implementationDimension a qb:DimensionProperty, rdf:Property ;
+    rdfs:label "Implementation dimension"@en ;
+    rdfs:comment "The implementation used to collect the observation"@en ;
+    rdfs:domain qb:Observation ;
+    rdfs:range lovc:RestrictionTypeExpressionDetectorImplementation .
+
+lrd:restrictionTypeDimension a qb:DimensionProperty, rdf:Property ;
+    rdfs:label "Restriction type dimension"@en ;
+    rdfs:comment "The restriction type of this observation"@en ;
+    rdfs:domain qb:Observation ;
+    rdfs:range lovc:RestrictionType .
+
+lrd:detectorVersionDimension a qb:DimensionProperty, rdf:Property ;
+  rdfs:label "Detector version dimension"@en ;
+  rdfs:comment "The specific detector used to collect the observation"@en ;
+  rdfs:domain qb:Observation ;
+  rdfs:range lovc:RestrictionTypeExpressionDetectorVersion .
+
+#
 # Definitions of Data Structures
+#
+lrd:datasetStructure a qb:DataStructureDefinition ;
+
+    # dimensions
+    qb:component
+      [ a qb:ComponentSpecification ; qb:dimension lrd:implementationDimension ; ] ;
+      [ a qb:ComponentSpecification ; qb:dimension lrd:restrictionTypeDimension ;] ;
+      [ a qb:ComponentSpecification ; qb:dimension lrd:detectorVersionDimension ;] ;
+
+    # measures
+    qb:component
+      [ a qb:ComponentSpecification ; qb:measure lrd:occurrence ; ] ;
+      [ a qb:ComponentSpecification ; qb:measure lrd:hierarchyOccurrence ; ] ;
+      [ a qb:ComponentSpecification ; qb:measure lrd:maxHierarchyDepth ; ] ;
+      [ a qb:ComponentSpecification ; qb:measure lrd:minHierarchyDepth ; ] ;
+      [ a qb:ComponentSpecification ; qb:measure lrd:averageHierarchyDepth ; ] ;
+      [ a qb:ComponentSpecification ; qb:measure lrd:medianHierarchyDepth ; ] ;
+
+    # attributes
+    qb:component
+      [ a qb:ComponentSpecification ; qb:attribute sdmx-attribute:unitMeasure ; ] .
+   
+
