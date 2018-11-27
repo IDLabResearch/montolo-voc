@@ -5,8 +5,8 @@ According to UPON-light, one taxonomy is made per kind (so we have one table for
 | Concept                 | 1st Specialization     | 2nd Specialization        | 3rd Specialization         | 4th Specialization         | Suggested By | Updated by |
 |-------------------------|------------------------|---------------------------|----------------------------|----------------------------|--------------|------------|
 | rdfcv:SimpleConstraint  | RestrictionDefinition  | | | | @slieber | @slieber |
-| prov:Entity             | RestrictionType        | | | | @slieber | @slieber |
-| qb:DimensionProperty, prov:Entity | RestrictionTypeExpression | | | | @slieber | @slieber |
+| prov:Entity, frbr:Work  | RestrictionType        | | | | @slieber | @slieber |
+| qb:DimensionProperty, prov:Entity, frbr:Expression | RestrictionTypeExpression | | | | @slieber | @slieber |
 | qb:MeasureProperty, prov:Entity | RestrictionTypeMetric | | | | @slieber | @slieber |
 | frbr:Work, prov:Entity | RestrictionTypeDetector | | | | @slieber | @slieber |
 | frbr:Expression, qb:MeasureProperty, prov:Entity | RestrictionTypeDetectorVersion | | | | @slieber | @slieber |
