@@ -24,3 +24,4 @@ According to UPON-light, one taxonomy is made per kind (so we have one table for
 | Concept                 | 1st Specialization     | 2nd Specialization        | 3rd Specialization         | 4th Specialization         | Suggested By | Updated by |
 |-------------------------|------------------------|---------------------------|----------------------------|----------------------------|--------------|------------|
 | hasRestrictionTypeDefinition | | | | | @slieber | @slieber |
+| detectsRestrictionTypeExpression | | | | | @slieber | @slieber |
