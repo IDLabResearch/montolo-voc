@@ -10,7 +10,6 @@ According to UPON-light, one taxonomy is made per kind (so we have one table for
 | qb:MeasureProperty, prov:Entity | RestrictionTypeMeasure | | | | @slieber | @slieber |
 | frbr:Work, prov:Entity | RestrictionTypeDetector | | | | @slieber | @slieber |
 | frbr:Expression, qb:MeasureProperty, prov:Entity | RestrictionTypeDetectorVersion | | | | @slieber | @slieber |
-| qb:MeasureProperty, prov:Entity | RestrictionTypeDetectorImplementation | | | | @slieber | @slieber |
 | qb:Observation, prov:Entity | RestrictionTypeStatistic | | | | @slieber | @slieber |
 | qb:DataSet, prov:Entity | Dataset | | | | @slieber | @slieber |
 | qb:DataStructureDefinition | DataStructureDefinition | | | | @slieber | @slieber |
