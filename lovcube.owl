@@ -20,6 +20,10 @@
                               rdfs:domain :RestrictionType ;
                               rdfs:range :RestrictionTypeDefinitionVersion .
 
+###  https://w3id.org/lovcube/ns/lovcube#detectsRestrictionTypeExpression
+:detectsRestrictionTypeExpression rdf:type owl:ObjectProperty ;
+                              rdfs:domain :RestrictionTypeDetector ;
+                              rdfs:range :RestrictionTypeExpression .
 
 #################################################################
 #    Classes
