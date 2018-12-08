@@ -21,6 +21,7 @@ lrd:SubsumptionDefinition a rdfcv:SimpleConstraint .
 lrd:PropertyDomainsDefinition a rdfcv:SimpleConstraint .
 lrd:PropertyRangesDefinition a rdfcv:SimpleConstraint .
 lrd:LiteralPatternMatchingDefinition a rdfcv:SimpleConstraint .
+lrd:LiteralPatternRangesDefinition a rdfcv:SimpleConstraint .
 lrd:UniversalQuantificationDefinition a rdfcv:SimpleConstraint .
 lrd:MinimumUnqualifiedCardinalityDefinition a rdfcv:SimpleConstraint .
 lrd:MinimumQualifiedCardinalityDefinition a rdfcv:SimpleConstraint .
@@ -72,6 +73,13 @@ lrd:literalPatternMatching a lovc:RestrictionType ;
     rdfs:isDefinedBy <https://publikationen.bibliothek.kit.edu/1000054062> ;
     rdfs:comment """"""@en ;
     rdfs:label "Literal pattern matching restriction type"@en .
+
+lrd:literalRanges a lovc:RestrictionType ;
+    lovc:hasRestrictionTypeDefinition lrd:LiteralRangesDefinition ;
+    rdfs:isDefinedBy <https://publikationen.bibliothek.kit.edu/1000054062> ;
+    rdfs:comment """"""@en ;
+    rdfs:label "Literal ranges restriction type"@en .
+
 
 lrd:universalQuantification a lovc:RestrictionType ;
     lovc:hasRestrictionTypeDefinition lrd:UniversalQuantificationDefinition ;
@@ -173,6 +181,11 @@ lrd:literalPatternMatchingXsdPatternOwlRestriction a lovc:RestrictionTypeExpress
     frbr:realizationOf lrd:literalPatternMatching ;
     rdfs:label "owl:withRestrictions on xsd:pattern restriction"@en .
 
+lrd:literalRangesXsdMinMaxOwlRestriction a lovc:RestrictionTypeExpression ;
+    rdfs:comment """A literal ranges restriction, expressed using the owl:withRestriction property and a defined xsd:minInclusive xsd:minExclusive or xsd:maxInclusive or xsd:maxExclusive"""@en ;
+    frbr:realizationOf lrd:literalRanges ;
+    rdfs:label "owl:withRestriction on xsd:minInclusive xsd:minExclusive xsd:maxInclusive xsd:maxExclusive"@en .
+
 lrd:universalQuantificationOwlAllValuesFrom a lovc:RestrictionTypeExpression ;
     rdfs:comment """An universal quantification restriction, expressed using the owl:allValuesFrom property."""@en ;
     frbr:realizationOf lrd:univeralQuantification ;
@@ -220,6 +233,11 @@ lrd:disjointPropertiesOwlDisjointWith a lovc:RestrictionTypeExpression ;
     rdfs:comment """A disjoint properties restriction, expressed using the owl:propertyDisjointWith property."""@en ;
     frbr:realizationOf lrd:disjointProperties ;
     rdfs:label "owl:propertyDisjointWith restriction"@en .
+
+lrd:disjointPropertiesOwlAllDisjointProperties a lovc:RestrictionTypeExpression ;
+    rdfs:comment """A disjoint properties restriction, expressed using the owl:AllDisjointProperties class."""@en ;
+    frbr:realizationOf lrd:disjointProperties ;
+    rdfs:label "owl:AllDisjointProperties restriction"@en .
 
 lrd:disjointClassesOwlDisjointWith a lovc:RestrictionTypeExpression ;
     rdfs:comment """A disjoint classes restriction, expressed using the owl:disjointWith property."""@en ;
@@ -288,6 +306,13 @@ lrd:literalPatternMatchingDetectorXsdPatternOwlRestriction-v1 a lovc:Restriction
     rdfs:label "owl:withRestrictions, xsd:pattern detector v1"@en .
     frbr:realizationOf lrd:literalPatternMatchingDetectorXsdPatternOwlRestriction .
 
+lrd:literalRangesDetectorXsdMinMaxOwlRestriction a lovc:RestrictionTypeExpressionDetector ;
+    rdfs:comment """A method or software component to detect owl:withRestrictions, xsd:minInclusive, xsd:minExclusive, xsd:maxInclusive, xsd:maxExclusive."""@en ;
+    rdfs:label "owl:withRestriction, xsd:minInclusive, xsd:minExclusive, xsd:maxInclusive, xsd:maxExclusive detector"@en .
+
+lrd:literalRangesDetectorXsdMinMaxOwlRestriction a lovc:RestrictionTypeExpressionDetectorVersion ;
+    rdfs:label "owl:withRestriction, xsd:minInclusive, xsd:minExclusive, xsd:maxInclusive, xsd:maxExclusive detector v1"@en .
+    frbr:realizationOf lrd:literalRangesDetectorXsdMinMaxOwlRestriction .
 
 lrd:universalQuantificationDetectorOwlAllValuesFrom a lovc:RestrictionTypeExpressionDetector ;
     rdfs:comment """A method or software component to detect owl:allValuesFrom restrictions."""@en ;
@@ -409,28 +434,28 @@ lrd:disjointClassesDetectorOwlAllDisjointClasses-v1 a lovc:RestrictionTypeExpres
 # Definitions of Restriction Types Measures
 #
 
-lrd:restrictionTypeOccurrence a lovc:RestrictionTypeMetric ;
+lrd:restrictionTypeOccurrence a lovc:RestrictionTypeMeasure ;
     rdfs:comment """The occurrence of a restriction of a certain type."""@en ;
     rdfs:label "Restriction type occurrence"@en .
 
-lrd:hierarchyOccurrence a lovc:RestrictionTypeMetric ;
+lrd:hierarchyOccurrence a lovc:RestrictionTypeMeasure ;
     rdfs:comment """The occurrence of disjoint hierarchies of IRIs."""@en ;
     rdfs:label "Hierarchy amount"@en .
 
-lrd:minHierarchyDepth a lovc:RestrictionTypeMetric ;
+lrd:minHierarchyDepth a lovc:RestrictionTypeMeasure ;
     rdfs:comment """The smallest hierarchy depth of disjoint hierarchies of IRIs."""@en ;
     rdfs:label "Minimum hierarchy depth"@en .
 
-lrd:maxHierarchyDepth a lovc:RestrictionTypeMetric ;
+lrd:maxHierarchyDepth a lovc:RestrictionTypeMeasure ;
     rdfs:comment """The biggest hierarchy depth of disjoint hierarcheis of IRIs."""@en ;
     rdfs:label "Maximum hierarchy depth"@en .
 
-lrd:averageHierarchyDepth a lovc:RestrictionTypeMetric ;
-    rdfs:comment """The average hierarchy depth of disjoint hierarchies of IRIs"""@en ;
+lrd:averageHierarchyDepth a lovc:RestrictionTypeMeasure ;
+    rdfs:comment """The average hierarchy depth of disjoint hierarchies of IRIs."""@en ;
     rdfs:label "Average hierarchy depth" .
 
-lrd:medianHierarchyDepth a lovc:RestrictionTypeMetric ;
-    rdfs:comment """The median hierarchy depth of disjoint hierarchies of IRIs"""@en ;
+lrd:medianHierarchyDepth a lovc:RestrictionTypeMeasure ;
+    rdfs:comment """The median hierarchy depth of disjoint hierarchies of IRIs."""@en ;
     rdfs:label "Median hierarchy depth"@en .
 
 #
@@ -478,7 +503,13 @@ lrd:ontologyVersionDimension a qb:DimensionProperty, rdf:Property ;
 #
 # Definitions of Data Structures
 #
-lrd:lovstats2018datastructure a qb:DataStructureDefinition ;
+
+#
+# Restriction type amount data structure
+#
+lrd:restrictionTypesAmount a qb:DataStructureDefinition, prov:Entity ;
+    rdfs:label "Amount of restriction types"@en ;
+    rdfs:comment """This data structure contains the measurement of the amount of restriction types."""@en ;
 
     # dimensions
     qb:component
@@ -491,14 +522,126 @@ lrd:lovstats2018datastructure a qb:DataStructureDefinition ;
     # measures
     qb:component
       [ a qb:ComponentSpecification ; qb:measure lrd:occurrence ; ] ;
+
+    # attributes
+    qb:component
+      [ a qb:ComponentSpecification ; qb:attribute sdmx-attribute:unitMeasure ; ] .
+
+#
+# Hierarchy amount data structure
+#
+lrd:hierarchyAmountDistribution a qb:DataStructureDefinition, prov:Entity ;
+    rdfs:label "Amount of hierarchies"@en ;
+    rdfs:comment """This data structure contains the measurement of the amount of hierarchies."""@en ;
+
+    # dimensions
+    qb:component
+      [ a qb:ComponentSpecification ; qb:dimension lrd:implementationDimension ; ] ;
+      [ a qb:ComponentSpecification ; qb:dimension lrd:restrictionTypeDimension ;] ;
+      [ a qb:ComponentSpecification ; qb:dimension lrd:detectorVersionDimension ;] ;
+      [ a qb:ComponentSpecification ; qb:dimension lrd:executionTimeDimension ;] ;
+      [ a qb:ComponentSpecification ; qb:dimension lrd:ontologyVersionDimension ;] ;
+
+    # measures
+    qb:component
       [ a qb:ComponentSpecification ; qb:measure lrd:hierarchyOccurrence ; ] ;
-      [ a qb:ComponentSpecification ; qb:measure lrd:maxHierarchyDepth ; ] ;
-      [ a qb:ComponentSpecification ; qb:measure lrd:minHierarchyDepth ; ] ;
+
+    # attributes
+    qb:component
+      [ a qb:ComponentSpecification ; qb:attribute sdmx-attribute:unitMeasure ; ] .
+   
+#
+# Mean hierarchy depth data structure
+#
+lrd:meanHierarchyDepthsDistribution a qb:DataStructureDefinition ;
+    rdfs:label "Average hierarchy depth distribution"@en ;
+    rdfs:comment """This data structure contains average hieararchy depth measurements."""@en ;
+
+    # dimensions
+    qb:component
+      [ a qb:ComponentSpecification ; qb:dimension lrd:implementationDimension ; ] ;
+      [ a qb:ComponentSpecification ; qb:dimension lrd:restrictionTypeDimension ;] ;
+      [ a qb:ComponentSpecification ; qb:dimension lrd:detectorVersionDimension ;] ;
+      [ a qb:ComponentSpecification ; qb:dimension lrd:executionTimeDimension ;] ;
+      [ a qb:ComponentSpecification ; qb:dimension lrd:ontologyVersionDimension ;] ;
+
+    # measures
+    qb:component
       [ a qb:ComponentSpecification ; qb:measure lrd:averageHierarchyDepth ; ] ;
+
+    # attributes
+    qb:component
+      [ a qb:ComponentSpecification ; qb:attribute sdmx-attribute:unitMeasure ; ] .
+
+#
+# Median hierarchy depth data structure
+#
+lrd:medianHierarchyDepthsDistribution a qb:DataStructureDefinition ;
+    rdfs:label "Median hierarchy depth distribution"@en ;
+    rdfs:comment """This data structure contains median hieararchy depth measurements."""@en ;
+
+    # dimensions
+    qb:component
+      [ a qb:ComponentSpecification ; qb:dimension lrd:implementationDimension ; ] ;
+      [ a qb:ComponentSpecification ; qb:dimension lrd:restrictionTypeDimension ;] ;
+      [ a qb:ComponentSpecification ; qb:dimension lrd:detectorVersionDimension ;] ;
+      [ a qb:ComponentSpecification ; qb:dimension lrd:executionTimeDimension ;] ;
+      [ a qb:ComponentSpecification ; qb:dimension lrd:ontologyVersionDimension ;] ;
+
+    # measures
+    qb:component
       [ a qb:ComponentSpecification ; qb:measure lrd:medianHierarchyDepth ; ] ;
 
     # attributes
     qb:component
       [ a qb:ComponentSpecification ; qb:attribute sdmx-attribute:unitMeasure ; ] .
    
+#
+# Min hierarchy depth data structure
+#
+lrd:minHierarchyDepthsDistribution a qb:DataStructureDefinition ;
+    rdfs:label "Minimum hierarchy depth distribution"@en ;
+    rdfs:comment """This data structure contains minimum hieararchy depth measurements."""@en ;
+
+    # dimensions
+    qb:component
+      [ a qb:ComponentSpecification ; qb:dimension lrd:implementationDimension ; ] ;
+      [ a qb:ComponentSpecification ; qb:dimension lrd:restrictionTypeDimension ;] ;
+      [ a qb:ComponentSpecification ; qb:dimension lrd:detectorVersionDimension ;] ;
+      [ a qb:ComponentSpecification ; qb:dimension lrd:executionTimeDimension ;] ;
+      [ a qb:ComponentSpecification ; qb:dimension lrd:ontologyVersionDimension ;] ;
+
+    # measures
+    qb:component
+      [ a qb:ComponentSpecification ; qb:measure lrd:minHierarchyDepth ; ] ;
+
+    # attributes
+    qb:component
+      [ a qb:ComponentSpecification ; qb:attribute sdmx-attribute:unitMeasure ; ] .
+
+#   
+# Max hierarchy depth data structure
+#
+lrd:maxHierarchyDepthsDistribution a qb:DataStructureDefinition ;
+    rdfs:label "Maximum hierarchy depth distribution"@en ;
+    rdfs:comment """This data structure contains maximum hieararchy depth measurements."""@en ;
+
+    # dimensions
+    qb:component
+      [ a qb:ComponentSpecification ; qb:dimension lrd:implementationDimension ; ] ;
+      [ a qb:ComponentSpecification ; qb:dimension lrd:restrictionTypeDimension ;] ;
+      [ a qb:ComponentSpecification ; qb:dimension lrd:detectorVersionDimension ;] ;
+      [ a qb:ComponentSpecification ; qb:dimension lrd:executionTimeDimension ;] ;
+      [ a qb:ComponentSpecification ; qb:dimension lrd:ontologyVersionDimension ;] ;
+
+    # measures
+    qb:component
+      [ a qb:ComponentSpecification ; qb:measure lrd:maxHierarchyDepth ; ] ;
+
+    # attributes
+    qb:component
+      [ a qb:ComponentSpecification ; qb:attribute sdmx-attribute:unitMeasure ; ] .
+   
+
+  
 
