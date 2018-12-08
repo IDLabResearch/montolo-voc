@@ -20,6 +20,10 @@
                               rdfs:domain :RestrictionType ;
                               rdfs:range :RestrictionTypeDefinitionVersion .
 
+###  https://w3id.org/lovcube/ns/lovcube#detectsRestrictionTypeExpression
+:detectsRestrictionTypeExpression rdf:type owl:ObjectProperty ;
+                              rdfs:domain :RestrictionTypeDetector ;
+                              rdfs:range :RestrictionTypeExpression .
 
 #################################################################
 #    Classes
@@ -71,18 +75,6 @@ prov:Entity rdf:type owl:Class .
                                            prov:Entity .
 
 
-###  https://w3id.org/lovcube/ns/lovcube#RestrictionTypeDefinitionVersion
-:RestrictionTypeDefinitionVersion rdf:type owl:Class ;
-                                  rdfs:subClassOf frbr:Expression ,
-                                                  prov:Entity .
-
-
-###  https://w3id.org/lovcube/ns/lovcube#RestrictionTypeDetectorImplementation
-:RestrictionTypeDetectorImplementation rdf:type owl:Class ;
-                                       rdfs:subClassOf qb:MeasureProperty ,
-                                                       prov:Entity .
-
-
 ###  https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpression
 :RestrictionTypeExpression rdf:type owl:Class ;
                            rdfs:subClassOf qb:DimensionProperty ,
@@ -121,10 +113,10 @@ prov:Entity rdf:type owl:Class .
 
 [ rdf:type owl:AllDisjointClasses ;
   owl:members ( :RestrictionType
-                :RestrictionTypeDetectorImplementation
                 :RestrictionTypeExpression
                 :RestrictionTypeExpressionDetector
                 :RestrictionTypeExpressionDetectorVersion
+                :RestrictionTypeDefinition
                 :RestrictionTypeMeasure
                 :RestrictionTypeStatistic
               )
