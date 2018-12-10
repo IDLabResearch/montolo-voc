@@ -29,6 +29,8 @@ This file contains a list of competency questions, the vocabulary aims to answer
 | CQ19 | What attribute units are part of the result? (e.g. integer boolean)
 
 ## SPARQL queries
+The SPARQL queries can be executed by using the sparql_query.py script and giving it a sparql endpoint url to run the queries against and a directory containing the sparql queries that you want to execute.
+The output from the queries will then be saved to the same folder as the query files are in and will be stored in the json format.
 
 ### CQ1
 
