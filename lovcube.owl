@@ -7,9 +7,59 @@
 @prefix frbr: <http://purl.org/vocab/frbr/core#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
 @base <https://w3id.org/lovcube/ns/lovcube> .
 
-<https://w3id.org/lovcube/ns/lovcube> rdf:type owl:Ontology .
+
+<https://w3id.org/lovcube/ns/lovcube> rdf:type owl:Ontology ;
+
+                                      rdf:type voaf:Vocabulary;
+
+                                      vann:preferredNamespacePrefix "lovc";
+
+                                      vann:preferredNamespaceUri "https://w3id.org/lovcube/ns/lovcube#";
+
+                                      rdfs:label "LOVCube vocabulary"@en ;
+
+                                      dct:title "LOVCube vocabulary"@en ;
+
+                                      dct:description "The LOVCube vocabulary"@en;
+
+                                      rdfs:comment """-Version 0.1.0: creation."""@en ;
+
+                                      owl:versionIRI <https://w3id.org/lovcube/ns/lovcube/v0.1.0> ;
+                                      owl:versionInfo "0.1.0" ;
+
+                                      rdfs:seeAlso <https://w3id.org/lovcube> ;
+
+                                      dct:modified "2018-12-10"^^xsd:date ;
+
+                                      dct:issued "2018-12-10"^^xsd:date ;
+
+                                      dct:rights "Copyright © Ghent University – imec – IDLab"@en ;
+
+                                      cc:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+
+                                      foaf:primaryTopic <https://w3id.org/lovcube> ;
+
+                                      dct:creator <https://sven-lieber.org/profile#me> ;
+
+                                      dct:contributor <http://ben.de-meester.org/#me> ;
+
+                                      dct:contributor [
+
+                                      rdf:type foaf:Person ;
+
+                                      foaf:mbox "mailto:Anastasia.dimou@UGent.be" ;
+
+                                      foaf:name "Anastasia Dimou"@en
+
+                                      ] .
 
 #################################################################
 #    Object Properties
