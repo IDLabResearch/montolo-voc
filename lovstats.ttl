@@ -612,7 +612,6 @@ lrd:restrictionTypesAmount a qb:DataStructureDefinition, prov:Entity ;
 
     # dimensions
     qb:component
-      [ a qb:ComponentSpecification ; qb:dimension lrd:implementationDimension ; ] ;
       [ a qb:ComponentSpecification ; qb:dimension lrd:restrictionTypeDimension ;] ;
       [ a qb:ComponentSpecification ; qb:dimension lrd:detectorVersionDimension ;] ;
       [ a qb:ComponentSpecification ; qb:dimension lrd:executionTimeDimension ;] ;
