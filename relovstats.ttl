@@ -5,256 +5,109 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix dc: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix lovc: <https://w3id.org/lovcube/ns/lovcube#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix sdmx-attribute: <http://purl.org/linked-data/sdmx/2009/attribute#> .
 @prefix lrd: <http://example.com/lovrestrictiondata#> .
-@prefix frbr : <http://purl.org/vocab/frbr/core#> .
-@prefix rdfcv : <http://www.dr-thomashartmann.de/phd-thesis/rdf-validation/vocabularies/rdf-constraints-vocabulary#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix frbr: <http://purl.org/vocab/frbr/core#> .
+@prefix rdfcv: <http://www.dr-thomashartmann.de/phd-thesis/rdf-validation/vocabularies/rdf-constraints-vocabulary#> .
 @prefix : <http://example.com/constraints#> .
 
-#
-# Generic description of Restriction Types
-#
-
-lrd:FunctionalPropertiesDefinition a rdfcv:SimpleConstraint ;
-  :constraintType :FunctionalProperties ;
-  dcterms:title "A.1 Functional Properties" ;
-  rdfcv:constrainingElement :functional-properties ;
-  rdfcv:leftProperties ( <p1> <p2> <pn> ) ;
-  rdfcv:contextClass  <C_context> .
-
-lrd:InverseFunctionalPropertiesDefinition a rdfcv:SimpleConstraint ;
-  :constraintType :InverseFunctionalProperties ;
-  dcterms:title "A.2 Inverse-Functional Properties" ;
-  rdfcv:constrainingElement :inverse-functional-properties ;
-  rdfcv:leftProperties ( <p1> <p2> <pn> ) ;
-  rdfcv:contextClass  <C_context> .
-
-lrd:SubsumptionDefinition a rdfcv:SimpleConstraint ;
-  :constraintType :Subsumption ;
-  dcterms:title "A.4 Subsumption" ;
-  rdfcv:constrainingElement :sub-class ;
-  rdfcv:contextClass  <C1> ;
-  rdfcv:classes <C2> .
-
-lrd:PropertyDomainsDefinition a rdfcv:SimpleConstraint ;
-  :constraintType :PropertyDomain ;
-  dcterms:title "A.13 Property Domains" ;
-  rdfcv:constrainingElement :property-domain ;
-  rdfcv:leftProperties <p> ;
-  rdfcv:classes <C> .
-
-lrd:PropertyRangesDefinition a rdfcv:SimpleConstraint ;
-  :constraintType :PropertyRange ;
-  dcterms:title "A.14 Property Ranges" ;
-  rdfcv:constrainingElement :property-range ;
-  rdfcv:leftProperties <p> ;
-  rdfcv:classes <C> .
-
-lrd:LiteralPatternMatchingDefinition a rdfcv:SimpleConstraint ;
-  :constraintType :LiteralPatternMatching ;
-  dcterms:title "A.20 Literal Pattern Matching" ;
-  rdfs:comment  "Regular expression needs to be perl, python style.";
-  rdfcv:constrainingElement :REGEX ;
-  rdfcv:contextClass  <C_context> ;
-  rdfcv:leftProperties <p> ;
-  rdfcv:classes <DT> ;
-  rdfcv:constrainingValue <literal_pattern> .
-
-lrd:LiteralPatternRangesDefinition a rdfcv:SimpleConstraint .
-
-lrd:UniversalQuantificationDefinition a rdfcv:SimpleConstraint ;
-  :constraintType :UniversalQuantification ;
-  dcterms:title "A.23 Universal Quantifications" ;
-  rdfcv:constrainingElement :universal_quantification ;
-  rdfcv:contextClass  <C_context> ;
-  rdfcv:leftProperties <p> ;
-  rdfcv:classes <C_or_DT> .
-
-lrd:MinimumUnqualifiedCardinalityDefinition a rdfcv:SimpleConstraint ;
-  :constraintType :MinimumUnqualifiedCardinalityRestrictions ;
-  dcterms:title "A.32 Minimum Unqualified Cardinality Restrictions" ;
-  rdfcv:constrainingElement :minimum-cardinality ;
-  rdfcv:contextClass  <C_context> ;
-  rdfcv:leftProperties <p> ;
-  rdfcv:constrainingValue <n> .
-
-lrd:MinimumQualifiedCardinalityDefinition a rdfcv:SimpleConstraint ;
-  :constraintType :MinimumQualifiedCardinalityRestrictions ;
-  dcterms:title "A.33 Minimum Qualified Cardinality Restrictions" ;
-  rdfcv:constrainingElement :minimum-cardinality ;
-  rdfcv:contextClass  <C_context> ;
-  rdfcv:leftProperties <p> ;
-  rdfcv:classes <C_or_DT> ;
-  rdfcv:constrainingValue <n> .
-
-lrd:MaximumUnqualifiedCardinalityDefinition a rdfcv:SimpleConstraint ;
-  :constraintType :MaximumUnqualifiedCardinalityRestrictions ;
-  dcterms:title "A.34 Maximum Unqualified Cardinality Restrictions" ;
-  rdfcv:constrainingElement :maximum-cardinality ;
-  rdfcv:contextClass  <C_context> ;
-  rdfcv:leftProperties <p> ;
-  rdfcv:constrainingValue <n> .
-
-lrd:MaximumQualifiedCardinalityDefinition a rdfcv:SimpleConstraint ;
-  :constraintType :MaximumQualifiedCardinalityRestrictions ;
-  dcterms:title "A.35 Maximum Qualified Cardinality Restrictions" ;
-  rdfcv:constrainingElement :maximum-cardinality ;
-  rdfcv:contextClass  <C_context> ;
-  rdfcv:leftProperties <p> ;
-  rdfcv:classes <C_or_DT> ;
-  rdfcv:constrainingValue <n> .
-
-lrd:exactUnqualifiedCardinalityDefinition a rdfcv:SimpleConstraint ;
-  :constraintType :ExactUnqualifiedCardinalityRestrictions ;
-  dcterms:title "A.36 Exact Unqualified Cardinality Restrictions" ;
-  rdfcv:constrainingElement :exact-cardinality ;
-  rdfcv:contextClass  <C_context> ;
-  rdfcv:leftProperties <p> ;
-  rdfcv:constrainingValue <n> .
-
-lrd:exactQualifiedCardinalityDefinition a rdfcv:SimpleConstraint ;
-  :constraintType :ExactQualifiedCardinalityRestrictions ;
-  dcterms:title "A.37 Exact Qualified Cardinality Restrictions" ;
-  rdfcv:constrainingElement :exact-cardinality ;
-  rdfcv:contextClass  <C_context> ;
-  rdfcv:leftProperties <p> ;
-  rdfcv:classes <C_or_DT> ;
-  rdfcv:constrainingValue <n> .
-
-lrd:AsymmetricPropertiesDefinition a rdfcv:SimpleConstraint ;
-  :constraintType :AsymmetricProperty ;
-  dcterms:title "A.57 Asymmetric Object Properties" ;
-  rdfcv:constrainingElement :asymmetric_property ;
-  rdfcv:leftProperties <p> .
-
-lrd:IrreflexivePropertiesDefinition a rdfcv:SimpleConstraint ;
-  :constraintType :IrreflexiveObjectProperty ;
-  dcterms:title "A.64 Irreflexive Object Properties" ;
-  rdfcv:constrainingElement :irreflexive_property ;
-  rdfcv:leftProperties <p> .
-
-lrd:DisjointPropertiesDefinition a rdfcv:SimpleConstraint ;
-  :constraintType :DisjointProperties ;
-  dcterms:title "A.69 Disjoint Properties" ;
-  rdfcv:constrainingElement :disjoint_properties ;
-  rdfcv:leftProperties (<p1><p2><pn>) .
-
-lrd:DisjointClassesDefinition a rdfcv:SimpleConstraint ;
-  :constraintType :DisjointClasses ;
-  dcterms:title "A.70 Disjoint Classes" ;
-  rdfcv:constrainingElement :disjoint_classes ;
-  rdfcv:classes (<C1><C2><Cn>) .
 
 #
 # Definitions of Restriction Types
 #
 
 lrd:functionalProperties a lovc:RestrictionType ;
-    lovc:hasRestrictionTypeDefinition lrd:FunctionalPropertiesDefinition ;
     rdfs:isDefinedBy <https://publikationen.bibliothek.kit.edu/1000054062> ;
     rdfs:comment """"""@en ;
     rdfs:label "Functional properties restriction type"@en .
 
 lrd:inverseFunctionalProperties a lovc:RestrictionType ;
-    lovc:hasRestrictionTypeDefinition lrd:InverseFunctionalPropertiesDefinition ;
     rdfs:isDefinedBy <https://publikationen.bibliothek.kit.edu/1000054062> ;
     rdfs:comment """"""@en ;
     rdfs:label "Inverse functional properties restriction type"@en .
 
 lrd:subsumption a lovc:RestrictionType ;
-    lovc:hasRestrictionTypeDefinition lrd:SubsumptionDefinition ;
     rdfs:isDefinedBy <https://publikationen.bibliothek.kit.edu/1000054062> ;
     rdfs:comment """"""@en ;
     rdfs:label "Subsumption restriction type"@en .
 
 lrd:propertyDomains a lovc:RestrictionType ;
-    lovc:hasRestrictionTypeDefinition lrd:PropertyDomainsDefinition ;
     rdfs:isDefinedBy <https://publikationen.bibliothek.kit.edu/1000054062> ;
     rdfs:comment """"""@en ;
     rdfs:label "Property domains restriction type"@en .
 
 lrd:propertyRanges a lovc:RestrictionType ;
-    lovc:hasRestrictionTypeDefinition lrd:PropertyRangesDefinition ;
     rdfs:isDefinedBy <https://publikationen.bibliothek.kit.edu/1000054062> ;
     rdfs:comment """"""@en ;
     rdfs:label "Property ranges restriction type"@en .
 
 lrd:literalPatternMatching a lovc:RestrictionType ;
-    lovc:hasRestrictionTypeDefinition lrd:LiteralPatternMatchingDefinition ;
     rdfs:isDefinedBy <https://publikationen.bibliothek.kit.edu/1000054062> ;
     rdfs:comment """"""@en ;
     rdfs:label "Literal pattern matching restriction type"@en .
 
 lrd:literalRanges a lovc:RestrictionType ;
-    lovc:hasRestrictionTypeDefinition lrd:LiteralRangesDefinition ;
     rdfs:isDefinedBy <https://publikationen.bibliothek.kit.edu/1000054062> ;
     rdfs:comment """"""@en ;
     rdfs:label "Literal ranges restriction type"@en .
 
 
 lrd:universalQuantification a lovc:RestrictionType ;
-    lovc:hasRestrictionTypeDefinition lrd:UniversalQuantificationDefinition ;
     rdfs:isDefinedBy <https://publikationen.bibliothek.kit.edu/1000054062> ;
     rdfs:comment """"""@en ;
     rdfs:label "Universal quantification restriction type"@en .
 
 lrd:minimumUnqualifiedCardinality a lovc:RestrictionType ;
-    lovc:hasRestrictionTypeDefinition lrd:MinimumUnqualifiedCardinalityDefinition ;
     rdfs:isDefinedBy <https://publikationen.bibliothek.kit.edu/1000054062> ;
     rdfs:comment """Minimum unqualified cardinality restriction type"""@en ;
     rdfs:label ""@en .
 
 lrd:minimumQualifiedCardinality a lovc:RestrictionType ;
-    lovc:hasRestrictionTypeDefinition lrd:MinimumQualifiedCardinalityDefinition ;
     rdfs:isDefinedBy <https://publikationen.bibliothek.kit.edu/1000054062> ;
     rdfs:comment """"""@en ;
     rdfs:label "Minimum qualified cardinality restriction type"@en .
 
 lrd:maximumUnqualifiedCardinality a lovc:RestrictionType ;
-    lovc:hasRestrictionTypeDefinition lrd:MaximumUnqualifiedCadrinalityDefinition ;
     rdfs:isDefinedBy <https://publikationen.bibliothek.kit.edu/1000054062> ;
     rdfs:comment """"""@en ;
     rdfs:label "Maximum unqualified cardinality restriction type"@en .
 
 lrd:maximumQualifiedCardinality a lovc:RestrictionType ;
-    lovc:hasRestrictionTypeDefinition lrd:MaximumQualifiedCardinalityDefinition ;
     rdfs:isDefinedBy <https://publikationen.bibliothek.kit.edu/1000054062> ;
     rdfs:comment """"""@en ;
     rdfs:label "Maximum qualified cardinality restriction type"@en .
 
 lrd:exactUnqualifiedCardinality a lovc:RestrictionType ;
-    lovc:hasRestrictionTypeDefinition lrd:exactUnqualifiedCardinalityDefinition ;
     rdfs:isDefinedBy <https://publikationen.bibliothek.kit.edu/1000054062> ;
     rdfs:comment """"""@en ;
     rdfs:label "Exact unqualified cardinality restriction type"@en .
 
 lrd:exactQualifiedCardinality a lovc:RestrictionType ;
-   lovcv:hasRestrictionTypeDefinition lrd:exactQualifiedCardinalityDefinition ;
    rdfs:isDefinedBy <https://publikationen.bibliothek.kit.edu/1000054062> ;
    rdfs:comment """"""@en ;
    rdfs:label "Exact qualified cardinality restriction type"@en .
     
 lrd:asymmetricProperties a lovc:RestrictionType ;
-    lovc:hasRestrictionTypeDefinition lrd:AsymmetricPropertiesDefinition ;
     rdfs:isDefinedBy <https://publikationen.bibliothek.kit.edu/1000054062> ;
     rdfs:comment """"""@en ;
     rdfs:label "Asymmetric properties restriction type"@en .
 
 lrd:irreflexiveProperties a lovc:RestrictionType ;
-    lovc:hasRestrictionTypeDefinition lrd:IrreflexivePropertiesDefinition ;
     rdfs:isDefinedBy <https://publikationen.bibliothek.kit.edu/1000054062> ;
     rdfs:comment """"""@en ;
     rdfs:label "Irreflexive properties restriction type"@en .
 
 lrd:disjointProperties a lovc:RestrictionType ;
-    lovc:hasRestrictionTypeDefinition lrd:DisjointPropertiesDefinition ;
     rdfs:isDefinedBy <https://publikationen.bibliothek.kit.edu/1000054062> ;
     rdfs:comment """"""@en ;
     rdfs:label "Disjoint properties restriction type"@en .
 
 lrd:disjointClasses a lovc:RestrictionType ;
-    lovc:hasRestrictionTypeDefinition lrd:DisjointClassesDefinition ;
     rdfs:isDefinedBy <https://publikationen.bibliothek.kit.edu/1000054062> ;
     rdfs:comment """"""@en ;
     rdfs:label "Disjoint classes restriction type"@en .
@@ -388,7 +241,7 @@ lrd:subsumptionDetectorRdfsSubClassOf a lovc:RestrictionTypeExpressionDetector ;
     rdfs:label "rdfs:subClassOf detector"@en .
 
 lrd:subsumptionLODStatsDetectorRdfsSubClassOf-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
-    rdfs:label "rdfs:subClassOf detector (LODStats) v1"@en .
+    rdfs:label "rdfs:subClassOf detector (LODStats) v1"@en ;
     frbr:realizationOflrd:subsumptionDetectorRdfsSubClassOf .
 
 
@@ -597,7 +450,7 @@ lrd:ontologyVersionDimension a qb:DimensionProperty, rdf:Property ;
     rdfs:label "Ontology version dimension"@en ;
     rdfs:comment "The ontology version from which this observation was made."@en ;
     rdfs:domain qb:Observation ;
-    rdfs:range owl:Ontology ;
+    rdfs:range owl:Ontology .
 
 #
 # Definitions of Data Structures
@@ -612,9 +465,9 @@ lrd:restrictionTypesAmount a qb:DataStructureDefinition, prov:Entity ;
 
     # dimensions
     qb:component
-      [ a qb:ComponentSpecification ; qb:dimension lrd:restrictionTypeDimension ;] ;
-      [ a qb:ComponentSpecification ; qb:dimension lrd:detectorVersionDimension ;] ;
-      [ a qb:ComponentSpecification ; qb:dimension lrd:executionTimeDimension ;] ;
+      [ a qb:ComponentSpecification ; qb:dimension lrd:restrictionTypeDimension ;] ,
+      [ a qb:ComponentSpecification ; qb:dimension lrd:detectorVersionDimension ;] ,
+      [ a qb:ComponentSpecification ; qb:dimension lrd:executionTimeDimension ;] ,
       [ a qb:ComponentSpecification ; qb:dimension lrd:ontologyVersionDimension ;] ;
 
     # measures
@@ -634,10 +487,10 @@ lrd:hierarchyAmountDistribution a qb:DataStructureDefinition, prov:Entity ;
 
     # dimensions
     qb:component
-      [ a qb:ComponentSpecification ; qb:dimension lrd:implementationDimension ; ] ;
-      [ a qb:ComponentSpecification ; qb:dimension lrd:restrictionTypeDimension ;] ;
-      [ a qb:ComponentSpecification ; qb:dimension lrd:detectorVersionDimension ;] ;
-      [ a qb:ComponentSpecification ; qb:dimension lrd:executionTimeDimension ;] ;
+      [ a qb:ComponentSpecification ; qb:dimension lrd:implementationDimension ; ] ,
+      [ a qb:ComponentSpecification ; qb:dimension lrd:restrictionTypeDimension ;] ,
+      [ a qb:ComponentSpecification ; qb:dimension lrd:detectorVersionDimension ;] ,
+      [ a qb:ComponentSpecification ; qb:dimension lrd:executionTimeDimension ;] ,
       [ a qb:ComponentSpecification ; qb:dimension lrd:ontologyVersionDimension ;] ;
 
     # measures
@@ -657,10 +510,10 @@ lrd:meanHierarchyDepthsDistribution a qb:DataStructureDefinition ;
 
     # dimensions
     qb:component
-      [ a qb:ComponentSpecification ; qb:dimension lrd:implementationDimension ; ] ;
-      [ a qb:ComponentSpecification ; qb:dimension lrd:restrictionTypeDimension ;] ;
-      [ a qb:ComponentSpecification ; qb:dimension lrd:detectorVersionDimension ;] ;
-      [ a qb:ComponentSpecification ; qb:dimension lrd:executionTimeDimension ;] ;
+      [ a qb:ComponentSpecification ; qb:dimension lrd:implementationDimension ; ] ,
+      [ a qb:ComponentSpecification ; qb:dimension lrd:restrictionTypeDimension ;] ,
+      [ a qb:ComponentSpecification ; qb:dimension lrd:detectorVersionDimension ;] ,
+      [ a qb:ComponentSpecification ; qb:dimension lrd:executionTimeDimension ;] ,
       [ a qb:ComponentSpecification ; qb:dimension lrd:ontologyVersionDimension ;] ;
 
     # measures
@@ -680,10 +533,10 @@ lrd:medianHierarchyDepthsDistribution a qb:DataStructureDefinition ;
 
     # dimensions
     qb:component
-      [ a qb:ComponentSpecification ; qb:dimension lrd:implementationDimension ; ] ;
-      [ a qb:ComponentSpecification ; qb:dimension lrd:restrictionTypeDimension ;] ;
-      [ a qb:ComponentSpecification ; qb:dimension lrd:detectorVersionDimension ;] ;
-      [ a qb:ComponentSpecification ; qb:dimension lrd:executionTimeDimension ;] ;
+      [ a qb:ComponentSpecification ; qb:dimension lrd:implementationDimension ; ] ,
+      [ a qb:ComponentSpecification ; qb:dimension lrd:restrictionTypeDimension ;] ,
+      [ a qb:ComponentSpecification ; qb:dimension lrd:detectorVersionDimension ;] ,
+      [ a qb:ComponentSpecification ; qb:dimension lrd:executionTimeDimension ;] ,
       [ a qb:ComponentSpecification ; qb:dimension lrd:ontologyVersionDimension ;] ;
 
     # measures
@@ -703,10 +556,10 @@ lrd:minHierarchyDepthsDistribution a qb:DataStructureDefinition ;
 
     # dimensions
     qb:component
-      [ a qb:ComponentSpecification ; qb:dimension lrd:implementationDimension ; ] ;
-      [ a qb:ComponentSpecification ; qb:dimension lrd:restrictionTypeDimension ;] ;
-      [ a qb:ComponentSpecification ; qb:dimension lrd:detectorVersionDimension ;] ;
-      [ a qb:ComponentSpecification ; qb:dimension lrd:executionTimeDimension ;] ;
+      [ a qb:ComponentSpecification ; qb:dimension lrd:implementationDimension ; ] ,
+      [ a qb:ComponentSpecification ; qb:dimension lrd:restrictionTypeDimension ;] ,
+      [ a qb:ComponentSpecification ; qb:dimension lrd:detectorVersionDimension ;] ,
+      [ a qb:ComponentSpecification ; qb:dimension lrd:executionTimeDimension ;] ,
       [ a qb:ComponentSpecification ; qb:dimension lrd:ontologyVersionDimension ;] ;
 
     # measures
@@ -726,10 +579,10 @@ lrd:maxHierarchyDepthsDistribution a qb:DataStructureDefinition ;
 
     # dimensions
     qb:component
-      [ a qb:ComponentSpecification ; qb:dimension lrd:implementationDimension ; ] ;
-      [ a qb:ComponentSpecification ; qb:dimension lrd:restrictionTypeDimension ;] ;
-      [ a qb:ComponentSpecification ; qb:dimension lrd:detectorVersionDimension ;] ;
-      [ a qb:ComponentSpecification ; qb:dimension lrd:executionTimeDimension ;] ;
+      [ a qb:ComponentSpecification ; qb:dimension lrd:implementationDimension ; ] ,
+      [ a qb:ComponentSpecification ; qb:dimension lrd:restrictionTypeDimension ;] ,
+      [ a qb:ComponentSpecification ; qb:dimension lrd:detectorVersionDimension ;] ,
+      [ a qb:ComponentSpecification ; qb:dimension lrd:executionTimeDimension ;] ,
       [ a qb:ComponentSpecification ; qb:dimension lrd:ontologyVersionDimension ;] ;
 
     # measures
