@@ -2,11 +2,19 @@
 
 # Ontology Restriction Types
 
+Ontologies created with [OWL](https://www.w3.org/TR/owl2-overview/), 
+or in general using the [RDF](https://www.w3.org/TR/rdf11-concepts/) framework, might contain restrictions (axioms) to machine-understandably describe knowledge.
+
+Several types of such restrictions exist, and so far it is not known which restriction types are used to which extent in practice. 
+This repository contains a vocabulary to describe restriction types, and corresponding restriction type expressions and measures ([LOVCube](lovcube.owl)).
+Additionally it contains RDF-based descriptions of several abstract restriction types and their concrete RDF-based expressions ([relovstats.ttl](relovstats.ttl)).
+
+Tools creating statistics about the use of restriction types in ontologies can use the LOVCube vocabulary to describe the statistics and refer to their structure.
 
 # LOVCube Vocabulary
 
 This repository contains the RDF/OWL based vocabulary of LOVCube.
-The vocabulary is developed according to the UPON-light methodology. Hence, the `requirements` folder contains the documentation.
+The vocabulary is developed according to the UPON-light methodology. Hence, the `requirements` folder contains information regarding the development process the documentation (ongoing work).
 
 
 # ReLOVStats Restriction Types
@@ -50,4 +58,25 @@ _:N740f60a3437f4b46869218f604ee20e4 a qb:DataSet,
 
 # How to use?
 
-On https://lov.ilabt.imec.be/lovcube/data/relovstats/latest
+On https://lov.ilabt.imec.be/lovcube/data/relovstats/latest (alternatively [here](https://figshare.com/articles/ReLOVStats/7981718/1]) an existing dataset can be queried.
+It was created based on 98% of [LOV](http://lov.linkeddata.es) ontologies.
+
+Example SPARQL query to get restriction types and correpsonding occurrence measure
+```sparql
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX lovstats: <http://example.com/lovrestrictiondata#>
+
+SELECT ((strafter(str(?type), "#")) as ?typeName) (SUM(?occurrence) as ?total) ?ontology
+WHERE {
+  ?obs a qb:Observation ;
+    lovstats:restrictionTypeOccurrence ?occurrence ;
+    lovstats:restrictionTypeDimension ?type ;
+    lovstats:detectorVersionDimension ?detector ;
+    lovstats:ontologyVersionDimension ?ontology .
+
+
+}
+GROUP BY ?type ?ontology
+ORDER BY ?type ASC(?total) ?ontology
+
+```
