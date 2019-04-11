@@ -58,7 +58,7 @@ _:N740f60a3437f4b46869218f604ee20e4 a qb:DataSet,
 
 # How to use?
 
-On https://lov.ilabt.imec.be/lovcube/data/relovstats/latest (alternatively [here](https://figshare.com/articles/ReLOVStats/7981718/1]) an existing dataset can be queried.
+On https://lov.ilabt.imec.be/lovcube/data/relovstats/latest (alternatively [here](https://figshare.com/articles/ReLOVStats/7981718/1])) an existing dataset can be queried.
 It was created based on 98% of [LOV](http://lov.linkeddata.es) ontologies.
 
 Example SPARQL query to get restriction types and correpsonding occurrence measure
@@ -73,8 +73,6 @@ WHERE {
     lovstats:restrictionTypeDimension ?type ;
     lovstats:detectorVersionDimension ?detector ;
     lovstats:ontologyVersionDimension ?ontology .
-
-
 }
 GROUP BY ?type ?ontology
 ORDER BY ?type ASC(?total) ?ontology
