@@ -16,29 +16,43 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix frbr: <http://purl.org/vocab/frbr/core#> .
 @prefix rdfcv: <http://www.dr-thomashartmann.de/phd-thesis/rdf-validation/vocabularies/rdf-constraints-vocabulary#> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 
-<https://w3id.org/lovcube/ns/relovstats#> rdf:type void:Dataset ;
-                                       dct:modified "2019-04-11"^^xsd:date ;
+<https://w3id.org/lovcube/ns/relovstats#> rdf:type void:Dataset, owl:Ontology, voaf:Vocabulary ;
+                                       vann:preferredNamespacePrefix "rls" ;
+                                       vann:preferredNamespaceUri "https://w3id.org/lovcube/ns/relovstats#";
+                                       rdfs:label "ReLOVStats restriction types"@en ;
+                                       dct:title "ReLOVStats restriction types"@en ;
+                                       dct:description "ReLOVStats restriction types, described using the LOVCube vocabulary"@en ;
+                                       rdfs:comment """-Version 0.2.0: fixed syntax errors and removed obsolete restriction type definitions
+-Version 0.1.0: creation."""@en ;
+                                       owl:versionIRI   <https://w3id.org/lovcube/ns/relovstats/v0.2.0> ;
+                                       owl:priorVersion <https://w3id.org/lovcube/ns/relovstats/v0.1.0> ;
+                                       owl:versionInfo "0.2.0" ;
+                                       rdfs:seeAlso <https://w3id.org/lovcube> ;
+                                       dct:modified "2019-04-12"^^xsd:date ;
+                                       dct:issued "2019-04-12"^^xsd:date ;
+                                       dct:created "2018-12-10"^^xsd:date ;
+                                       dct:rights "Copyright © Ghent University – imec – IDLab"@en ;
+                                       cc:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+                                       foaf:primaryTopic <https://w3id.org/lovcube> ;
                                        dct:creator <https://sven-lieber.org/profile#me> ;
-                                       rdfs:label "LOVCube vocabulary"@en ;
+                                       dct:contributor <http://ben.de-meester.org/#me> ;
                                        dct:contributor [ foaf:name "Anastasia Dimou"@en ;
                                                          rdf:type foaf:Person ;
                                                          foaf:mbox "mailto:Anastasia.dimou@UGent.be"
                                                        ] ;
-                                       dct:issued "2019-04-11"^^xsd:date ;
-                                       foaf:primaryTopic <https://w3id.org/lovcube> ;
-                                       owl:versionInfo "0.1.0" ;
-                                       dct:description "ReLOVStats restriction types, described using the LOVCube vocabulary"@en ;
-                                       rdfs:seeAlso <https://w3id.org/lovcube> ;
-                                       dct:contributor <http://ben.de-meester.org/#me> ;
-                                       vann:preferredNamespaceUri "https://w3id.org/lovcube/ns/relovstats#" ;
-                                       cc:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
-                                       dct:rights "Copyright © Ghent University – imec – IDLab"@en ;
-                                       rdfs:comment "-Version 0.1.0: creation."@en ;
-                                       dct:title "ReLOVStats restriction types"@en ;
-                                       vann:preferredNamespacePrefix "rls" .
+                                       .
+
+<https://sven-lieber.org/profile#me> rdf:type foaf:Person ;
+                                     foaf:mbox "mailto:sven.lieber@ugent.be" ;
+                                     foaf:name "Sven Lieber"@en .
+
+<https://ben.de-meester.org/#me> rdf:type foaf:Person ;
+                                 foaf:mbox "mailto:ben.demeester@ugent.be" ;
+                                 foaf:name "Ben De Meester"@en .
 
 #
 # Definitions of Restriction Types
@@ -286,7 +300,7 @@ rls:functionalPropertiesDetectorOwlFunctionalProperty a lovc:RestrictionTypeExpr
 
 rls:functionalPropertiesLODStatsDetectorOwlFunctionalProperty-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
     rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#>  ;
-    rdfs:label "owl:FunctionalProperty detector (LODStats) v1"@en .
+    rdfs:label "owl:FunctionalProperty detector (LODStats) v1"@en ;
     frbr:realizationOf rls:functionalPropertiesDetectorOwlFunctionalProperty .
 
 
@@ -297,7 +311,7 @@ rls:inverseFunctionalPropertiesDetectorOwlInverseFunctionalProperty a lovc:Restr
 
 rls:inverseFunctionalPropertiesLODStatsDetectorOwlInverseFunctionalProperty-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
     rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#>  ;
-    rdfs:label "owl:InverseFunctionalProperty detector (LODStats) v1"@en .
+    rdfs:label "owl:InverseFunctionalProperty detector (LODStats) v1"@en ;
     frbr:realizationOf rls:inverseFunctionalPropertiesDetectorOwlInverseFunctionalProperty .
 
 
@@ -309,7 +323,7 @@ rls:subsumptionDetectorRdfsSubClassOf a lovc:RestrictionTypeExpressionDetector ;
 rls:subsumptionLODStatsDetectorRdfsSubClassOf-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
     rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#>  ;
     rdfs:label "rdfs:subClassOf detector (LODStats) v1"@en ;
-    frbr:realizationOfrls:subsumptionDetectorRdfsSubClassOf .
+    frbr:realizationOf rls:subsumptionDetectorRdfsSubClassOf .
 
 
 rls:propertyDomainsDetectorRdfsDomain a lovc:RestrictionTypeExpressionDetector ;
@@ -319,7 +333,7 @@ rls:propertyDomainsDetectorRdfsDomain a lovc:RestrictionTypeExpressionDetector ;
 
 rls:propertyDomainsLODStatsDetectorRdfsDomain-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
     rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#>  ;
-    rdfs:label "rdfs:domain detector (LODStats) v1"@en .
+    rdfs:label "rdfs:domain detector (LODStats) v1"@en ;
     frbr:realizationOf rls:propertyDomainsDetectorRdfsDomain .
 
 
@@ -330,7 +344,7 @@ rls:propertyRangesDetetorRdfsRange a lovc:RestrictionTypeExpressionDetector ;
 
 rls:propertyRangesLODStatsDetectorRdfsRange-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
     rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#>  ;
-    rdfs:label "rdfs:range detector (LODStats) v1"@en .
+    rdfs:label "rdfs:range detector (LODStats) v1"@en ;
     frbr:realizationOf rls:propertyRangesDetetorRdfsRange .
 
 
@@ -341,7 +355,7 @@ rls:literalPatternMatchingDetectorXsdPatternOwlRestriction a lovc:RestrictionTyp
 
 rls:literalPatternMatchingLODStatsDetectorXsdPatternOwlRestriction-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
     rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#>  ;
-    rdfs:label "owl:withRestrictions, xsd:pattern detector (LODStats) v1"@en .
+    rdfs:label "owl:withRestrictions, xsd:pattern detector (LODStats) v1"@en ;
     frbr:realizationOf rls:literalPatternMatchingDetectorXsdPatternOwlRestriction .
 
 rls:literalRangesDetectorXsdMinMaxOwlRestriction a lovc:RestrictionTypeExpressionDetector ;
@@ -351,7 +365,7 @@ rls:literalRangesDetectorXsdMinMaxOwlRestriction a lovc:RestrictionTypeExpressio
 
 rls:literalRangesDetectorXsdMinMaxOwlRestriction a lovc:RestrictionTypeExpressionDetectorVersion ;
     rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#>  ;
-    rdfs:label "owl:withRestriction, xsd:minInclusive, xsd:minExclusive, xsd:maxInclusive, xsd:maxExclusive detector v1"@en .
+    rdfs:label "owl:withRestriction, xsd:minInclusive, xsd:minExclusive, xsd:maxInclusive, xsd:maxExclusive detector v1"@en ;
     frbr:realizationOf rls:literalRangesDetectorXsdMinMaxOwlRestriction .
 
 rls:universalQuantificationDetectorOwlAllValuesFrom a lovc:RestrictionTypeExpressionDetector ;
@@ -361,7 +375,7 @@ rls:universalQuantificationDetectorOwlAllValuesFrom a lovc:RestrictionTypeExpres
 
 rls:universalQuantificationLODStatsDetectorOwlAllValuesFrom-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
     rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#>  ;
-    rdfs:label "owl:allValuesFrom detector (LODStats) v1"@en .
+    rdfs:label "owl:allValuesFrom detector (LODStats) v1"@en ;
     frbr:realizationOf rls:universalQuantificationDetectorOwlAllValuesFrom .
 
 
@@ -372,7 +386,7 @@ rls:minimumUnqualifiedCardinalityDetectorOwlMinCardinality a lovc:RestrictionTyp
 
 rls:minimumUnqualifiedCardinalityLODStatsDetectorOwlMinCardinality-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
     rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#>  ;
-    rdfs:label "owl:minCardinality detector (LODStats) v1"@en .
+    rdfs:label "owl:minCardinality detector (LODStats) v1"@en ;
     frbr:realizationOf rls:minimumUnqualifiedCardinalityDetectorOwlMinCardinality .
 
 
@@ -383,7 +397,7 @@ rls:minimumQualifiedCardinalityDetectorOwl a lovc:RestrictionTypeExpressionDetec
 
 rls:minimumQualifiedCardinalityLODStatsDetectorOwl-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
     rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#>  ;
-    rdfs:label "owl:minQualifiedCardinality detector (LODStats) v1"@en .
+    rdfs:label "owl:minQualifiedCardinality detector (LODStats) v1"@en ;
     frbr:realizationOf rls:minimumQualifiedCardinalityDetectorOwl .
 
 
@@ -394,7 +408,7 @@ rls:maximumUnqualifiedCardinalityDetectorOwlMaxCardinality a lovc:RestrictionTyp
 
 rls:maximumUnqualifiedCardinalityLODStatsDetectorOwlMaxCardinality-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
     rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#>  ;
-    rdfs:label "owl:maxCardinality detector (LODStats) v1"@en .
+    rdfs:label "owl:maxCardinality detector (LODStats) v1"@en ;
     frbr:realizationOf rls:maximumUnqualifiedCardinalityDetectorOwlMaxCardinality .
 
 
@@ -405,7 +419,7 @@ rls:maximumQualifiedCardinalityDetectorOwl a lovc:RestrictionTypeExpressionDetec
 
 rls:maximumQualifiedCardinalityLODStatsDetectorOwl-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
     rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#>  ;
-    rdfs:label "owl:maxQualifiedCardinality detector (LODStats) v1"@en .
+    rdfs:label "owl:maxQualifiedCardinality detector (LODStats) v1"@en ;
     frbr:realizationOf rls:maximumQualifiedCardinalityDetectorOwl .
 
 	
@@ -449,7 +463,7 @@ rls:asymmetricPropertiesDetectorOwlAsymmetricProperty a lovc:RestrictionTypeExpr
 
 rls:asymmetricPropertiesLODStatsDetectorOwlAsymmetricProperty-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
     rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#>  ;
-    rdfs:label "owl:AsymmetricProperty detector (LODStats) v1"@en .
+    rdfs:label "owl:AsymmetricProperty detector (LODStats) v1"@en ;
     frbr:realizationOf rls:asymmetricPropertiesDetectorOwlAsymmetricProperty .
 
 
@@ -460,7 +474,7 @@ rls:irreflexivePropertiesDetectorOwlIrreflexiveProperty a lovc:RestrictionTypeEx
 
 rls:irreflexivePropertiesLODStatsDetectorOwlIrreflexiveProperty-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
     rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#>  ;
-    rdfs:label "owl:IrreflexiveProperty detector (LODStats) v1"@en .
+    rdfs:label "owl:IrreflexiveProperty detector (LODStats) v1"@en ;
     frbr:realizationOf rls:irreflexivePropertiesDetectorOwlIrreflexiveProperty .
 
 
@@ -471,7 +485,7 @@ rls:disjointPropertiesDetectorOwlDisjointWith a lovc:RestrictionTypeExpressionDe
 
 rls:disjointPropertiesLODStatsDetectorOwlDisjointWith-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
     rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#>  ;
-    rdfs:label "owl:propertyDisjointWith detector (LODStats) v1"@en .
+    rdfs:label "owl:propertyDisjointWith detector (LODStats) v1"@en ;
     frbr:realizationOf rls:disjointPropertiesDetectorOwlDisjointWith .
 
 
@@ -482,7 +496,7 @@ rls:disjointPropertiesDetectorOwlAllDisjointProperties a lovc:RestrictionTypeExp
 
 rls:disjointPropertiesLODStatsDetectorOwlAllDisjointProperties-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
     rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#>  ;
-    rdfs:label "owl:AllDisjointProperties detector (LODStats) v1"@en .
+    rdfs:label "owl:AllDisjointProperties detector (LODStats) v1"@en ;
     frbr:realizationOf rls:disjointPropertiesDetectorOwlAllDisjointProperties .
 
 
@@ -493,7 +507,7 @@ rls:disjointClassesDetectorOwlDisjointWith a lovc:RestrictionTypeExpressionDetec
 
 rls:disjointClassesLODStatsDetectorOwlDisjointWith-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
     rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#>  ;
-    rdfs:label "owl:disjointWith detector (LODStats) v1"@en .
+    rdfs:label "owl:disjointWith detector (LODStats) v1"@en ;
     frbr:realizationOf rls:disjointClassesDetectorOwlDisjointWith .
 
 
@@ -504,7 +518,7 @@ rls:disjointClassesDetectorOwlAllDisjointClasses a lovc:RestrictionTypeExpressio
 
 rls:disjointClassesLODStatsDetectorOwlAllDisjointClasses-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
     rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#>  ;
-    rdfs:label "owl:AllDisjointClasses detector (LODStats) v1"@en .
+    rdfs:label "owl:AllDisjointClasses detector (LODStats) v1"@en ;
     frbr:realizationOf rls:disjoinClassesDetectorOwlAllDisjointClasses .
 
 #
