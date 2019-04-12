@@ -14,27 +14,40 @@
 @prefix voaf: <http://purl.org/vocommons/voaf#> .
 @base <https://w3id.org/lovcube/ns/lovcube> .
 
-<https://w3id.org/lovcube/ns/lovcube> rdf:type owl:Ontology ;
-                                       owl:versionIRI <https://w3id.org/lovcube/ns/lovcube/v0.1.0> ;
-                                       dct:modified "2018-12-10"^^xsd:date ;
-                                       dct:creator <https://sven-lieber.org/profile#me> ;
+<https://w3id.org/lovcube/ns/lovcube#> rdf:type owl:Ontology ;
+                                       vann:preferredNamespacePrefix "lovc" ;
+                                       vann:preferredNamespaceUri "https://w3id.org/lovcube/ns/lovcube#" ;
                                        rdfs:label "LOVCube vocabulary"@en ;
+                                       dct:title "LOVCube vocabulary"@en ;
+                                       dct:description "The LOVCube vocabulary"@en ;
+                                       rdfs:comment """-Version 0.2.0: added expression and human-readable documentation
+-Version 0.1.0: creation."""@en ;
+                                       owl:versionIRI   <https://w3id.org/lovcube/ns/lovcube/v0.2.0> ;
+                                       owl:priorVersion <https://w3id.org/lovcube/ns/lovcube/v0.1.0> ;
+                                       owl:versionInfo "0.2.0" ;
+                                       rdfs:seeAlso <https://w3id.org/lovcube> ;
+                                       dct:modified "2019-04-12"^^xsd:date ;
+                                       dct:issued "2019-04-12"^^xsd:date ;
+                                       dct:created "2018-12-10"^^xsd:date ;
+                                       dct:rights "Copyright © Ghent University – imec – IDLab"@en ;
+                                       cc:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+                                       foaf:primaryTopic <https://w3id.org/lovcube> ;
+                                       dct:creator <https://sven-lieber.org/profile#me> ;
+                                       dct:contributor <http://ben.de-meester.org/#me> ;
                                        dct:contributor [ foaf:name "Anastasia Dimou"@en ;
                                                          rdf:type foaf:Person ;
                                                          foaf:mbox "mailto:Anastasia.dimou@UGent.be"
                                                        ] ;
-                                       dct:issued "2018-12-10"^^xsd:date ;
-                                       foaf:primaryTopic <https://w3id.org/lovcube> ;
-                                       owl:versionInfo "0.1.0" ;
-                                       dct:description "The LOVCube vocabulary"@en ;
-                                       rdfs:seeAlso <https://w3id.org/lovcube> ;
-                                       dct:contributor <http://ben.de-meester.org/#me> ;
-                                       vann:preferredNamespaceUri "https://w3id.org/lovcube/ns/lovcube#" ;
-                                       cc:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
-                                       dct:rights "Copyright © Ghent University – imec – IDLab"@en ;
-                                       rdfs:comment "-Version 0.1.0: creation."@en ;
-                                       dct:title "LOVCube vocabulary"@en ;
-                                       vann:preferredNamespacePrefix "lovc" .
+                                       .
+
+<https://sven-lieber.org/profile#me> rdf:type foaf:Person ;
+                                     foaf:mbox "mailto:sven.lieber@ugent.be" ;
+                                     foaf:name "Sven Lieber"@en .
+
+<https://ben.de-meester.org/#me> rdf:type foaf:Person ;
+                                 foaf:mbox "mailto:ben.demeester@ugent.be" ;
+                                 foaf:name "Ben De Meester"@en .
+
 
 #################################################################
 #    Annotation properties
