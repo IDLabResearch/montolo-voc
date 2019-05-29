@@ -1,4 +1,4 @@
-[![DOI](https://zenodo.org/badge/161186859.svg)](https://zenodo.org/badge/latestdoi/161186859)
+[![DOI](https://zenodo.org/badge/161186859.svg)](http://doi.org/10.5281/zenodo.2638002)
 
 # Ontology Restriction Types
 
