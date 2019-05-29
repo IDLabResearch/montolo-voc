@@ -139,43 +139,43 @@ rls:maximumUnqualifiedCardinality a lovc:RestrictionType ;
 rls:maximumQualifiedCardinality a lovc:RestrictionType ;
     rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#>  ;
     rdfs:seeAlso <https://publikationen.bibliothek.kit.edu/1000054062> ;
-    rdfs:comment """The constraint type maximum qualified cardinality restrictions consists of a non-negative integer n, an object or data proeprty p, and a class C or a atatype DT, and it defiens a class C_context which contains all those individuals that are connected by p to at most n different (1) individuals that are instances of C or (2) literals in DT. Maximum qualified cardinality restrictions must hold for all instances of the class C_context."""@en ;
+    dct:description """The constraint type maximum qualified cardinality restrictions consists of a non-negative integer n, an object or data proeprty p, and a class C or a atatype DT, and it defiens a class C_context which contains all those individuals that are connected by p to at most n different (1) individuals that are instances of C or (2) literals in DT. Maximum qualified cardinality restrictions must hold for all instances of the class C_context."""@en ;
     rdfs:label "Maximum qualified cardinality restriction type"@en .
 
 rls:exactUnqualifiedCardinality a lovc:RestrictionType ;
     rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#>  ;
     rdfs:seeAlso <https://publikationen.bibliothek.kit.edu/1000054062> ;
-    rdfs:comment """A constraint of the constraint type exact unqualified cardinality restrictions consists of a non-negative integer n and an object or data property p, and it defines a class C_context which contains all those individuals that are connected by p to exactly n different individuals/literals. Exact unqualified cardinality restrictions must hold for all instances of the class C_context."""@en ;
+    dct:description """A constraint of the constraint type exact unqualified cardinality restrictions consists of a non-negative integer n and an object or data property p, and it defines a class C_context which contains all those individuals that are connected by p to exactly n different individuals/literals. Exact unqualified cardinality restrictions must hold for all instances of the class C_context."""@en ;
     rdfs:label "Exact unqualified cardinality restriction type"@en .
 
 rls:exactQualifiedCardinality a lovc:RestrictionType ;
    rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#>  ;
    rdfs:seeAlso <https://publikationen.bibliothek.kit.edu/1000054062> ;
-   rdfs:comment """A constraint of the constriant type exact qualified cardinality restrictions consists of a non-negative integer n, an object or data property p, and a class C or a datatype DT, and it defines a class C_context which contains all those individuals that are connected by p to exactly n different (1) individuals that are instances of C or (2) literals in DT. Exact qualified cardinality restrictions must hold for all instances of the class C_context."""@en ;
+   dct:description """A constraint of the constriant type exact qualified cardinality restrictions consists of a non-negative integer n, an object or data property p, and a class C or a datatype DT, and it defines a class C_context which contains all those individuals that are connected by p to exactly n different (1) individuals that are instances of C or (2) literals in DT. Exact qualified cardinality restrictions must hold for all instances of the class C_context."""@en ;
    rdfs:label "Exact qualified cardinality restriction type"@en .
     
 rls:asymmetricProperties a lovc:RestrictionType ;
     rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#>  ;
     rdfs:seeAlso <https://publikationen.bibliothek.kit.edu/1000054062> ;
-    rdfs:comment """A property is asymmetric if it is disjoint from its own inverse. A constraint of the constraint type asymmetric object properties states that the object property p is asymmetric - that is, if an individual i_1 is connected by p to an individual i_2, then I_2 cannot be connected by p to i_2."""@en ;
+    dct:description """A property is asymmetric if it is disjoint from its own inverse. A constraint of the constraint type asymmetric object properties states that the object property p is asymmetric - that is, if an individual i_1 is connected by p to an individual i_2, then I_2 cannot be connected by p to i_2."""@en ;
     rdfs:label "Asymmetric properties restriction type"@en .
 
 rls:irreflexiveProperties a lovc:RestrictionType ;
     rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#>  ;
     rdfs:seeAlso <https://publikationen.bibliothek.kit.edu/1000054062> ;
-    rdfs:comment """A property is irreflexive if it is never locally reflexive. Constraints of the irreflexive object properties constraint type (irreflexive roles in DL) state that the object property p is irreflexive - that is, no individual is connected by p to itself."""@en ;
+    dct:description """A property is irreflexive if it is never locally reflexive. Constraints of the irreflexive object properties constraint type (irreflexive roles in DL) state that the object property p is irreflexive - that is, no individual is connected by p to itself."""@en ;
     rdfs:label "Irreflexive properties restriction type"@en .
 
 rls:disjointProperties a lovc:RestrictionType ;
     rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#>  ;
     rdfs:seeAlso <https://publikationen.bibliothek.kit.edu/1000054062> ;
-    rdfs:comment """A constraint of the constraint type disjoint properties states that all of the object or data properties p_i, 1 <= i <= n, are pairwise disjoint."""@en ;
+    dct:description """A constraint of the constraint type disjoint properties states that all of the object or data properties p_i, 1 <= i <= n, are pairwise disjoint."""@en ;
     rdfs:label "Disjoint properties restriction type"@en .
 
 rls:disjointClasses a lovc:RestrictionType ;
     rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#>  ;
     rdfs:seeAlso <https://publikationen.bibliothek.kit.edu/1000054062> ;
-    rdfs:comment """The constraint type disjoint classes states that all of the classes C_i, 1 <= i <= n, are pairwise disjoint."""@en ;
+    dct:description """The constraint type disjoint classes states that all of the classes C_i, 1 <= i <= n, are pairwise disjoint."""@en ;
     rdfs:label "Disjoint classes restriction type"@en .
 
 #
