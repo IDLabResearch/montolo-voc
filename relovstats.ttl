@@ -349,15 +349,15 @@ rls:propertyDomainLODStatsDetectorRdfsDomain-v1 a lovc:RestrictionTypeExpression
     frbr:realizationOf rls:propertyDomainDetectorRdfsDomain .
 
 
-rls:propertyRangesDetetorRdfsRange a lovc:RestrictionTypeExpressionDetector ;
+rls:propertyRangeDetetorRdfsRange a lovc:RestrictionTypeExpressionDetector ;
     rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#>  ;
     rdfs:comment """A method or software component to detect rdfs:range restrictions."""@en ;
     rdfs:label "rdfs:range detector"@en .
 
-rls:propertyRangesLODStatsDetectorRdfsRange-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
+rls:propertyRangeLODStatsDetectorRdfsRange-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
     rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#>  ;
     rdfs:label "rdfs:range detector (LODStats) v1"@en ;
-    frbr:realizationOf rls:propertyRangesDetetorRdfsRange .
+    frbr:realizationOf rls:propertyRangeDetetorRdfsRange .
 
 
 rls:literalPatternMatchingDetectorXsdPatternOwlRestriction a lovc:RestrictionTypeExpressionDetector ;
