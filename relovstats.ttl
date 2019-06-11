@@ -26,14 +26,15 @@
                                        rdfs:label "ReLOVStats restriction types"@en ;
                                        dct:title "ReLOVStats restriction types"@en ;
                                        dct:description "ReLOVStats restriction types, described using the LOVCube vocabulary"@en ;
-                                       rdfs:comment """-Version 0.2.0: fixed syntax errors and removed obsolete restriction type definitions
+                                       rdfs:comment """-Version 0.2.1 added human-readable comments
+-Version 0.2.0: fixed syntax errors and removed obsolete restriction type definitions
 -Version 0.1.0: creation."""@en ;
-                                       owl:versionIRI   <https://w3id.org/lovcube/ns/relovstats/v0.2.0> ;
-                                       owl:priorVersion <https://w3id.org/lovcube/ns/relovstats/v0.1.0> ;
-                                       owl:versionInfo "0.2.0" ;
+                                       owl:versionIRI   <https://w3id.org/lovcube/ns/relovstats/v0.2.1> ;
+                                       owl:priorVersion <https://w3id.org/lovcube/ns/relovstats/v0.2.0> ;
+                                       owl:versionInfo "0.2.1" ;
                                        rdfs:seeAlso <https://w3id.org/lovcube> ;
-                                       dct:modified "2019-04-12"^^xsd:date ;
-                                       dct:issued "2019-04-12"^^xsd:date ;
+                                       dct:modified "2019-05-27"^^xsd:date ;
+                                       dct:issued "2019-05-29"^^xsd:date ;
                                        dct:created "2018-12-10"^^xsd:date ;
                                        dct:rights "Copyright © Ghent University – imec – IDLab"@en ;
                                        cc:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
