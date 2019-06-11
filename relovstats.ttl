@@ -120,7 +120,7 @@ rls:minimumUnqualifiedCardinality a lovc:RestrictionType ;
     rdfs:seeAlso <https://publikationen.bibliothek.kit.edu/1000054062> ;
 	dct:description """A constraint of the constraint type minimum unqualified cardinality restrictions consists of a non-negative integer n and an object or data property p, and it defines a class C which contains all those individuals that are connected by p to at least n different individuals/literals. Minimum unqualified cardinality restrictions must hold for all instances of the class C."""@en ;
     rdfs:comment """Minimum unqualified cardinality restriction type"""@en ;
-    rdfs:label ""@en .
+    rdfs:label "Minimum unqualified cardinality restriction type"@en .
 
 rls:minimumQualifiedCardinality a lovc:RestrictionType ;
     rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#>  ;
@@ -337,15 +337,15 @@ rls:subsumptionLODStatsDetectorRdfsSubClassOf-v1 a lovc:RestrictionTypeExpressio
     frbr:realizationOf rls:subsumptionDetectorRdfsSubClassOf .
 
 
-rls:propertyDomainsDetectorRdfsDomain a lovc:RestrictionTypeExpressionDetector ;
+rls:propertyDomainDetectorRdfsDomain a lovc:RestrictionTypeExpressionDetector ;
     rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#>  ;
     rdfs:comment """A method or software component to detect rdfs:domain restrictions."""@en ;
     rdfs:label "rdfs:domain detector"@en .
 
-rls:propertyDomainsLODStatsDetectorRdfsDomain-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
+rls:propertyDomainLODStatsDetectorRdfsDomain-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
     rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#>  ;
     rdfs:label "rdfs:domain detector (LODStats) v1"@en ;
-    frbr:realizationOf rls:propertyDomainsDetectorRdfsDomain .
+    frbr:realizationOf rls:propertyDomainDetectorRdfsDomain .
 
 
 rls:propertyRangesDetetorRdfsRange a lovc:RestrictionTypeExpressionDetector ;
@@ -374,7 +374,7 @@ rls:literalRangesDetectorXsdMinMaxOwlRestriction a lovc:RestrictionTypeExpressio
     rdfs:comment """A method or software component to detect owl:withRestrictions, xsd:minInclusive, xsd:minExclusive, xsd:maxInclusive, xsd:maxExclusive."""@en ;
     rdfs:label "owl:withRestriction, xsd:minInclusive, xsd:minExclusive, xsd:maxInclusive, xsd:maxExclusive detector"@en .
 
-rls:literalRangesDetectorXsdMinMaxOwlRestriction a lovc:RestrictionTypeExpressionDetectorVersion ;
+rls:literalRangesLODStatsDetectorXsdMinMaxOwlRestriction-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
     rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#>  ;
     rdfs:label "owl:withRestriction, xsd:minInclusive, xsd:minExclusive, xsd:maxInclusive, xsd:maxExclusive detector v1"@en ;
     frbr:realizationOf rls:literalRangesDetectorXsdMinMaxOwlRestriction .
@@ -395,7 +395,7 @@ rls:minimumUnqualifiedCardinalityDetectorOwlMinCardinality a lovc:RestrictionTyp
     rdfs:comment """A method or software component to detect owl:minCardinality restrictions."""@en ;
     rdfs:label "owl:minCardinality detector"@en .
 
-rls:minimumUnqualifiedCardinalityLODStatsDetectorOwlMinCardinality-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
+rls:minimumUnqualifiedCardinalityLODStatsDetectorOwl-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
     rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#>  ;
     rdfs:label "owl:minCardinality detector (LODStats) v1"@en ;
     frbr:realizationOf rls:minimumUnqualifiedCardinalityDetectorOwlMinCardinality .
@@ -406,7 +406,7 @@ rls:minimumQualifiedCardinalityDetectorOwl a lovc:RestrictionTypeExpressionDetec
     rdfs:comment """A method or software component to detect owl:minQualifiedCardinality restrictions."""@en ;
     rdfs:label "owl:minQualifiedCardinality detector"@en .
 
-rls:minimumQualifiedCardinalityLODStatsDetectorOwl-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
+rls:minimumQualifiedCardinalityLODStatsDetector-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
     rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#>  ;
     rdfs:label "owl:minQualifiedCardinality detector (LODStats) v1"@en ;
     frbr:realizationOf rls:minimumQualifiedCardinalityDetectorOwl .
@@ -417,18 +417,19 @@ rls:maximumUnqualifiedCardinalityDetectorOwlMaxCardinality a lovc:RestrictionTyp
     rdfs:comment """A method or software component to detect owl:maxCardinality restrictions."""@en ;
     rdfs:label "owl:maxCardinality detector"@en .
 
-rls:maximumUnqualifiedCardinalityLODStatsDetectorOwlMaxCardinality-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
+
+rls:maximumUnqualifiedCardinalityLODStatsDetectorOwl-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
     rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#>  ;
     rdfs:label "owl:maxCardinality detector (LODStats) v1"@en ;
     frbr:realizationOf rls:maximumUnqualifiedCardinalityDetectorOwlMaxCardinality .
 
-
+	
 rls:maximumQualifiedCardinalityDetectorOwl a lovc:RestrictionTypeExpressionDetector ;
     rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#>  ;
     rdfs:comment """A method or software component to detect owl:maxQualifiedCardinality restrictions."""@en ;
     rdfs:label "owl:maxQualifiedCardinality detector"@en .
 
-rls:maximumQualifiedCardinalityLODStatsDetectorOwl-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
+rls:maximumQualifiedCardinalityLODStatsDetector-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
     rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#>  ;
     rdfs:label "owl:maxQualifiedCardinality detector (LODStats) v1"@en ;
     frbr:realizationOf rls:maximumQualifiedCardinalityDetectorOwl .
