@@ -188,6 +188,10 @@ foaf:Person rdf:type owl:Class .
                                           prov:Entity ;
                           rdfs:label "Restriction Type Statistic"@en .
 
+### https://w3id.org/lovcube/ns/lovcube#OntologyRepository
+:OntologyRepository rdfs:type owl:Class ;
+                    rdfs:subClassOf prov:Entity ;
+                    rdfs:label "Ontology Repository"@en .
 
 #################################################################
 #    Individuals

@@ -562,6 +562,14 @@ rls:medianHierarchyDepth a lovc:RestrictionTypeMeasure ;
     rdfs:comment """The median hierarchy depth of disjoint hierarchies of IRIs."""@en ;
     rdfs:label "Median hierarchy depth"@en .
 
+#
+# Definitions of Ontology Repositories
+#
+rls:lov a lovc:OntologyRepository ;
+    rdfs:label "Linked Open Vocabularies (LOV)"@en .
+
+rls:bioportal a lovc:OntologyRepository ;
+    rdfs:label "BioPortal"@en .
 
 #
 # Definitions of Dimensions
@@ -594,6 +602,13 @@ rls:ontologyVersionDimension a qb:DimensionProperty, rdf:Property ;
     rdfs:comment "The ontology version from which this observation was made."@en ;
     rdfs:domain qb:Observation ;
     rdfs:range owl:Ontology .
+
+rls:ontologyRepositoryDimension a qb:DimensionProperty, rdf:Property ;
+    rdfs:isDefiendBy <https://w3id.org/lovcube/ns/relovstats#> ;
+    rdfs:label "Ontology Repository dimension"@en ;
+    rdfs:comment "The ontology repository from which the ontology was obtained."@en ;
+    rdfs:domain qb:Observation ;
+    rdfs:range lovc:OntologyRepository .
 
 #
 # Definitions of Data Structures
