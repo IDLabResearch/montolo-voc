@@ -201,17 +201,47 @@ rls:subsumptionRdfsSubClassOf a lovc:RestrictionTypeExpression ;
     frbr:realizationOf rls:subsumption ;
     rdfs:label "rdfs:subClassOf restriction"@en .
 
+rls:subsumptionOwlSubClassOf a lovc:RestrictionTypeExpression ;
+    rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#>  ;
+    rdfs:comment """A subsumption restriction, expressed using the owl:SubClassOf property."""@en ;
+    frbr:realizationOf rls:subsumption ;
+    rdfs:label "owl:SubClassOf restriction"@en .
+
 rls:propertyDomainsRdfsDomain a lovc:RestrictionTypeExpression ;
     rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#>  ;
     rdfs:comment """A property domains restriction, expressed using the rdfs:domain property."""@en ;
     frbr:realizationOf rls:propertyDomains ;
     rdfs:label "rdfs:domain restriction"@en .
 
+rls:propertyDomainsOwlObjectPropertyDomain a lovc:RestrictionTypeExpression ;
+    rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#>  ;
+    rdfs:comment """A property domains restriction, expressed using the owl:ObjectPropertyDomain property."""@en ;
+    frbr:realizationOf rls:propertyDomains ;
+    rdfs:label "owl:ObjectPropertyDomain restriction"@en .
+
+rls:propertyDomainsOwlDataPropertyDomain a lovc:RestrictionTypeExpression ;
+    rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#>  ;
+    rdfs:comment """A property domains restriction, expressed using the owl:DataPropertyDomain property."""@en ;
+    frbr:realizationOf rls:propertyDomains ;
+    rdfs:label "owl:DataPropertyDomain restriction"@en .
+
 rls:propertyRangesRdfsRange a lovc:RestrictionTypeExpression ;
     rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#>  ;
     rdfs:comment """A property ranges restriction, expressed using the rdfs:range property."""@en ;
     frbr:realizationOf rls:propertyRanges ;
     rdfs:label "rdfs:range restriction"@en .
+
+rls:propertyRangesOwlObjectPropertyRange a lovc:RestrictionTypeExpression ;
+    rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#>  ;
+    rdfs:comment """A property ranges restriction, expressed using the owl:ObjectPropertyRange property."""@en ;
+    frbr:realizationOf rls:propertyRanges ;
+    rdfs:label "owl:ObjectPropertyRange restriction"@en .
+
+rls:propertyRangesOwlDataPropertyRange a lovc:RestrictionTypeExpression ;
+    rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#>  ;
+    rdfs:comment """A property ranges restriction, expressed using the owl:DataPropertyRange property."""@en ;
+    frbr:realizationOf rls:propertyRanges ;
+    rdfs:label "owl:DataPropertyRange restriction"@en .
 
 rls:literalPatternMatchingXsdPatternOwlRestriction a lovc:RestrictionTypeExpression ;
     rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#>  ;
@@ -338,6 +368,17 @@ rls:subsumptionLODStatsDetectorRdfsSubClassOf-v1 a lovc:RestrictionTypeExpressio
     frbr:realizationOf rls:subsumptionDetectorRdfsSubClassOf .
 
 
+rls:subsumptionDetectorOwlSubClassOf a lovc:RestrictionTypeExpressionDetector ;
+    rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#>  ;
+    rdfs:comment """A method or software component to detect owl:SubClassOf restrictions."""@en ;
+    rdfs:label "owl:SubClassOf detector"@en .
+
+rls:subsumptionLODStatsDetectorOwlSubClassOf-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
+    rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#>  ;
+    rdfs:label "owl:SubClassOf detector (LODStats) v1"@en ;
+    frbr:realizationOf rls:subsumptionDetectorOwlSubClassOf .
+
+
 rls:propertyDomainDetectorRdfsDomain a lovc:RestrictionTypeExpressionDetector ;
     rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#>  ;
     rdfs:comment """A method or software component to detect rdfs:domain restrictions."""@en ;
@@ -349,6 +390,28 @@ rls:propertyDomainLODStatsDetectorRdfsDomain-v1 a lovc:RestrictionTypeExpression
     frbr:realizationOf rls:propertyDomainDetectorRdfsDomain .
 
 
+rls:propertyDomainDetectorOwlObjectPropertyDomain a lovc:RestrictionTypeExpressionDetector ;
+    rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#>  ;
+    rdfs:comment """A method or software component to detect owl:ObjectPropertyDomain restrictions."""@en ;
+    rdfs:label "owl:ObjectPropertyDomain detector"@en .
+
+rls:propertyDomainLODStatsDetectorOwlObjectPropertyDomain-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
+    rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#>  ;
+    rdfs:label "owl:ObjectPropertyDomain detector (LODStats) v1"@en ;
+    frbr:realizationOf rls:propertyDomainDetectorOwlObjectPropertyDomain .
+
+
+rls:propertyDomainDetectorOwlDataPropertyDomain a lovc:RestrictionTypeExpressionDetector ;
+    rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#>  ;
+    rdfs:comment """A method or software component to detect owl:DataPropertyDomain restrictions."""@en ;
+    rdfs:label "owl:DataPropertyDomain detector"@en .
+
+rls:propertyDomainLODStatsDetectorOwlDataPropertyDomain-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
+    rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#>  ;
+    rdfs:label "owl:DataPropertyDomain detector (LODStats) v1"@en ;
+    frbr:realizationOf rls:propertyDomainDetectorOwlDataPropertyDomain .
+
+
 rls:propertyRangeDetetorRdfsRange a lovc:RestrictionTypeExpressionDetector ;
     rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#>  ;
     rdfs:comment """A method or software component to detect rdfs:range restrictions."""@en ;
@@ -358,6 +421,17 @@ rls:propertyRangeLODStatsDetectorRdfsRange-v1 a lovc:RestrictionTypeExpressionDe
     rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#>  ;
     rdfs:label "rdfs:range detector (LODStats) v1"@en ;
     frbr:realizationOf rls:propertyRangeDetetorRdfsRange .
+
+
+rls:propertyRangeDetectorOwlObjectPropertyRange a lovc:RestrictionTypeExpressionDetector ;
+    rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#>  ;
+    rdfs:comment """A method or software component to detect owl:ObjectPropertyRange restrictions."""@en ;
+    rdfs:label "owl:ObjectPropertyRange detector"@en .
+
+rls:propertyRangeLODStatsDetectorOwlObjectPropertyRange-v1 a lovc:RestrictionTypeExpressionDetectorVersion ;
+    rdfs:isDefinedBy <https://w3id.org/lovcube/ns/relovstats#>  ;
+    rdfs:label "owl:ObjectPropertyRange detector (LODStats) v1"@en ;
+    frbr:realizationOf rls:propertyRangeDetectorOwlObjectPropertyRange .
 
 
 rls:literalPatternMatchingDetectorXsdPatternOwlRestriction a lovc:RestrictionTypeExpressionDetector ;
