@@ -14,24 +14,22 @@
 @prefix voaf: <http://purl.org/vocommons/voaf#> .
 @base <https://w3id.org/lovcube/ns/lovcube> .
 
-<https://w3id.org/lovcube/ns/lovcube#> rdf:type owl:Ontology ;
-                                       vann:preferredNamespacePrefix "lovc" ;
-                                       vann:preferredNamespaceUri "https://w3id.org/lovcube/ns/lovcube#" ;
-                                       rdfs:label "LOVCube vocabulary"@en ;
-                                       dct:title "LOVCube vocabulary"@en ;
-                                       dct:description "The LOVCube vocabulary"@en ;
-                                       rdfs:comment """-Version 0.2.0: added expression and human-readable documentation
--Version 0.1.0: creation."""@en ;
-                                       owl:versionIRI   <https://w3id.org/lovcube/ns/lovcube/v0.2.0> ;
-                                       owl:priorVersion <https://w3id.org/lovcube/ns/lovcube/v0.1.0> ;
-                                       owl:versionInfo "0.2.0" ;
-                                       rdfs:seeAlso <https://w3id.org/lovcube> ;
-                                       dct:modified "2019-04-12"^^xsd:date ;
-                                       dct:issued "2019-04-12"^^xsd:date ;
-                                       dct:created "2018-12-10"^^xsd:date ;
+<https://w3id.org/montolo/ns/montolo#> rdf:type owl:Ontology ;
+                                       vann:preferredNamespacePrefix "mov" ;
+                                       vann:preferredNamespaceUri "https://w3id.org/montolo/ns/montolo-voc#" ;
+                                       rdfs:label "MontoloVoc vocabulary"@en ;
+                                       dct:title "MontoloVoc vocabulary"@en ;
+                                       dct:description "The MontoloVoc vocabulary used to describe https://w3id.org/montolo"@en ;
+                                       rdfs:comment """-Version 1.0.0: Rebranded from LOVCube vocabulary."""@en ;
+                                       owl:versionIRI   <https://w3id.org/montolo/ns/montolo/v1.0.0> ;
+                                       owl:versionInfo "1.0.0" ;
+                                       rdfs:seeAlso <https://w3id.org/montolo> ;
+                                       dct:modified "2019-07-19"^^xsd:date ;
+                                       dct:issued "2019-07-19"^^xsd:date ;
+                                       dct:created "2019-07-19"^^xsd:date ;
                                        dct:rights "Copyright © Ghent University – imec – IDLab"@en ;
                                        cc:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
-                                       foaf:primaryTopic <https://w3id.org/lovcube> ;
+                                       foaf:primaryTopic <https://w3id.org/montolo> ;
                                        dct:creator <https://sven-lieber.org/profile#me> ;
                                        dct:contributor <http://ben.de-meester.org/#me> ;
                                        dct:contributor [ foaf:name "Anastasia Dimou"@en ;

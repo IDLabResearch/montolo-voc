@@ -1,5 +1,5 @@
 
-This subfolder contains the documentation of the LOVCube vocabulary, and is **not** static; the vocabulary will be constantly updated.
+This subfolder contains the documentation of the MontoloVoc vocabulary, and is **not** static; the vocabulary will be constantly updated.
 
 *todo:* add description of how pull requests can be made
 
