@@ -6,10 +6,9 @@ Ontologies created with [OWL](https://www.w3.org/TR/owl2-overview/),
 or in general using the [RDF](https://www.w3.org/TR/rdf11-concepts/) framework, might contain restrictions (axioms) to machine-understandably describe knowledge.
 
 Several types of such restrictions exist, and so far it is not known which restriction types are used to which extent in practice. 
-This repository contains a vocabulary to describe restriction types, and corresponding restriction type expressions and measures ([LOVCube](lovcube.owl)).
-Additionally it contains RDF-based descriptions of several abstract restriction types and their concrete RDF-based expressions ([relovstats.ttl](relovstats.ttl)).
+This repository contains a vocabulary to describe restriction types, and corresponding restriction type expressions and measures ([MontoloVoc](montolo-voc.owl)).
 
-Tools creating statistics about the use of restriction types in ontologies can use the LOVCube vocabulary to describe the statistics and refer to their structure.
+Tools creating statistics about the use of restriction types in ontologies can use the *MontoloVoc* vocabulary to describe the statistics and refer to their structure.
 
 # MontoloVoc Vocabulary
 
