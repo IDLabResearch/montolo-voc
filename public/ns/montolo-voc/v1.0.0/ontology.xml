@@ -1,0 +1,460 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/montolo/ns/montolo#"
+     xml:base="https://w3id.org/montolo/ns/montolo"
+     xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://w3id.org/montolo/ns/montolo#">
+        <owl:versionIRI rdf:resource="https://w3id.org/montolo/ns/montolo/v1.0.0"/>
+        <ns:license rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
+        <terms:contributor rdf:resource="_:genid-nodeid-node1dg5reushx1"/>
+        <terms:contributor rdf:resource="http://ben.de-meester.org/#me"/>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-07-19</terms:created>
+        <terms:creator rdf:resource="https://sven-lieber.org/profile#me"/>
+        <terms:description xml:lang="en">The MontoloVoc vocabulary used to describe https://w3id.org/montolo</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-07-19</terms:issued>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-07-19</terms:modified>
+        <terms:rights xml:lang="en">Copyright © Ghent University – imec – IDLab</terms:rights>
+        <terms:title xml:lang="en">MontoloVoc vocabulary</terms:title>
+        <vann:preferredNamespacePrefix>mov</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://w3id.org/montolo/ns/montolo-voc#</vann:preferredNamespaceUri>
+        <rdfs:comment xml:lang="en">-Version 1.0.0: Rebranded from LOVCube vocabulary.</rdfs:comment>
+        <rdfs:label xml:lang="en">MontoloVoc vocabulary</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://w3id.org/montolo"/>
+        <owl:versionInfo>1.0.0</owl:versionInfo>
+        <foaf:primaryTopic rdf:resource="https://w3id.org/montolo"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://creativecommons.org/ns#license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://creativecommons.org/ns#license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/rights -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/rights"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/mbox -->
+
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/mbox"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/name -->
+
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/primaryTopic -->
+
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/primaryTopic"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/lovcube/ns/lovcube#detectsRestrictionTypeExpression -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lovcube/ns/lovcube#detectsRestrictionTypeExpression">
+        <rdfs:domain rdf:resource="https://w3id.org/lovcube/ns/lovcube#RestrictionTypeDetector"/>
+        <rdfs:range rdf:resource="https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpression"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/lovcube/ns/lovcube#hasRestrictionTypeDefinition -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/lovcube/ns/lovcube#hasRestrictionTypeDefinition">
+        <rdfs:domain rdf:resource="https://w3id.org/lovcube/ns/lovcube#RestrictionType"/>
+        <rdfs:range rdf:resource="https://w3id.org/lovcube/ns/lovcube#RestrictionTypeDefinitionVersion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/linked-data/cube#DataSet -->
+
+
+    <owl:Class rdf:about="http://purl.org/linked-data/cube#DataSet"/>
+    
+
+
+    <!-- http://purl.org/linked-data/cube#DimensionProperty -->
+
+
+    <owl:Class rdf:about="http://purl.org/linked-data/cube#DimensionProperty"/>
+    
+
+
+    <!-- http://purl.org/linked-data/cube#MeasureProperty -->
+
+
+    <owl:Class rdf:about="http://purl.org/linked-data/cube#MeasureProperty"/>
+    
+
+
+    <!-- http://purl.org/linked-data/cube#Observation -->
+
+
+    <owl:Class rdf:about="http://purl.org/linked-data/cube#Observation"/>
+    
+
+
+    <!-- http://purl.org/vocab/frbr/core#Expression -->
+
+
+    <owl:Class rdf:about="http://purl.org/vocab/frbr/core#Expression"/>
+    
+
+
+    <!-- http://purl.org/vocab/frbr/core#Work -->
+
+
+    <owl:Class rdf:about="http://purl.org/vocab/frbr/core#Work"/>
+    
+
+
+    <!-- http://purl.org/vocommons/voaf#Vocabulary -->
+
+
+    <owl:Class rdf:about="http://purl.org/vocommons/voaf#Vocabulary"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#Entity -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/prov#Entity"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person"/>
+    
+
+
+    <!-- https://w3id.org/lovcube/ns/lovcube#Dataset -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lovcube/ns/lovcube#Dataset">
+        <rdfs:subClassOf rdf:resource="http://purl.org/linked-data/cube#DataSet"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lovcube/ns/lovcube#OntologyRepository -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lovcube/ns/lovcube#OntologyRepository">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <rdfs:label xml:lang="en">Ontology Repository</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lovcube/ns/lovcube#RestrictionType -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lovcube/ns/lovcube#RestrictionType">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vocab/frbr/core#Work"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <rdfs:comment xml:lang="en">A certain type of restriction, which can be an axiom or a constraint. One example is the restriction type &apos;disjoint classes&apos;.</rdfs:comment>
+        <rdfs:label xml:lang="en">Restriction Type</rdfs:label>
+        <rdfs:label></rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lovcube/ns/lovcube#RestrictionTypeDefinition -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lovcube/ns/lovcube#RestrictionTypeDefinition">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vocab/frbr/core#Work"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <rdfs:label xml:lang="en">Restriction Type Definition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lovcube/ns/lovcube#RestrictionTypeDefinitionVersion -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lovcube/ns/lovcube#RestrictionTypeDefinitionVersion">
+        <rdfs:label xml:lang="en">Restriction Type Definition Version</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lovcube/ns/lovcube#RestrictionTypeDetector -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lovcube/ns/lovcube#RestrictionTypeDetector">
+        <rdfs:label xml:lang="en">Restriction Type Detector</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpression -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpression">
+        <rdfs:subClassOf rdf:resource="http://purl.org/linked-data/cube#DimensionProperty"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/vocab/frbr/core#Expression"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <rdfs:comment xml:lang="en">One possible expression of a restriction type. One example might be the expression &apos;owl:disjointWith&apos; for the restriction type &apos;disjoint classes&apos;.</rdfs:comment>
+        <rdfs:label xml:lang="en">Restriction Type Expression</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpressionDetector -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpressionDetector">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vocab/frbr/core#Work"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <rdfs:comment xml:lang="en">A piece of software which is able to detect a certain restriction type expression.</rdfs:comment>
+        <rdfs:label xml:lang="en">Restriction Type Expression Detector</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpressionDetectorVersion -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpressionDetectorVersion">
+        <rdfs:subClassOf rdf:resource="http://purl.org/linked-data/cube#MeasureProperty"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/vocab/frbr/core#Expression"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <rdfs:comment xml:lang="en">A concrete version of a restriction type expression detector.</rdfs:comment>
+        <rdfs:label xml:lang="en">Restriction Type Expression Detector Version</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lovcube/ns/lovcube#RestrictionTypeMeasure -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lovcube/ns/lovcube#RestrictionTypeMeasure">
+        <rdfs:subClassOf rdf:resource="http://purl.org/linked-data/cube#MeasureProperty"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <rdfs:label xml:lang="en">Restriction Type Measure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/lovcube/ns/lovcube#RestrictionTypeStatistic -->
+
+
+    <owl:Class rdf:about="https://w3id.org/lovcube/ns/lovcube#RestrictionTypeStatistic">
+        <rdfs:subClassOf rdf:resource="http://purl.org/linked-data/cube#Observation"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <rdfs:label xml:lang="en">Restriction Type Statistic</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://ben.de-meester.org/#me -->
+
+
+    <owl:NamedIndividual rdf:about="https://ben.de-meester.org/#me">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <foaf:mbox>mailto:ben.demeester@ugent.be</foaf:mbox>
+        <foaf:name xml:lang="en">Ben De Meester</foaf:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://sven-lieber.org/profile#me -->
+
+
+    <owl:NamedIndividual rdf:about="https://sven-lieber.org/profile#me">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <foaf:mbox>mailto:sven.lieber@ugent.be</foaf:mbox>
+        <foaf:name xml:lang="en">Sven Lieber</foaf:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/lovcube/ns/lovcube -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/lovcube/ns/lovcube">
+        <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
+    </owl:NamedIndividual>
+    <rdf:Description rdf:nodeID="genid1">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <foaf:mbox>mailto:Anastasia.dimou@UGent.be</foaf:mbox>
+        <foaf:name xml:lang="en">Anastasia Dimou</foaf:name>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid2">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <foaf:mbox>mailto:Anastasia.dimou@UGent.be</foaf:mbox>
+        <foaf:name xml:lang="en">Anastasia Dimou</foaf:name>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid3">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <foaf:mbox>mailto:Anastasia.dimou@UGent.be</foaf:mbox>
+        <foaf:name xml:lang="en">Anastasia Dimou</foaf:name>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/lovcube/ns/lovcube#RestrictionType"/>
+            <rdf:Description rdf:about="https://w3id.org/lovcube/ns/lovcube#RestrictionTypeDefinition"/>
+            <rdf:Description rdf:about="https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpression"/>
+            <rdf:Description rdf:about="https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpressionDetector"/>
+            <rdf:Description rdf:about="https://w3id.org/lovcube/ns/lovcube#RestrictionTypeExpressionDetectorVersion"/>
+            <rdf:Description rdf:about="https://w3id.org/lovcube/ns/lovcube#RestrictionTypeMeasure"/>
+            <rdf:Description rdf:about="https://w3id.org/lovcube/ns/lovcube#RestrictionTypeStatistic"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/ -->
+
+

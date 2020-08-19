@@ -1,0 +1,14 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+<https://w3id.org/montolo/ns/montolo/v1.0.0> a prov:Entity;
+	 dc:title "MontoloVoc vocabulary";
+	 prov:wasAttributedTo <https://sven-lieber.org/profile#me>;
+	 dc:creator <https://sven-lieber.org/profile#me>;
+	 prov:wasAttributedTo :agent0;
+	 prov:wasAttributedTo <http://ben.de-meester.org/#me>;
+	 dc:contributor <http://ben.de-meester.org/#me>;
+	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
+	 prov:wasGeneratedAt "2019-07-19";
+.
+:agent0 a prov:Agent; foaf:name "_:genid-nodeid-node1dg5reushx1".
