@@ -1,0 +1,255 @@
+<https://w3id.org/montolo/ns/montolo-voc#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/montolo/ns/montolo-voc#> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/montolo/ns/montolo-voc/v2.0.0> .
+<https://w3id.org/montolo/ns/montolo-voc#> <http://creativecommons.org/ns#license> <https://creativecommons.org/publicdomain/zero/1.0/> .
+<https://w3id.org/montolo/ns/montolo-voc#> <http://purl.org/dc/terms/contributor> <http://ben.de-meester.org/#me> .
+<https://w3id.org/montolo/ns/montolo-voc#> <http://purl.org/dc/terms/contributor> <http://w3id.org/montolo/ns/montolo-voc#natadimou> .
+<https://w3id.org/montolo/ns/montolo-voc#> <http://purl.org/dc/terms/created> "2019-07-19"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/montolo/ns/montolo-voc#> <http://purl.org/dc/terms/creator> <https://sven-lieber.org/profile#me> .
+<https://w3id.org/montolo/ns/montolo-voc#> <http://purl.org/dc/terms/description> "The MontoloVoc vocabulary used to describe https://w3id.org/montolo"@en .
+<https://w3id.org/montolo/ns/montolo-voc#> <http://purl.org/dc/terms/issued> "2019-07-19"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/montolo/ns/montolo-voc#> <http://purl.org/dc/terms/modified> "2020-08-18"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/montolo/ns/montolo-voc#> <http://purl.org/dc/terms/rights> "Copyright © Ghent University – imec – IDLab"@en .
+<https://w3id.org/montolo/ns/montolo-voc#> <http://purl.org/dc/terms/title> "MontoloVoc vocabulary"@en .
+<https://w3id.org/montolo/ns/montolo-voc#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "mov" .
+<https://w3id.org/montolo/ns/montolo-voc#> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/montolo/ns/montolo-voc#" .
+<https://w3id.org/montolo/ns/montolo-voc#> <http://www.w3.org/2000/01/rdf-schema#comment> "-Version 1.0.0: Rebranded from LOVCube vocabulary."@en .
+<https://w3id.org/montolo/ns/montolo-voc#> <http://www.w3.org/2000/01/rdf-schema#comment> "-Version 2.0.0: Fixed semantic issues and removed unused classes"@en .
+<https://w3id.org/montolo/ns/montolo-voc#> <http://www.w3.org/2000/01/rdf-schema#label> "MontoloVoc vocabulary"@en .
+<https://w3id.org/montolo/ns/montolo-voc#> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://w3id.org/montolo> .
+<https://w3id.org/montolo/ns/montolo-voc#> <http://www.w3.org/2002/07/owl#priorVersion> <https://w3id.org/montolo/ns/montolo-voc#> .
+<https://w3id.org/montolo/ns/montolo-voc#> <http://www.w3.org/2002/07/owl#versionInfo> "2.0.0" .
+<https://w3id.org/montolo/ns/montolo-voc#> <http://xmlns.com/foaf/0.1/primaryTopic> <https://w3id.org/montolo> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://creativecommons.org/ns#license
+<http://creativecommons.org/ns#license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/rights
+<http://purl.org/dc/terms/rights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://xmlns.com/foaf/0.1/mbox
+<http://xmlns.com/foaf/0.1/mbox> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://xmlns.com/foaf/0.1/name
+<http://xmlns.com/foaf/0.1/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://xmlns.com/foaf/0.1/primaryTopic
+<http://xmlns.com/foaf/0.1/primaryTopic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/montolo/ns/montolo-voc#detectsRestrictionTypeExpression
+<http://w3id.org/montolo/ns/montolo-voc#detectsRestrictionTypeExpression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/montolo/ns/montolo-voc#detectsRestrictionTypeExpression> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/montolo/ns/montolo-voc#RestrictionTypeExpressionDetector> .
+<http://w3id.org/montolo/ns/montolo-voc#detectsRestrictionTypeExpression> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/montolo/ns/montolo-voc#RestrictionTypeExpression> .
+<http://w3id.org/montolo/ns/montolo-voc#detectsRestrictionTypeExpression> <http://www.w3.org/2000/01/rdf-schema#comment> "Can be used to make the link between restriction types and restriction types expressions explicit." .
+<http://w3id.org/montolo/ns/montolo-voc#detectsRestrictionTypeExpression> <http://www.w3.org/2000/01/rdf-schema#label> "detects restriction type expression" .
+# 
+# http://w3id.org/montolo/ns/montolo-voc#hasRestrictionTypeDefinition
+<http://w3id.org/montolo/ns/montolo-voc#hasRestrictionTypeDefinition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/montolo/ns/montolo-voc#hasRestrictionTypeDefinition> <http://www.w3.org/2000/01/rdf-schema#domain> <http://w3id.org/montolo/ns/montolo-voc#RestrictionType> .
+<http://w3id.org/montolo/ns/montolo-voc#hasRestrictionTypeDefinition> <http://www.w3.org/2000/01/rdf-schema#range> <http://w3id.org/montolo/ns/montolo-voc#RestrictionTypeDefinitionVersion> .
+<http://w3id.org/montolo/ns/montolo-voc#hasRestrictionTypeDefinition> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a restriction type to a specific version of a definition." .
+<http://w3id.org/montolo/ns/montolo-voc#hasRestrictionTypeDefinition> <http://www.w3.org/2000/01/rdf-schema#label> "has restriction type definition" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/linked-data/cube#DataSet
+<http://purl.org/linked-data/cube#DataSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://purl.org/linked-data/cube#Observation
+<http://purl.org/linked-data/cube#Observation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://purl.org/vocab/frbr/core#Expression
+<http://purl.org/vocab/frbr/core#Expression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://purl.org/vocab/frbr/core#Work
+<http://purl.org/vocab/frbr/core#Work> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://w3id.org/montolo/ns/montolo-voc#Dataset
+<http://w3id.org/montolo/ns/montolo-voc#Dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/montolo/ns/montolo-voc#Dataset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linked-data/cube#DataSet> .
+<http://w3id.org/montolo/ns/montolo-voc#Dataset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<http://www.w3.org/ns/prov#Entity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/montolo/ns/montolo-voc#Dataset> <http://www.w3.org/2000/01/rdf-schema#comment> "A dataset of ontology statistics which are both a datacube dataset (qb:DataSet) and a PROV-O entity (prov:Entity)." .
+<http://w3id.org/montolo/ns/montolo-voc#Dataset> <http://www.w3.org/2000/01/rdf-schema#label> "Dataset" .
+# 
+# http://w3id.org/montolo/ns/montolo-voc#OntologyRepository
+<http://w3id.org/montolo/ns/montolo-voc#OntologyRepository> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/montolo/ns/montolo-voc#OntologyRepository> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/montolo/ns/montolo-voc#Repository> .
+<http://w3id.org/montolo/ns/montolo-voc#OntologyRepository> <http://www.w3.org/2000/01/rdf-schema#comment> "A repository which hosts ontologies, examples could be Linked Open Vocabularies (LOV) or BioPortal."@en .
+<http://w3id.org/montolo/ns/montolo-voc#OntologyRepository> <http://www.w3.org/2000/01/rdf-schema#label> "Ontology Repository"@en .
+# 
+# http://w3id.org/montolo/ns/montolo-voc#Repository
+<http://w3id.org/montolo/ns/montolo-voc#Repository> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/montolo/ns/montolo-voc#Repository> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<http://w3id.org/montolo/ns/montolo-voc#Repository> <http://www.w3.org/2000/01/rdf-schema#comment> "Any type of software repository from which input data is taken."@en .
+<http://w3id.org/montolo/ns/montolo-voc#Repository> <http://www.w3.org/2000/01/rdf-schema#label> "Repository"@en .
+# 
+# http://w3id.org/montolo/ns/montolo-voc#RestrictionType
+<http://w3id.org/montolo/ns/montolo-voc#RestrictionType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/montolo/ns/montolo-voc#RestrictionType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/frbr/core#Work> .
+<http://w3id.org/montolo/ns/montolo-voc#RestrictionType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<http://w3id.org/montolo/ns/montolo-voc#RestrictionType> <http://www.w3.org/2000/01/rdf-schema#comment> "A certain type of restriction, which can be an axiom or a constraint. One example is the restriction type 'disjoint classes'."@en .
+<http://w3id.org/montolo/ns/montolo-voc#RestrictionType> <http://www.w3.org/2000/01/rdf-schema#label> "Restriction Type"@en .
+# 
+# http://w3id.org/montolo/ns/montolo-voc#RestrictionTypeDefinition
+<http://w3id.org/montolo/ns/montolo-voc#RestrictionTypeDefinition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/montolo/ns/montolo-voc#RestrictionTypeDefinition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/frbr/core#Work> .
+<http://w3id.org/montolo/ns/montolo-voc#RestrictionTypeDefinition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<http://w3id.org/montolo/ns/montolo-voc#RestrictionTypeDefinition> <http://www.w3.org/2000/01/rdf-schema#comment> "A natural language definition of restriction types"@en .
+<http://w3id.org/montolo/ns/montolo-voc#RestrictionTypeDefinition> <http://www.w3.org/2000/01/rdf-schema#label> "Restriction Type Definition"@en .
+# 
+# http://w3id.org/montolo/ns/montolo-voc#RestrictionTypeDefinitionVersion
+<http://w3id.org/montolo/ns/montolo-voc#RestrictionTypeDefinitionVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/montolo/ns/montolo-voc#RestrictionTypeDefinitionVersion> <http://www.w3.org/2000/01/rdf-schema#comment> "A specific version of a definition for a restriction type."@en .
+<http://w3id.org/montolo/ns/montolo-voc#RestrictionTypeDefinitionVersion> <http://www.w3.org/2000/01/rdf-schema#label> "Restriction Type Definition Version"@en .
+# 
+# http://w3id.org/montolo/ns/montolo-voc#RestrictionTypeExpression
+<http://w3id.org/montolo/ns/montolo-voc#RestrictionTypeExpression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/montolo/ns/montolo-voc#RestrictionTypeExpression> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/frbr/core#Expression> .
+<http://w3id.org/montolo/ns/montolo-voc#RestrictionTypeExpression> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<http://w3id.org/montolo/ns/montolo-voc#RestrictionTypeExpression> <http://www.w3.org/2000/01/rdf-schema#comment> "One possible expression of a restriction type. One example might be the expression 'owl:disjointWith' for the restriction type 'disjoint classes'."@en .
+<http://w3id.org/montolo/ns/montolo-voc#RestrictionTypeExpression> <http://www.w3.org/2000/01/rdf-schema#label> "Restriction Type Expression"@en .
+# 
+# http://w3id.org/montolo/ns/montolo-voc#RestrictionTypeExpressionDetector
+<http://w3id.org/montolo/ns/montolo-voc#RestrictionTypeExpressionDetector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/montolo/ns/montolo-voc#RestrictionTypeExpressionDetector> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/frbr/core#Work> .
+<http://w3id.org/montolo/ns/montolo-voc#RestrictionTypeExpressionDetector> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<http://w3id.org/montolo/ns/montolo-voc#RestrictionTypeExpressionDetector> <http://www.w3.org/2000/01/rdf-schema#comment> "A piece of software which is able to detect a certain restriction type expression. Multiple versions of this detector might exist as separate entities"@en .
+<http://w3id.org/montolo/ns/montolo-voc#RestrictionTypeExpressionDetector> <http://www.w3.org/2000/01/rdf-schema#label> "Restriction Type Expression Detector"@en .
+# 
+# http://w3id.org/montolo/ns/montolo-voc#RestrictionTypeExpressionDetectorVersion
+<http://w3id.org/montolo/ns/montolo-voc#RestrictionTypeExpressionDetectorVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/montolo/ns/montolo-voc#RestrictionTypeExpressionDetectorVersion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/frbr/core#Expression> .
+<http://w3id.org/montolo/ns/montolo-voc#RestrictionTypeExpressionDetectorVersion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<http://w3id.org/montolo/ns/montolo-voc#RestrictionTypeExpressionDetectorVersion> <http://www.w3.org/2000/01/rdf-schema#comment> "A concrete version of a restriction type expression detector."@en .
+<http://w3id.org/montolo/ns/montolo-voc#RestrictionTypeExpressionDetectorVersion> <http://www.w3.org/2000/01/rdf-schema#label> "Restriction Type Expression Detector Version"@en .
+# 
+# http://w3id.org/montolo/ns/montolo-voc#RestrictionTypeMeasure
+<http://w3id.org/montolo/ns/montolo-voc#RestrictionTypeMeasure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/montolo/ns/montolo-voc#RestrictionTypeMeasure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<http://w3id.org/montolo/ns/montolo-voc#RestrictionTypeMeasure> <http://www.w3.org/2000/01/rdf-schema#comment> "A measure of a restriction type which follows the RDF Data Cube definition. Examples could be the 'occurrence' of a restriction type or 'hierarchy depth' etc."@en .
+<http://w3id.org/montolo/ns/montolo-voc#RestrictionTypeMeasure> <http://www.w3.org/2000/01/rdf-schema#label> "Restriction Type Measure"@en .
+# 
+# http://w3id.org/montolo/ns/montolo-voc#RestrictionTypeStatistic
+<http://w3id.org/montolo/ns/montolo-voc#RestrictionTypeStatistic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/montolo/ns/montolo-voc#RestrictionTypeStatistic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linked-data/cube#Observation> .
+<http://w3id.org/montolo/ns/montolo-voc#RestrictionTypeStatistic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<http://w3id.org/montolo/ns/montolo-voc#RestrictionTypeStatistic> <http://www.w3.org/2000/01/rdf-schema#comment> "A restriction type statistic basically is a RDF Data Cube observation about restriction type use, but also a PROV-O entity such that provenance of it can be expressed."@en .
+<http://w3id.org/montolo/ns/montolo-voc#RestrictionTypeStatistic> <http://www.w3.org/2000/01/rdf-schema#label> "Restriction Type Statistic"@en .
+# 
+# http://www.w3.org/ns/prov#Entity
+# 
+# http://xmlns.com/foaf/0.1/Person
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/montolo/ns/montolo-voc#natadimou
+<http://w3id.org/montolo/ns/montolo-voc#natadimou> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/montolo/ns/montolo-voc#natadimou> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://w3id.org/montolo/ns/montolo-voc#natadimou> <http://xmlns.com/foaf/0.1/mbox> "mailto:Anastasia.dimou@UGent.be" .
+<http://w3id.org/montolo/ns/montolo-voc#natadimou> <http://xmlns.com/foaf/0.1/name> "Anastasia Dimou"@en .
+# 
+# https://ben.de-meester.org/#me
+<https://ben.de-meester.org/#me> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://ben.de-meester.org/#me> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://ben.de-meester.org/#me> <http://xmlns.com/foaf/0.1/mbox> "mailto:ben.demeester@ugent.be" .
+<https://ben.de-meester.org/#me> <http://xmlns.com/foaf/0.1/name> "Ben De Meester"@en .
+# 
+# https://sven-lieber.org/profile#me
+<https://sven-lieber.org/profile#me> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://sven-lieber.org/profile#me> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://sven-lieber.org/profile#me> <http://xmlns.com/foaf/0.1/mbox> "mailto:sven.lieber@ugent.be" .
+<https://sven-lieber.org/profile#me> <http://xmlns.com/foaf/0.1/name> "Sven Lieber"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid1 <http://www.w3.org/2002/07/owl#members> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/montolo/ns/montolo-voc#RestrictionType> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/montolo/ns/montolo-voc#RestrictionTypeDefinition> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/montolo/ns/montolo-voc#RestrictionTypeExpression> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/montolo/ns/montolo-voc#RestrictionTypeExpressionDetector> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/montolo/ns/montolo-voc#RestrictionTypeExpressionDetectorVersion> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/montolo/ns/montolo-voc#RestrictionTypeMeasure> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/montolo/ns/montolo-voc#RestrictionTypeStatistic> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+# 
+# Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

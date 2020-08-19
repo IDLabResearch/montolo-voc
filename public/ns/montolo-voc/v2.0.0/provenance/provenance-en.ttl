@@ -1,0 +1,16 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix : <> .
+<https://w3id.org/montolo/ns/montolo-voc/v2.0.0> a prov:Entity;
+	 dc:title "MontoloVoc vocabulary";
+	 prov:wasAttributedTo <https://sven-lieber.org/profile#me>;
+	 dc:creator <https://sven-lieber.org/profile#me>;
+	 prov:wasAttributedTo <http://ben.de-meester.org/#me>;
+	 dc:contributor <http://ben.de-meester.org/#me>;
+	 prov:wasAttributedTo <http://w3id.org/montolo/ns/montolo-voc#natadimou>;
+	 dc:contributor <http://w3id.org/montolo/ns/montolo-voc#natadimou>;
+	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
+	 prov:wasRevisionOf <https://w3id.org/montolo/ns/montolo-voc#>;
+	 prov:wasGeneratedAt "2020-08-18";
+.
