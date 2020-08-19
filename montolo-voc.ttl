@@ -1,0 +1,175 @@
+@prefix : <http://w3id.org/montolo/ns/montolo-voc#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix frbr: <http://purl.org/vocab/frbr/core#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
+
+<https://w3id.org/montolo/ns/montolo-voc#> rdf:type owl:Ontology ;
+                                       vann:preferredNamespacePrefix "mov" ;
+                                       vann:preferredNamespaceUri "https://w3id.org/montolo/ns/montolo-voc#" ;
+                                       rdfs:label "MontoloVoc vocabulary"@en ;
+                                       dct:title "MontoloVoc vocabulary"@en ;
+                                       dct:description "The MontoloVoc vocabulary used to describe https://w3id.org/montolo"@en ;
+                                       rdfs:comment """-Version 1.0.0: Rebranded from LOVCube vocabulary."""@en ;
+                                       rdfs:comment """-Version 2.0.0: Fixed semantic issues and removed unused classes"""@en ;
+                                       owl:versionIRI   <https://w3id.org/montolo/ns/montolo-voc/v2.0.0> ;
+                                       owl:versionInfo "2.0.0" ;
+                                       owl:priorVersion <https://w3id.org/montolo/ns/montolo-voc#> ;
+                                       rdfs:seeAlso <https://w3id.org/montolo> ;
+                                       dct:modified "2020-08-18"^^xsd:date ;
+                                       dct:issued "2019-07-19"^^xsd:date ;
+                                       dct:created "2019-07-19"^^xsd:date ;
+                                       dct:rights "Copyright © Ghent University – imec – IDLab"@en ;
+                                       cc:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+                                       foaf:primaryTopic <https://w3id.org/montolo> ;
+                                       dct:creator <https://sven-lieber.org/profile#me> ;
+                                       dct:contributor <http://ben.de-meester.org/#me> ;
+                                       dct:contributor :natadimou .
+
+:natadimou rdf:type foaf:Person ;
+  foaf:name "Anastasia Dimou"@en ;
+  foaf:mbox "mailto:Anastasia.dimou@UGent.be" .
+
+<https://sven-lieber.org/profile#me> rdf:type foaf:Person ;
+                                     foaf:mbox "mailto:sven.lieber@ugent.be" ;
+                                     foaf:name "Sven Lieber"@en .
+
+<https://ben.de-meester.org/#me> rdf:type foaf:Person ;
+                                 foaf:mbox "mailto:ben.demeester@ugent.be" ;
+                                 foaf:name "Ben De Meester"@en .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+:detectsRestrictionTypeExpression rdf:type owl:ObjectProperty ;
+                                  rdfs:label "detects restriction type expression" ;
+                                  rdfs:comment "Can be used to make the link between restriction types and restriction types expressions explicit." ;
+                                  rdfs:domain :RestrictionTypeExpressionDetector ;
+                                  rdfs:range :RestrictionTypeExpression .
+
+
+:hasRestrictionTypeDefinition rdf:type owl:ObjectProperty ;
+                              rdfs:label "has restriction type definition" ;
+                              rdfs:comment "Links a restriction type to a specific version of a definition." ;
+                              rdfs:domain :RestrictionType ;
+                              rdfs:range :RestrictionTypeDefinitionVersion .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+:Dataset 
+  rdf:type owl:Class ;
+  rdfs:label "Dataset" ;
+  rdfs:comment "A dataset of ontology statistics which are both a datacube dataset (qb:DataSet) and a PROV-O entity (prov:Entity)." ;
+  rdfs:subClassOf 
+    qb:DataSet ,
+    prov:Entity .
+
+
+:RestrictionType
+  rdf:type owl:Class ;
+  rdfs:subClassOf
+    frbr:Work ,
+    prov:Entity ;
+  rdfs:comment "A certain type of restriction, which can be an axiom or a constraint. One example is the restriction type 'disjoint classes'."@en ;
+  rdfs:label "Restriction Type"@en .
+
+
+:RestrictionTypeDefinition
+  rdf:type owl:Class ;
+  rdfs:subClassOf
+    frbr:Work ,
+    prov:Entity ;
+  rdfs:label "Restriction Type Definition"@en ;
+  rdfs:comment "A natural language definition of restriction types"@en .
+
+
+:RestrictionTypeDefinitionVersion
+  rdf:type owl:Class ;
+  rdfs:label "Restriction Type Definition Version"@en ;
+  rdfs:comment "A specific version of a definition for a restriction type."@en .
+
+
+:RestrictionTypeExpression 
+  rdf:type owl:Class ;
+  rdfs:subClassOf
+    frbr:Expression ,
+    prov:Entity ;
+  rdfs:comment "One possible expression of a restriction type. One example might be the expression 'owl:disjointWith' for the restriction type 'disjoint classes'."@en ;
+  rdfs:label "Restriction Type Expression"@en .
+
+
+:RestrictionTypeExpressionDetector
+  rdf:type owl:Class ;
+  rdfs:subClassOf 
+    frbr:Work ,
+    prov:Entity ;
+  rdfs:comment "A piece of software which is able to detect a certain restriction type expression. Multiple versions of this detector might exist as separate entities"@en ;
+  rdfs:label "Restriction Type Expression Detector"@en .
+
+
+:RestrictionTypeExpressionDetectorVersion
+  rdf:type owl:Class ;
+  rdfs:subClassOf
+    frbr:Expression ,
+    prov:Entity ;
+  rdfs:comment "A concrete version of a restriction type expression detector."@en ;
+  rdfs:label "Restriction Type Expression Detector Version"@en .
+
+
+:RestrictionTypeMeasure
+  rdf:type owl:Class ;
+  rdfs:subClassOf prov:Entity ;
+  rdfs:label "Restriction Type Measure"@en ;
+  rdfs:comment "A measure of a restriction type which follows the RDF Data Cube definition. Examples could be the 'occurrence' of a restriction type or 'hierarchy depth' etc."@en .
+
+
+:RestrictionTypeStatistic
+  rdf:type owl:Class ;
+  rdfs:subClassOf
+    qb:Observation ,
+    prov:Entity ;
+  rdfs:label "Restriction Type Statistic"@en ;
+  rdfs:comment "A restriction type statistic basically is a RDF Data Cube observation about restriction type use, but also a PROV-O entity such that provenance of it can be expressed."@en .
+
+:Repository
+  rdf:type owl:Class ;
+  rdfs:subClassOf prov:Entity ;
+  rdfs:label "Repository"@en ;
+  rdfs:comment "Any type of software repository from which input data is taken."@en .
+
+:OntologyRepository 
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Repository ;
+  rdfs:label "Ontology Repository"@en ;
+  rdfs:comment "A repository which hosts ontologies, examples could be Linked Open Vocabularies (LOV) or BioPortal."@en .
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+   owl:members ( :RestrictionType
+                 :RestrictionTypeDefinition
+                 :RestrictionTypeExpression
+                 :RestrictionTypeExpressionDetector
+                 :RestrictionTypeExpressionDetectorVersion
+                 :RestrictionTypeMeasure
+                 :RestrictionTypeStatistic
+               )
+ ] .
+
+
