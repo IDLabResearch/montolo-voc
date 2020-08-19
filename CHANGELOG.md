@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Class `:Repository` 
+- Class `:Repository` as not all RDF input data might come from an ontology repository, e.g. SHACL files from GitHub
 - `:OntologyRepository` class now a subclass of the new `:Repository` class
 - added several `rdfs:comment` triples to provide further information
 
