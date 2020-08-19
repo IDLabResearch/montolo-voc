@@ -20,10 +20,12 @@
                                        dct:title "MontoloVoc vocabulary"@en ;
                                        dct:description "The MontoloVoc vocabulary used to describe https://w3id.org/montolo"@en ;
                                        rdfs:comment """-Version 1.0.0: Rebranded from LOVCube vocabulary."""@en ;
-                                       owl:versionIRI   <https://w3id.org/montolo/ns/montolo-voc/v1.0.0> ;
-                                       owl:versionInfo "1.0.0" ;
+                                       rdfs:comment """-Version 2.0.0: Fixed semantic issues and removed unused classes"""@en ;
+                                       owl:versionIRI   <https://w3id.org/montolo/ns/montolo-voc/v2.0.0> ;
+                                       owl:versionInfo "2.0.0" ;
+                                       owl:priorVersion <https://w3id.org/montolo/ns/montolo-voc#> ;
                                        rdfs:seeAlso <https://w3id.org/montolo> ;
-                                       dct:modified "2019-07-19"^^xsd:date ;
+                                       dct:modified "2020-08-18"^^xsd:date ;
                                        dct:issued "2019-07-19"^^xsd:date ;
                                        dct:created "2019-07-19"^^xsd:date ;
                                        dct:rights "Copyright © Ghent University – imec – IDLab"@en ;
@@ -31,11 +33,11 @@
                                        foaf:primaryTopic <https://w3id.org/montolo> ;
                                        dct:creator <https://sven-lieber.org/profile#me> ;
                                        dct:contributor <http://ben.de-meester.org/#me> ;
-                                       dct:contributor [ foaf:name "Anastasia Dimou"@en ;
-                                                         rdf:type foaf:Person ;
-                                                         foaf:mbox "mailto:Anastasia.dimou@UGent.be"
-                                                       ] ;
-                                       .
+                                       dct:contributor :natadimou .
+
+:natadimou rdf:type foaf:Person ;
+  foaf:name "Anastasia Dimou"@en ;
+  foaf:mbox "mailto:Anastasia.dimou@UGent.be" .
 
 <https://sven-lieber.org/profile#me> rdf:type foaf:Person ;
                                      foaf:mbox "mailto:sven.lieber@ugent.be" ;
@@ -47,27 +49,19 @@
 
 
 #################################################################
-#    Annotation properties
-#################################################################
-
-###  http://xmlns.com/foaf/0.1/mbox
-foaf:mbox rdf:type owl:AnnotationProperty .
-
-
-###  http://xmlns.com/foaf/0.1/name
-foaf:name rdf:type owl:AnnotationProperty .
-
-
-#################################################################
 #    Object Properties
 #################################################################
 
 :detectsRestrictionTypeExpression rdf:type owl:ObjectProperty ;
-                                  rdfs:domain :RestrictionTypeDetector ;
+                                  rdfs:label "detects restriction type expression" ;
+                                  rdfs:comment "Can be used to make the link between restriction types and restriction types expressions explicit." ;
+                                  rdfs:domain :RestrictionTypeExpressionDetector ;
                                   rdfs:range :RestrictionTypeExpression .
 
 
 :hasRestrictionTypeDefinition rdf:type owl:ObjectProperty ;
+                              rdfs:label "has restriction type definition" ;
+                              rdfs:comment "Links a restriction type to a specific version of a definition." ;
                               rdfs:domain :RestrictionType ;
                               rdfs:range :RestrictionTypeDefinitionVersion .
 
@@ -76,117 +70,92 @@ foaf:name rdf:type owl:AnnotationProperty .
 #    Classes
 #################################################################
 
-###  http://purl.org/linked-data/cube#DataSet
-qb:DataSet rdf:type owl:Class .
+:Dataset 
+  rdf:type owl:Class ;
+  rdfs:label "Dataset" ;
+  rdfs:comment "A dataset of ontology statistics which are both a datacube dataset (qb:DataSet) and a PROV-O entity (prov:Entity)." ;
+  rdfs:subClassOf 
+    qb:DataSet ,
+    prov:Entity .
 
 
-###  http://purl.org/linked-data/cube#DimensionProperty
-qb:DimensionProperty rdf:type owl:Class .
+:RestrictionType
+  rdf:type owl:Class ;
+  rdfs:subClassOf
+    frbr:Work ,
+    prov:Entity ;
+  rdfs:comment "A certain type of restriction, which can be an axiom or a constraint. One example is the restriction type 'disjoint classes'."@en ;
+  rdfs:label "Restriction Type"@en .
 
 
-###  http://purl.org/linked-data/cube#MeasureProperty
-qb:MeasureProperty rdf:type owl:Class .
+:RestrictionTypeDefinition
+  rdf:type owl:Class ;
+  rdfs:subClassOf
+    frbr:Work ,
+    prov:Entity ;
+  rdfs:label "Restriction Type Definition"@en ;
+  rdfs:comment "A natural language definition of restriction types"@en .
 
 
-###  http://purl.org/linked-data/cube#Observation
-qb:Observation rdf:type owl:Class .
+:RestrictionTypeDefinitionVersion
+  rdf:type owl:Class ;
+  rdfs:label "Restriction Type Definition Version"@en ;
+  rdfs:comment "A specific version of a definition for a restriction type."@en .
 
 
-###  http://purl.org/vocab/frbr/core#Expression
-frbr:Expression rdf:type owl:Class .
+:RestrictionTypeExpression 
+  rdf:type owl:Class ;
+  rdfs:subClassOf
+    frbr:Expression ,
+    prov:Entity ;
+  rdfs:comment "One possible expression of a restriction type. One example might be the expression 'owl:disjointWith' for the restriction type 'disjoint classes'."@en ;
+  rdfs:label "Restriction Type Expression"@en .
 
 
-###  http://purl.org/vocab/frbr/core#Work
-frbr:Work rdf:type owl:Class .
+:RestrictionTypeExpressionDetector
+  rdf:type owl:Class ;
+  rdfs:subClassOf 
+    frbr:Work ,
+    prov:Entity ;
+  rdfs:comment "A piece of software which is able to detect a certain restriction type expression. Multiple versions of this detector might exist as separate entities"@en ;
+  rdfs:label "Restriction Type Expression Detector"@en .
 
 
-###  http://purl.org/vocommons/voaf#Vocabulary
-voaf:Vocabulary rdf:type owl:Class .
+:RestrictionTypeExpressionDetectorVersion
+  rdf:type owl:Class ;
+  rdfs:subClassOf
+    frbr:Expression ,
+    prov:Entity ;
+  rdfs:comment "A concrete version of a restriction type expression detector."@en ;
+  rdfs:label "Restriction Type Expression Detector Version"@en .
 
 
-###  http://www.w3.org/ns/prov#Entity
-prov:Entity rdf:type owl:Class .
+:RestrictionTypeMeasure
+  rdf:type owl:Class ;
+  rdfs:subClassOf prov:Entity ;
+  rdfs:label "Restriction Type Measure"@en ;
+  rdfs:comment "A measure of a restriction type which follows the RDF Data Cube definition. Examples could be the 'occurrence' of a restriction type or 'hierarchy depth' etc."@en .
 
 
-###  http://xmlns.com/foaf/0.1/Person
-foaf:Person rdf:type owl:Class .
+:RestrictionTypeStatistic
+  rdf:type owl:Class ;
+  rdfs:subClassOf
+    qb:Observation ,
+    prov:Entity ;
+  rdfs:label "Restriction Type Statistic"@en ;
+  rdfs:comment "A restriction type statistic basically is a RDF Data Cube observation about restriction type use, but also a PROV-O entity such that provenance of it can be expressed."@en .
 
+:Repository
+  rdf:type owl:Class ;
+  rdfs:subClassOf prov:Entity ;
+  rdfs:label "Repository"@en ;
+  rdfs:comment "Any type of software repository from which input data is taken."@en .
 
-:Dataset rdf:type owl:Class ;
-         rdfs:subClassOf qb:DataSet ,
-                         prov:Entity .
-
-
-:RestrictionType rdf:type owl:Class ;
-                 rdfs:subClassOf frbr:Work ,
-                                 prov:Entity ;
-                 rdfs:comment "A certain type of restriction, which can be an axiom or a constraint. One example is the restriction type 'disjoint classes'."@en ;
-                 rdfs:label "Restriction Type"@en .
-
-
-:RestrictionTypeDefinition rdf:type owl:Class ;
-                           rdfs:subClassOf frbr:Work ,
-                                           prov:Entity ;
-                           rdfs:label "Restriction Type Definition"@en .
-
-
-:RestrictionTypeDefinitionVersion rdf:type owl:Class ;
-                                  rdfs:label "Restriction Type Definition Version"@en .
-
-
-:RestrictionTypeDetector rdf:type owl:Class ;
-                         rdfs:label "Restriction Type Detector"@en .
-
-
-:RestrictionTypeExpression rdf:type owl:Class ;
-                           rdfs:subClassOf frbr:Expression ,
-                                           prov:Entity ;
-                           rdfs:comment "One possible expression of a restriction type. One example might be the expression 'owl:disjointWith' for the restriction type 'disjoint classes'."@en ;
-                           rdfs:label "Restriction Type Expression"@en .
-
-
-:RestrictionTypeExpressionDetector rdf:type owl:Class ;
-                                   rdfs:subClassOf frbr:Work ,
-                                                   prov:Entity ;
-                                   rdfs:comment "A piece of software which is able to detect a certain restriction type expression."@en ;
-                                   rdfs:label "Restriction Type Expression Detector"@en .
-
-
-:RestrictionTypeExpressionDetectorVersion rdf:type owl:Class ;
-                                          rdfs:subClassOf frbr:Expression ,
-                                                          prov:Entity ;
-                                          rdfs:comment "A concrete version of a restriction type expression detector."@en ;
-                                          rdfs:label "Restriction Type Expression Detector Version"@en .
-
-
-:RestrictionTypeMeasure rdf:type owl:Class ;
-                        rdfs:subClassOf prov:Entity ;
-                        rdfs:label "Restriction Type Measure"@en .
-
-
-:RestrictionTypeStatistic rdf:type owl:Class ;
-                          rdfs:subClassOf qb:Observation ,
-                                          prov:Entity ;
-                          rdfs:label "Restriction Type Statistic"@en .
-
-:OntologyRepository rdfs:type owl:Class ;
-                    rdfs:subClassOf prov:Entity ;
-                    rdfs:label "Ontology Repository"@en .
-
-#################################################################
-#    Individuals
-#################################################################
-
-
-[ rdf:type foaf:Person ;
-  foaf:mbox "mailto:Anastasia.dimou@UGent.be" ;
-  foaf:name "Anastasia Dimou"@en
-] .
-
-[ rdf:type foaf:Person ;
-   foaf:mbox "mailto:Anastasia.dimou@UGent.be" ;
-   foaf:name "Anastasia Dimou"@en
- ] .
+:OntologyRepository 
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Repository ;
+  rdfs:label "Ontology Repository"@en ;
+  rdfs:comment "A repository which hosts ontologies, examples could be Linked Open Vocabularies (LOV) or BioPortal."@en .
 
 #################################################################
 #    General axioms
@@ -204,4 +173,3 @@ foaf:Person rdf:type owl:Class .
  ] .
 
 
-###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
